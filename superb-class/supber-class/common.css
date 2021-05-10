@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    overflow: hidden;
+  }
+  #header{
+    width: 100%;
+    border: 0;
+    height: 105px;
+    z-index: 3;
+    position: relative;
+  }
