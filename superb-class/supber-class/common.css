@@ -7,7 +7,25 @@
      opacity: 0;
      animation: page-fade-in 1s forwards;
   }
-  #header{
+  #header1{
+    width: 100%;
+    height: 105px;
+    z-index: 3;
+    position: relative;
+  }
+  #header2{
+    width: 100%;
+    height: 105px;
+    z-index: 3;
+    position: relative;
+  }
+  #header3{
+    width: 100%;
+    height: 105px;
+    z-index: 3;
+    position: relative;
+  }
+  #header4{
     width: 100%;
     height: 105px;
     z-index: 3;
@@ -25,3 +43,14 @@
    iframe{
   display:block;border:0px
 }
+ #superb{
+   width: 100%;
+   height: 919px;
+   position: relative;
+ }
+ #contactUs{
+  width: 100%;
+  height: 919px;
+  position: relative;
+ }
+
