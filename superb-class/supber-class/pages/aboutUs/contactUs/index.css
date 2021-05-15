@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    height: 860px;
+    background:linear-gradient(to top right,skyblue,white);
+  }
+  .contact-info{
+    margin:  100px auto;
+    width: 1000px;
+    height: 200px;
+  }
+  .card-icon{
+    font-size: 28px;
+    background: deepskyblue;
+    width: 60px;
+    height: 60px;
+    margin-left: 120px;
+    margin-top: 55px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+  }
+  
+  .card:hover .card-icon{
+    background: none;
+    color: deepskyblue;
+    transform: scale(1.6);
+  }
+
+  .card .t{
+    margin-top: 20px;
+    margin-left: 60px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+
+  .card:hover .t{
+    max-height: 40px;
+    opacity: 1;
+  }
+
+  .card{
+    background:linear-gradient(to top right,skyblue,deepskyblue);
+    height: 200px;
+    width: 300px;
+    color: whitesmoke;
+    float: left;
+    margin-left: 25px;
+  }
+  
+  
+    
+
+  h1{
+    color: #505559;
+    width: 192px;
+    height: 72px;
+    font-size: 48px;
+    text-align: left;
+    margin-top: 35px;
+    margin-left: 76px;
+  }

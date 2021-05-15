@@ -6,14 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="fullPage.css">
+    <link rel="stylesheet" href="iconfont.css">
     <link rel="shortcut icon" href="../supber-class/components/static/img/zhuoyue icon.ico">
+    <script src="./components/static/js/jquery.min.js"></script>
+    <script src="./components/static/js/fullPage.js"></script>
+    <script src="./components/static/js/fullPage.min.js"></script>
+  
 </head>
 <body>
-    <!--顶部导航栏-->
-    <iframe id="header" scrolling="no" src="./components/index.html"  frameborder="0"></iframe>
-    <!--第一屏 轮播图-->
-     <iframe id="switch" src="./pages/lb/index.html" frameborder="0"></iframe>
-    <!--第二屏 计科卓越-->
+    <section id="container" class="section-wrap">  
+        <!--顶部导航栏-->
+    
+      <!--第一屏 轮播图-->
+      <div id="section-1" class="section">
+     <iframe id="header1" scrolling="no" src="./components/index.html"  frameborder="0"></iframe>
+     <iframe id="switch" src="./pages/aboutUs/lb/index.html" frameborder="0"></iframe>
+    </div>
+    <!--第二屏 计科卓越--> 
+    <div id="section-2"  class="section">
+        <iframe id="header2" scrolling="no" src="./components/index.html"  frameborder="0"></iframe>
+        <iframe  id="superb" src="./pages/aboutUs/superb/index.html" frameborder="0"></iframe>
+    </div>
     <!--第三屏 联系我们-->
-</body>
+    <div class="section-3"  class="section">
+        <iframe id="header3" scrolling="no" src="./components/index.html"  frameborder="0"></iframe>
+        
+        <iframe id="contactUs" src="./pages/aboutUs/contactUs/index.html" frameborder="0"></iframe>
+    </div>
+    <!--第四屏  footer-->
+    <div class="section-4"  class="section">
+        
+        <iframe id="footer" src="./pages/aboutUs/footer/index.html" frameborder="0" ></iframe>
+    </div>
+    </section>
+    <ul class="section-btn">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="arrow arrowIndex">
+        <span class="arrDown iconfont icon-shangxiajiantou"></span>
+        <div>下一页</div>
+      </div>
+</body> 
+
+<script>
+        $(function () {
+        $('#container').switchPage({
+            'loop':true,
+            'keyboard':true
+        })
+    })
+</script>
 </html>

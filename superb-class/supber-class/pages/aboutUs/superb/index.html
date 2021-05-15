@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="top">
+        <p class="t1">计科卓越</p>
+        <p class="t2">思想过硬 · 作风过硬 · 技术过硬</p>
+    </div>
+    <div class="middle">
+       <div class="box first">
+           <span class="icon-cont">
+               <i class="fa fa-heart"></i>
+           </span>
+           <h3>班级理念</h3>
+           <br>
+           <ul class="hidden">
+               <li>多元极化</li>
+               <li>以人为本</li>
+               <li>合作共赢</li>
+               <li>师徒传承</li>
+           </ul>
+           <br><br>
+           <a class="expend">
+           <span class="plus">+</span>
+           <span class="minus">-</span>
+        </a>
+        </div>
+        <div class="box second">
+            <span class="icon-cont">
+                <i class="fa fa-edit"></i>
+            </span>
+            <h3>学院投入</h3>
+            <br>
+            <ul class="hidden">
+                <li>共聘请教授专家6名</li>
+                <li>每年资金投入50万元</li>
+                <li>院重点培养示范班</li>
+                <li>代表学院参赛数十场</li>
+            </ul>
+            <br><br>
+            <a class="expend">
+            <span class="plus">+</span>
+            <span class="minus">-</span>
+        </a>
+         </div>
+         <div class="box third">
+            <span class="icon-cont">
+                <i class="fa fa-desktop"></i>
+            </span>
+            <h3>师资力量</h3>
+            <br>
+            <ul class="hidden">
+                <li>5名互联网知名导师</li>
+                <li>校外顾问技术指导</li>
+                <li>7名行业内顶尖专家</li>
+                <li></li>
+            </ul>
+            <br><br>
+            <a class="expend">
+            <span class="plus">+</span>
+            <span class="minus">-</span>
+        </a>
+         </div>
+         <div class="box fourth">
+            <span class="icon-cont">
+                <i class="fa fa-rocket"></i>
+            </span>
+            <h3>在卓越班</h3>
+            <br>
+            <ul class="hidden">
+                <li>校企合作：创新创业实</li>
+                <li>践暨校企合作工程项目</li>
+                   <li>实训</li>
+                <li>参与互联网+、电赛</li>
+                <li>数模、ACM、蓝桥杯等</li>
+            </ul>
+            <br><br>
+            <a class="expend">
+            <span class="plus">+</span>
+            <span class="minus">-</span>
+          </a>
+         </div>
+
+    </div>
+     <button id="btn-left">Get大学四年成长规划！</button>
+         <button id="btn-right">联系我们</button>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $('.box').click(function(){
+        $(this).toggleClass('selected');
+    });
+</script>
+</html>
