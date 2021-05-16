@@ -38,7 +38,8 @@ section
     /* border: 1px solid black; */
     display: inline-block;
     vertical-align:middle;
-    background: linear-gradient(to top right , slategrey,white);
+    
+  background: linear-gradient(to top right, #43C6AC,#191654);
 
 }
 #tab ul{

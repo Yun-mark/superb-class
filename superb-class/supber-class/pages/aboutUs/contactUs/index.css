@@ -1,10 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   body{
     height: 860px;
-    background:linear-gradient(to top right,skyblue,white);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
   }
   .contact-info{
     margin-top: 20px;
@@ -60,17 +61,95 @@
   }
 
   .card{
-    background:LightSlateGray;
-    box-shadow:8px 8px 5px 0px skyblue ;
+    background: linear-gradient(to top right,#43C6AC, #191654);
+    box-shadow:8px 8px 5px 0px #191654 ;
     height: 150px;
     width: 200px;
     color: whitesmoke;
     float: left;
-    margin: 0 auto;
     margin-top: 10px;
     border-radius: 5%;
   }
+  .tabs{
+    height: 450px;
+    width: 300px;
+    background: linear-gradient(to top right,#43C6AC, #191654);
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 80px;
+    display: inline-block;
+    box-shadow:8px 8px 5px 0px #191654 ;
+  }
   
+.contactForm{
+  position: absolute;
+  width: 600px;
+  margin-left: 450px;
+  margin-top: 45px;
+  background: linear-gradient(to top right, #191654,#43C6AC);
+  box-shadow:8px 8px 5px 0px #191654 ;
+  display: inline-block;
+  
+}
+.contactForm h2{
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 20px;
+}
+.contactForm .inputBox{
+  position: relative;
+  width:520px;
+  margin-left: 35px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span{
+   position: absolute;
+   left: 0;
+   padding: 5px 0;
+   margin: 10px 0;
+   pointer-events: none;
+   transition: 0.5s;
+   color: #666;
+}
+
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+ .contactForm .inputBox textarea:valid ~ span{
+   color: #e91e63;
+   font-size: 12px;
+   transform: translateY(-20px);
+ }
+
+ .contactForm .inputBox input[type='submit']
+ {
+   width: 100px;
+   background: #00bcd4;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   font-size: 18px;
+   border-radius: 3%;
+ }
+
+
+
   .in {
     position: absolute;
     opacity: 1;

@@ -5,14 +5,14 @@
 }
 body{
 	height: 860px;
-	background:linear-gradient(to top right,skyblue,white);
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 .t1{
     margin: 0 auto;
     margin-top: 10px;
     width: 192px;
     height: 72px;
-    color:#505559 ;
+    color:#43C6AC;
     font-size: 48px;
     text-align: center;
     font-weight: bold; 
@@ -42,8 +42,8 @@ body{
   cursor: pointer;
   border-radius: 10px;
   overflow:hidden;
-  background: linear-gradient(to top right,white ,LightSlateGray);
-  box-shadow: 10px 10px 5px 0px skyblue;
+  background: linear-gradient(to top right,#191654,#43C6AC );
+  box-shadow: 10px 10px 5px 0px #191654 	;
 
 } 
 .box .icon-cont{
@@ -211,18 +211,18 @@ button{
     top: 500px;
     float: left;
     z-index: 100;
-	box-shadow: 10px 10px 5px 0px skyblue;
+	box-shadow: 10px 10px 5px 0px #191654;
 }
 
 #btn-left{   
-	background: deepskyblue;
+	background: linear-gradient(to top right,#191654,#43C6AC );
     color: #EDF1F2;
     left: 260px;
     border: 0px solid rgba(255, 255, 255, 100);
 }
 #btn-right{
-    background-color:#FFFFFF;
-    color: #101010;
+	background: linear-gradient(to top right,#43C6AC ,#191654);
+    color: #EDF1F2;
     right: 260px;
-    border: 1px solid #BBBBBB;
+    border: 0px solid rgba(255, 255, 255, 100);
 }
