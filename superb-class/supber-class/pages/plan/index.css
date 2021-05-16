@@ -38,6 +38,7 @@ section
     /* border: 1px solid black; */
     display: inline-block;
     vertical-align:middle;
+    background: linear-gradient(to top right , slategrey,white);
 
 }
 #tab ul{
