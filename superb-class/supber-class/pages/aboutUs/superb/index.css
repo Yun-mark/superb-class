@@ -5,7 +5,7 @@
 }
 body{
 	height: 860px;
-	background: linear-gradient(to top right, skyblue,white);
+	background:linear-gradient(to top right,skyblue,white);
 }
 .t1{
     margin: 0 auto;
@@ -35,14 +35,15 @@ body{
   height: 320px;
   padding-left: 10px;
   display: inline-block;
-  margin: 2.35%;
+  margin: 15px 25px;
   box-sizing: border-box;
   padding: 15px;
   position: relative;
   cursor: pointer;
   border-radius: 10px;
   overflow:hidden;
-  background: linear-gradient(to top right,  white, skyblue);
+  background: linear-gradient(to top right,white ,LightSlateGray);
+  box-shadow: 10px 10px 5px 0px skyblue;
 
 } 
 .box .icon-cont{
@@ -82,7 +83,7 @@ body{
 }
 
 .box h3{
-	color: deepskyblue;
+	color: white;
 	font-weight: bold;
 	font-size: 32px;
 	text-align: center;
@@ -98,7 +99,7 @@ body{
 }
 .box ul{
 	font-family: tahoma;
-	color: skyblue;
+	color: whitesmoke;
 	font-size: 17px;
 	line-height: 30px;
 	text-indent: 28px;
@@ -210,10 +211,11 @@ button{
     top: 500px;
     float: left;
     z-index: 100;
+	box-shadow: 10px 10px 5px 0px skyblue;
 }
 
 #btn-left{   
-	background: linear-gradient(to top right, skyblue,#3291F8 ) no-repeat;
+	background: deepskyblue;
     color: #EDF1F2;
     left: 260px;
     border: 0px solid rgba(255, 255, 255, 100);

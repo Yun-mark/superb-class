@@ -7,17 +7,18 @@
     background:linear-gradient(to top right,skyblue,white);
   }
   .contact-info{
-    margin:  100px auto;
-    width: 1000px;
-    height: 200px;
+    margin-top: 20px;
+    margin-left: 150px;
+    display: inline-block;
+    width: 200px;
+    height: 600px;
   }
   .card-icon{
     font-size: 28px;
     background: deepskyblue;
     width: 60px;
     height: 60px;
-    margin-left: 120px;
-    margin-top: 55px;
+    margin: 45px 70px;
     text-align: center;
     line-height: 60px !important;
     border-radius: 50%;
@@ -29,40 +30,96 @@
     color: deepskyblue;
     transform: scale(1.6);
   }
-
-  .card .t{
-    margin-top: 20px;
-    margin-left: 60px;
-    font-weight: 300;
+  .card .t1{
+    margin-top: -35px;
+    margin-left: 65px;
+    font-weight: bold;
     letter-spacing: 2px;
-    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+    }
+  .card .t2{
+    margin: -35px 62px;
+    font-weight: bold;
+    letter-spacing: 2px;
     opacity: 0;
     transition: 0.3s linear;
   }
-
+  
+  .card .t3{
+    margin-top: -35px;
+    margin-left: 65px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
   .card:hover .t{
     max-height: 40px;
     opacity: 1;
   }
 
   .card{
-    background:linear-gradient(to top right,skyblue,deepskyblue);
-    height: 200px;
-    width: 300px;
+    background:LightSlateGray;
+    box-shadow:8px 8px 5px 0px skyblue ;
+    height: 150px;
+    width: 200px;
     color: whitesmoke;
     float: left;
-    margin-left: 25px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 5%;
   }
   
+  .in {
+    position: absolute;
+    opacity: 1;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .in div {
+    display: block;
+    width: 300%;
+    height: 15.36px;
+    transform: translateX(-33.3%);
+    margin-top: -16px;
+    font-size: 13.44px;
+    text-align: center;
+  }
+  .arrUp {
+    position: relative;
+    font-size: 32px !important;
+    animation: up 3s cubic-bezier(0.5, 0, 0.1, 1) infinite;
+    -webkit-animation: up 3s cubic-bezier(0.5, 0, 0.1, 1) infinite;
+  }
+  .arrUp:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+  }
+
   
     
 
   h1{
-    color: #505559;
+    color:  #505559;
     width: 192px;
-    height: 72px;
     font-size: 48px;
     text-align: left;
-    margin-top: 35px;
-    margin-left: 76px;
+    margin-left: 50px ;
+    margin-top: 25px;
   }
+  h3{
+    color:  #505559;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 50px ;
+  }
+

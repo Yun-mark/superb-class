@@ -5,7 +5,7 @@
   body{
     overflow: hidden;
      opacity: 0;
-     animation: page-fade-in 1s forwards;
+     animation: page-fade-in 0.5s forwards;
   }
   #header1{
     width: 100%;
