@@ -70,8 +70,8 @@
       margin-top: 35px;
       border-radius: 31px;
       text-align: center;
-      background-color: #3291F8 ;
-  }
+      background:linear-gradient(to  top  right,#43C6AC, #3291F8) ;
+     }
   .login a{
     margin: 10px;
     color: #FFFFFF ;

@@ -21,7 +21,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     margin: 0 auto;
     width: 400px;
     height: 42px;
-    color: #101010;
+    color:  #43c6aca9;
     font-size: 28px;
 }
 .middle{
@@ -83,7 +83,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 
 .box h3{
-	color: white;
+	color: #43C6AC;
 	font-weight: bold;
 	font-size: 32px;
 	text-align: center;
