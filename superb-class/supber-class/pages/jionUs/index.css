@@ -1,0 +1,255 @@
+/* 加入我们样式开始 */
+body{
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  
+}
+.form{
+    width: 100%;
+    height: 1095px;
+}
+.wrap{
+    width: 1226px;
+    margin: 0 auto;
+}
+.form-box{
+    width: 100%;
+    height: 590px;
+    background-color: rgba(0,0,0,0);
+    background: linear-gradient(to top right, #191654,#43C6AC);
+    box-shadow:8px 8px 5px 0px #191654 ;
+    font-family: SourceHanSansSC-regular;
+    position: relative;
+    margin-top: 30px;
+    border-radius: 5%;
+}
+.form-box>h1{
+    width: 100%;
+    color: #45f3ff;
+    font-size: 72px;
+    font-weight: normal;
+    line-height: 130px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.form-box-left{
+    width: 200px;
+    height: 420px;
+    float: left;
+    border-right: 1px solid rgba(16, 16, 16);
+    position: relative;
+}
+.form-box-left>ul>li>img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 20px;
+    right: -9px;
+}
+.form-box-left>ul>li:nth-child(2)>img{
+     top: 176px;
+}
+.form-box-left>ul>li:last-child>img{
+     top: 340px;
+}
+
+.form-box-left li{
+    height: 155px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 36px;
+    list-style: none;
+    color: #fff;
+}
+
+.form-box-right{
+    width: 980px;
+    margin-left: 40px;
+    height: 420px;
+    float: left;
+    position: relative;
+    transition: 0.5s;
+}
+.row{
+    position: relative;
+    width: 100%;
+    height: 85px;
+    display: grid;
+    /* grid-template-columns: repeat(1fr,1fr); */
+    grid-template-columns: repeat(2,400px);
+    vertical-align: top;
+
+}
+.row .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.form-box-right .row>.col:last-child{
+    margin-left: 50px;
+}
+.inputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.inputBox input,
+.form-box-right .textarea textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    z-index: 1;
+    font-size: 26px;
+}
+.inputBox .radio {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+.inputBox .radio input{
+    width: 16px;
+    height: 16px;
+   margin-left: 20px;
+}
+.inputBox .radio label{
+    margin-left: 40px;
+}
+
+.inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #43C6AC;
+    line-height: 50px;
+    font-size: 28px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+ .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.inputBox input:focus + .text,
+.inputBox input:valid + .text
+{
+    top: -45px;
+    left: -10px;
+}
+.inputBox input:focus ~ .line,
+.inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+
+.form-box-right .textarea{
+    margin-left: 120px;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding: 10px 0;
+}
+.form-box-right .textarea textarea{
+    height: 100%;
+    resize: none;
+}
+
+.form-box-right textarea:focus + .text,
+.form-box-right textarea:valid + .text{
+    top: -45px;
+    left: -10px;
+}
+.form-box-right textarea:focus ~ .line,
+.form-box-right textarea:valid ~ .line{
+    height: 100%;
+}
+input[type="submit"]{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background-color: #45f3ff;
+    color: #000;
+    font-size: 28px;
+    border-radius: 10%;
+    position: absolute;
+    top: 48px;
+    left: 50%;
+}
+/* .form-box-right li{
+    height: 100px;
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    font-size: 26px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+.form-box span{
+    font-size: 28px;
+}
+.form-box-sp{
+    margin-left: 105px;
+}
+.form-box-input{
+    height: 50px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(187, 187, 187);
+    width:300px;
+    outline: none;
+    font-size: 26px;
+}
+.form-box-input:active {
+    border: none;
+}
+.form-box-right>form>ul>li:nth-child(2)>input{
+    margin-left: 12px;
+}
+.form-box label{
+    font-size: 16px;
+}
+.jieshao{
+    width: 795px;
+    height: 100%;
+}
+.form-box-right>li:last-child{
+    text-align: center;
+}
+button{
+    width: 100px;
+    height: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187);
+    position: absolute;
+    top: 505px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 125%;
+    cursor: pointer;
+
+} */
+/* 加入我们样式结束 */
