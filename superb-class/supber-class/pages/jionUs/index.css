@@ -8,63 +8,65 @@ body{
     height: 1095px;
 }
 .wrap{
-    width: 1226px;
+    width: 1090px;
     margin: 0 auto;
 }
 .form-box{
     width: 100%;
-    height: 590px;
+    height: 385px;
     background-color: rgba(0,0,0,0);
     background: linear-gradient(to top right, #191654,#43C6AC);
     box-shadow:8px 8px 5px 0px #191654 ;
     font-family: SourceHanSansSC-regular;
     position: relative;
-    margin-top: 30px;
-    border-radius: 5%;
+    padding: 40px 0;
 }
-.form-box>h1{
+h2{
     width: 100%;
-    color: #45f3ff;
-    font-size: 72px;
+    color: #43C6AC;
+    font-size: 40px;
     font-weight: normal;
-    line-height: 130px;
+    line-height: 80px;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 15px;
 }
 .form-box-left{
-    width: 200px;
-    height: 420px;
+    width: 160px;
+    height: 100%;
     float: left;
-    border-right: 1px solid rgba(16, 16, 16);
+    border-right: 1px solid #45f3ff;
     position: relative;
 }
 .form-box-left>ul>li>img{
     width: 16px;
     height: 16px;
     position: absolute;
+    background-color: skyblue;
+    border-radius: 50%;
     top: 20px;
     right: -9px;
 }
 .form-box-left>ul>li:nth-child(2)>img{
-     top: 176px;
+     top: 180px;
 }
 .form-box-left>ul>li:last-child>img{
      top: 340px;
 }
 
 .form-box-left li{
-    height: 155px;
+    height: 150px;
     text-align: right;
     padding-right: 10px;
-    font-size: 36px;
+    font-size: 24px;
     list-style: none;
-    color: #fff;
+    margin-top: 10px;
+    color: #43C6AC;
 }
 
 .form-box-right{
-    width: 980px;
+    width: 840px;
     margin-left: 40px;
-    height: 420px;
+    height: 100%;
     float: left;
     position: relative;
     transition: 0.5s;
@@ -121,6 +123,7 @@ body{
    margin-left: 20px;
 }
 .inputBox .radio label{
+    color: #43C6AC;
     margin-left: 40px;
 }
 
@@ -130,7 +133,7 @@ body{
     left: 0;
     color: #43C6AC;
     line-height: 50px;
-    font-size: 28px;
+    font-size: 15px;
     padding: 0 10px;
     display: block;
     transition: 0.5s;
@@ -186,10 +189,10 @@ input[type="submit"]{
     padding: 7px 35px;
     cursor: pointer;
     outline: none;
-    background-color: #45f3ff;
-    color: #000;
+    background:linear-gradient(to  top  right,#43C6AC, #3291F8) ;
+    color: #fff;
     font-size: 28px;
-    border-radius: 10%;
+    border-radius: 31px;
     position: absolute;
     top: 48px;
     left: 50%;
