@@ -39,15 +39,14 @@ button{
 }
 
 #btn-left{
-    
-	background: linear-gradient(to top right, skyblue,#3291F8 ) no-repeat;  
+    background: linear-gradient(to top right,#191654,#43C6AC );
     color: #EDF1F2;
     left: 260px;
     border: 0px solid rgba(255, 255, 255, 100);
 }
 #btn-right{
-    background-color:#FFFFFF;
-    color: #101010;
+	background: linear-gradient(to top right,#43C6AC ,#191654);
     right: 260px;
-    border: 1px solid rgba(255, 255, 255, 100);
+    color: #EDF1F2;
+    border: 0px solid rgba(255, 255, 255, 100);
 }
