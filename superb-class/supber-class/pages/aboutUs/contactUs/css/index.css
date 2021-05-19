@@ -1,0 +1,295 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+    font-family: 'Raleway';
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: block;
+    fill: rgba(51, 51, 51, 0.5);
+    margin-right: 20px;
+    -webkit-transition: all .2s ease-out;
+            transition: all .2s ease-out;
+  }
+  
+  .icon.active {
+    fill: deepskyblue;
+  }
+  
+  .icon.big {
+    width: 64px;
+    height: 64px;
+    fill: rgba(51, 51, 51, 0.5);
+  }
+  
+  .header{
+    position: relative;
+    display:inline-block;
+  }
+  .header h1{
+    position: absolute;
+    color:  #43C6AC;
+    letter-spacing: 2px;
+    width: 220px;
+    font-size: 48px;
+    text-align: center;
+    margin-left: 650px;
+  }
+   .header h3{
+    position: absolute;
+    color:  #43c6ace3;
+    height: 30px;
+    width: 210px;
+    font-size: 24px;
+    text-align: center;
+    left: 650px;
+    top: 70px;
+  }
+
+  
+.contactForm{
+  position: absolute;
+  margin-left: 950px;
+  margin-top:150px;
+  width: 500px;
+  background: linear-gradient(to top right, #191654,#43C6AC);
+  box-shadow:8px 8px 5px 0px #191654 ;
+  display: inline-block;
+  
+}
+.contactForm h2{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-left: 35px;
+}
+.contactForm .inputBox{
+  position: relative;
+  width:420px;
+  margin-left: 35px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+  background:linear-gradient(to top right,rgba(127, 208, 255, 0.815),#43C6AC);
+}
+
+.contactForm .inputBox span{
+   position: absolute;
+   left: 0;
+   padding: 5px 0;
+   margin: 10px 0;
+   pointer-events: none;
+   transition: 0.5s;
+   color: #666;
+}
+
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span{
+   color: #43C6AC;
+   font-size: 12px;
+   transform: translateY(-20px);
+ }
+
+ .contactForm .inputBox textarea:focus ~ span{
+  color: #43C6AC;
+  font-size: 12px;
+  transform: translateY(-20px);
+ }
+
+
+ .contactForm .inputBox input[type='submit']
+ {
+   width: 100px;
+   background:linear-gradient(to  top  right,#43C6AC, #3291F8) ;
+   color: white;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   margin-left: 20px;
+   font-size: 18px;
+   border-radius: 3%;
+ }
+
+
+
+  #wrapper {
+    width: 800px;
+    height: 420px;
+    position: absolute;
+    background: linear-gradient(to top right,#43C6AC, #191654);
+    box-shadow:8px 8px 5px 0px #191654 ;
+    margin-left: 70px;
+    margin-top: 130px;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    overflow: hidden;
+  }
+  
+  #left-side {
+    height: 70%;
+    width: 25%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #left-side ul li {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 34px;
+    color: rgba(51, 51, 51, 0.5);
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-out;
+            transition: all .2s ease-out;
+  }
+  #left-side ul li:hover {
+    color: #333333;
+    -webkit-transition: all .2s ease-out;
+            transition: all .2s ease-out;
+  }
+  #left-side ul li:hover > .icon {
+    fill: deepskyblue;
+  }
+  #left-side ul li.active {
+    color: deepskyblue;
+  }
+  #left-side ul li.active:hover > .icon {
+    fill: deepskyblue;
+  }
+  
+  #border {
+    height: 220px;
+    width: 1px;
+    background-color: rgba(51, 51, 51, 0.2);
+  }
+  #border #line.one {
+    width: 5px;
+    height: 70px;
+    background-color: deepskyblue;
+    margin-left: -2px;
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  #border #line.two {
+    width: 5px;
+    height: 70px;
+    background-color: deepskyblue;
+    margin-left: -2px;
+    margin-top: 80px;
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  #border #line.three {
+    width: 5px;
+    height: 70px;
+    background-color: deepskyblue;
+    margin-left: -2px;
+    margin-top: 150px;
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  
+  #right-side {
+    height: 300px;
+    width: 75%;
+    overflow: hidden;
+  }
+  #right-side #first, #right-side #second, #right-side #third {
+    position: absolute;
+    height: 300px;
+    width: 75%;
+    -webkit-transition: all .6s ease-in-out;
+            transition: all .6s ease-in-out;
+    margin-top: -350px;
+    opacity: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #right-side #first h1,  #right-side #first h3,#right-side #second h1,#right-side #second h3, #right-side #third h1   {
+    font-weight: 800;
+    color: white;
+  }
+  #right-side #first p, #right-side #second p, #right-side #third p  {
+    color: skyblue;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #right-side #third p a{
+    color:skyblue ;
+  }
+  #right-side #third .tupian{
+    background: url('../../../../components/static/img/wechat.png');
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+  }
+
+  #right-side #first.active, #right-side #second.active, #right-side #third.active {
+    margin-top: 0px;
+    opacity: 1;
+    -webkit-transition: all .6s ease-in-out;
+            transition: all .6s ease-in-out;
+  }
