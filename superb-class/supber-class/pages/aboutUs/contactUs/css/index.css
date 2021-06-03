@@ -103,7 +103,7 @@ html, body {
    position: absolute;
    left: 0;
    padding: 5px 0;
-   margin: 10px 0;
+   margin: 10px 10px;
    pointer-events: none;
    transition: 0.5s;
    color: #666;

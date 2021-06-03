@@ -202,6 +202,7 @@ section
 .text1, .text2{   
     display: inline-block;
     vertical-align: middle;
+    margin-top: 10px;
     width: 32.9%;
     height: 169.04px;
     /* border: #3291f8 1px solid; */
@@ -286,7 +287,7 @@ section
 {
     height: 139.77px;
     left: 612px;
-    bottom: 160px;
+    bottom: 230px;
 }
 .block1 >div > div:nth-of-type(2)::after{
     height: 132.77px;

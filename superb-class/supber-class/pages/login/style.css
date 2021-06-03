@@ -57,23 +57,83 @@ body {
 .tu1{
 	position: absolute;
 	left: 55px;
-	top: 127px;
+	top: 158px;
 }
 .tu2{
 	position: absolute;
 	left: 55px;
-	top: 193px;
-}
-.tu3{
-	position: absolute;
-	left: 55px;
-	top: 159px;
-}
-.tu4{
-	position: absolute;
-	left: 55px;
 	top: 225px;
 }
+.tu3{
+    position: absolute;
+    left: 50px;
+    top: 130px;
+}
+.tu4{
+    position: absolute;
+    left: 50px;
+    top: 215px;
+}
+#form2 #phone{
+    height: 50px;
+    width: 220px;
+    background-color: #fff;
+    border: none;
+    padding: 0 50px;
+    margin: 0.5rem 0;
+    border-radius: 20px;
+    outline: 0;
+}
+#form2 #code{
+    height: 50px;
+    width: 120px;
+    background-color: #fff;
+    border: none;
+    padding: 0 50px;
+    margin: 0.5rem 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    outline: 0;
+	margin-left: -96px;
+	display: inline-block;
+}
+
+#form2 .code{
+	position: absolute;
+	margin-left: 220px;
+	margin-top: 24px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-left: 1px solid rgb(212, 212, 224);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: rgb(117, 117, 139);
+    padding: 0 7px;
+}
+#form2 .yes{
+    height: 50px;
+    width: 180px;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    outline: 0;
+    background: linear-gradient(to right,#191654,#43C6AC);
+    margin-top: 30px;
+    color: #fff;
+}
+
+#form2 a{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(117, 117, 139);
+    display: block;
+    margin-top: 20px;
+}
+#form2  img{
+    background-color: rgb(233, 233, 233);
+}
+
 .container__form {
 	height: 100%;
 	position: absolute;
