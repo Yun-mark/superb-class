@@ -45,20 +45,20 @@
   <div class="container-fluid">
     <div class="row curve-pie">
       <div class="col-lg-8 col-md-8">
-        <div class="gragh_pannel" id="curve_show"></div>
+        <div class="gragh_pannel" id="curve_1"></div>
       </div>
       <div class="col-lg-4 col-md-4">
-        <div class="gragh_pannel" id="pie_show"></div>
+        <div class="gragh_pannel" id="pie_1"></div>
       </div>
     </div>
   </div>
 
   <div class="container-fluid">
-    <div class="column_pannel" id="column_show"></div>
+    <div class="column_pannel" id="column_1"></div>
   </div>
 
   <script>
-    var oChart = echarts.init(document.getElementById('curve_show'));
+    var oChart = echarts.init(document.getElementById('curve_1'));
     var aList_all = [
       { 'count': 36, 'date': '2019-04-13' },
       { 'count': 52, 'date': '2019-04-14' },
@@ -173,7 +173,7 @@
     oChart.setOption(chartopt);
 
 
-    var oPie = echarts.init(document.getElementById('pie_show'));
+    var oPie = echarts.init(document.getElementById('pie_1'));
     var oPieopt =
     {
       title: {
@@ -234,7 +234,7 @@
 
 
 
-    var oColumn = this.echarts.init(document.getElementById('column_show'));
+    var oColumn = this.echarts.init(document.getElementById('column_1'));
     var oColumnopt =
     {
       title: {
