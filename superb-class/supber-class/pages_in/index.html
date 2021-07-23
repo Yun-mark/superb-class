@@ -1,15 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>卓越班--内网首页</title>
+    <title>故事汇-后台主页</title>
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/fonts/iconfont.css">
 </head>
-
 <body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+          <div class="layui-logo layui-hide-xs">
+              <img src="./assets/images/计科卓越logo.png">
+          </div>
+          <!-- 头部区域（可配合layui 已有的水平导航） -->
+          <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+              <a href="javascript:;">
+                新建
+              </a>
+              <dl class="layui-nav-child">
+                <dd><a href=""><i class="layui-icon layui-icon-link"></i>附件</a></dd>
+                <dd><a href=""><i class="layui-icon layui-icon-form"></i>文档</a></dd>
+              </dl>
+            </li>
+            <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+              <a href="javascript:;" class="userinfo">
+                <span class="text-avatar">A</span>
+                个人中心
+              </a>
+              <dl class="layui-nav-child">
+                <dd><a href="">基本资料</a></dd>
+                <dd><a href="">账号安全</a></dd>
+              </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;" id="btnLogout"><span class="iconfont icon-tuichu"></span>退出</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="layui-side layui-bg-black">
+          <div class="layui-side-scroll">
+            
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
+                <li class="layui-nav-item layui-this"><a href="./home/sight.html" target="fm"><span class="iconfont icon-home"></span>首页</a></li>
+                <li class="layui-nav-item"><a href="javascript:;"><span class="iconfont icon-pinglun"></span>周报列表</a></li>
+              <li class="layui-nav-item">
+                <a class="" href="javascript:;"><span class="iconfont icon-16"></span>周报管理</a>
+                <dl class="layui-nav-child">
+                  <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 周报类别</a></dd>
+                  <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>个人列表</a></dd>
+                  <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>发布周报</a></dd>
+                </dl>
+              </li>
+              <li class="layui-nav-item">
+                <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
+                <dl class="layui-nav-child">
+                  <dd><a href="./user/user_info.html" target="fm"><i class="layui-icon layui-icon-template-1"></i>基本资料</a></dd>
+                  <dd><a href="javascript:;"><i class="layui-icon layui-icon-set"></i>账号安全</a></dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="layui-body">
+          <!-- 内容主体区域 -->
+         
+          <div class="layui-collapse"  >
+            <div class="layui-colla-item">
+              <div class="userinfo">
+                <span class="text-avatar">A</span>
+                <span id="welcome">欢迎</span>
+            </div>
+              <h2 class="layui-colla-title"><p>我的周报数据</p></h2>
+              <div class="layui-colla-content layui-show" > 
+                <iframe name="fm" src="./home/sight.html" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="layui-card card1">
+            <div class="layui-card-header" ><p>我的周报</p></div>
+            <div class="layui-card-body">
+              <table class="layui-table">
+                <colgroup>
+                  <col />
+                  <col />
+                  <col width="200" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>周报标题</th>
+                    <th>发布时间</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>朗云</td>
+                    <td>2021-11-29</td>
+                    <td>
+                      <div class="layui-btn-group">
+                        <button type="button" class="layui-btn layui-btn-sm">
+                          <i class="layui-icon">&#xe642;</i>
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-sm">
+                          <i class="layui-icon">&#xe640;</i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>张朗云</td>
+                    <td>2021-11-28</td>
+                    <td>
+                      <div class="layui-btn-group">
+                        <button type="button" class="layui-btn layui-btn-sm">
+                          <i class="layui-icon">&#xe642;</i>
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-sm">
+                          <i class="layui-icon">&#xe640;</i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>张朗云</td>
+                    <td>2021-11-28</td>
+                    <td><div class="layui-btn-group">
+                      <button type="button" class="layui-btn layui-btn-sm">
+                        <i class="layui-icon">&#xe642;</i>
+                      </button>
+                      <button type="button" class="layui-btn layui-btn-sm">
+                        <i class="layui-icon">&#xe640;</i>
+                      </button>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>张朗云</td>
+                    <td>2021-11-28</td>
+                    <td>
+                      <div class="layui-btn-group">
+                      <button type="button" class="layui-btn layui-btn-sm">
+                        <i class="layui-icon">&#xe642;</i>
+                      </button>
+                      <button type="button" class="layui-btn layui-btn-sm">
+                        <i class="layui-icon">&#xe640;</i>
+                      </button>
+                    </div>
+                  </td>
+                  </tr>   
+                </tbody>
+              </table> 
+              <div id="pageBox"></div>
+            </div>
+           
+          </div>
+          <div class="layui-card card2">
+            <div class="layui-card-header"><p>新建</p></div>
+            <div class="layui-card-body">
 
+           <div class="one">
+          <i class="layui-icon layui-icon-link" style="font-size: 65px; color: #009688;"></i><span>附件</span>
+          </div>
+          <div class="two">
+          <i class="layui-icon layui-icon-form" style="font-size: 70px; color: #1E9FFF;"></i><span>文档</span>
+          </div>
+           </div>
+          </div>
+        
+        </div>
+        
+        <div class="layui-footer">
+          <!-- 底部固定区域 -->
+          ©www.superb-class.cn - 计科卓越官网
+        </div>
+      </div>
+      <script src="./assets/lib/layui/layui.all.js"></script>
+      <script>
+        //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function(){
+          var element = layui.element;
+          
+          //…
+        });
+        </script>
+      <!--导入jQuery-->
+      <script src="./assets/lib/jquery.js"></script>
+
+      <script src="./assets/js/baseAPI.js"></script>
+      <script src="./assets/js/index.js"></script>
 </body>
-
 </html>

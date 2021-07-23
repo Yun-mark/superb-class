@@ -1,0 +1,73 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background-size: cover;
+}
+.layui-main img{
+    width: 30%;
+    margin-top: 5%;
+    margin-left: -10%
+}
+.loginAndRegBox {
+    width: 500px;
+    height: 400px;
+	background: linear-gradient(to top right, #191654,#43C6AC);
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    
+	border-radius: 20px;
+}
+.title-box{
+    height: 70px;
+    font-size: 45px;
+    color: azure;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    padding-top: 15px;
+    background-size: 60%;
+    letter-spacing: 3px;
+}
+.reg-box{
+    display:none;
+}
+.layui-form{
+    padding: 25px 30px;
+}
+.layui-form-item{
+    height: 50px;
+    position: relative;
+}
+.layui-icon{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 20px;
+}
+.layui-input{
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    padding-left: 40px;
+    
+	border-radius: 20px;
+}
+.layui-btn {
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.links{
+    display: flex;
+    justify-content: flex-end ;
+}
+
+.links a{
+    font-size: 20px;
+}
+.layui-btn{
+    border-radius: 20px;
+}
