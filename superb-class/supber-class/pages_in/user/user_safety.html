@@ -9,19 +9,24 @@
     <!-- 导入 layui 的样式 -->
     <link rel="stylesheet" href="../assets/lib/layui/css/layui.css" />
     <!-- 导入自己的样式 -->
-    <link rel="stylesheet" href="../assets/css/user_info.css" />
+    <link rel="stylesheet" href="../assets/css/user_safety.css" />
 </head>
 <body>
 
 
-    <div class="layui-card">
-  <div class="layui-card-header">卡片面板</div>
-  <div class="layui-card-body">
-    卡片式面板面板通常用于非白色背景色的主体内<br>
-    从而映衬出边框投影
+<div class="layui-card main-box">
+  <div class="layui-card-header user-safety-title">账号安全</div>
+  <div class="layui-card-body user-safety-content">
+    <div class="text">
+      <span>手机号</span><span>180****3267</span><a href="javascript:;" id="changeIphone">修改</a>
+    </div>
+    <div class="text">
+      <span>密码</span><span>******</span><a href="javascript:;" id="changePassword">修改</a>
+    </div>
   </div>
 </div>
-    
+
+
 
     <!-- 导入 layui 的 js -->
     <script src="../assets/lib/layui/layui.all.js"></script>
@@ -30,6 +35,6 @@
     <!-- 导入 baseAPI -->
     <script src="../assets/js/baseAPI.js"></script>
     <!-- 导入自己的 js -->
-    <script src="../assets/js/user/user_info.js"></script>
+    <script src="../assets/js/user/user_safety.js"></script>
 </body>
 </html>
