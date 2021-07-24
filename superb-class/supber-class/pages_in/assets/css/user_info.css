@@ -6,3 +6,28 @@ body{
     background-color: #f2f3f5;
     padding: 15px;
 }
+.layui-card-header{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 5%;
+} 
+.text-avatar {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 150, 136);
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 50%;
+}
+.pic{
+    margin-top: 2%;
+}
+.layui-form-label{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
