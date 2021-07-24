@@ -7,10 +7,12 @@ body{
     padding: 15px;
 }
 .layui-card-header{
-    font-weight: bolder;
-    font-size: 20px;
     margin-left: 5%;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px 15px 15px 0;
 } 
+
 .text-avatar {
     display: inline-block;
     width: 100px;
@@ -18,7 +20,7 @@ body{
     background-color: rgb(0, 150, 136);
     line-height: 100px;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(255, 255, 255);
     position: relative;
     border-radius: 50%;
@@ -30,4 +32,12 @@ body{
     font-size: 20px;
     font-weight: 200;
     letter-spacing: 5px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.layui-input{
+    width: 20%;
+}
+button{
+    margin-left: 15%;
 }

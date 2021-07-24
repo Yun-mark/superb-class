@@ -50,7 +50,7 @@ function renderAvatar(user) {
     }else{
         //文本头像
         $('.layui-nav-img').hide()
-        var first = name[0].toUpperCase()
+        var first = name.slice(-2).toUpperCase()
         $('.text-avatar').html(first).show()
     }
 
