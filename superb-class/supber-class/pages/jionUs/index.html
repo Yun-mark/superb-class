@@ -66,7 +66,7 @@
                          <div class="row">
                             <div class="col">
                                 <div class="inputBox textarea">
-                                    <textarea required ></textarea></textarea>
+                                    <textarea required id="tex" placeholder=""></textarea>
                                   <span class="text">自我介绍</span>
                                   <span class="line"></span>  
                                 </div>
@@ -84,5 +84,17 @@
         </div>
     </div>
     <!-- 加入我们结束 -->
+    <script>
+        var tex=document.getElementById("tex");
+        tex.style.fontSize="20px";
+        tex.onfocus=function(){
+            setTimeout(function(){
+                tex.setAttribute("placeholder","感兴趣或擅长的方向");
+            },300);
+        }
+        tex.onblur=function(){
+            tex.setAttribute("placeholder","");
+        }
+    </script>
 </body>
 </html>

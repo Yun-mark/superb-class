@@ -154,6 +154,7 @@ h2{
 .inputBox input:focus + .text,
 .inputBox input:valid + .text
 {
+    color: lightblue;
     top: -45px;
     left: -10px;
 }
@@ -177,6 +178,7 @@ h2{
 
 .form-box-right textarea:focus + .text,
 .form-box-right textarea:valid + .text{
+    color: lightblue;
     top: -45px;
     left: -10px;
 }
@@ -197,62 +199,5 @@ input[type="submit"]{
     top: 48px;
     left: 50%;
 }
-/* .form-box-right li{
-    height: 100px;
-    width: 100%;
-    text-align: left;
-    list-style: none;
-    font-size: 26px;
-    padding: 0 10px;
-    z-index: 1;
-    color: #000;
-}
-.form-box span{
-    font-size: 28px;
-}
-.form-box-sp{
-    margin-left: 105px;
-}
-.form-box-input{
-    height: 50px;
-    border: none;
-    background-color: rgba(0,0,0,0);
-    border-bottom: 1px solid rgba(187, 187, 187);
-    width:300px;
-    outline: none;
-    font-size: 26px;
-}
-.form-box-input:active {
-    border: none;
-}
-.form-box-right>form>ul>li:nth-child(2)>input{
-    margin-left: 12px;
-}
-.form-box label{
-    font-size: 16px;
-}
-.jieshao{
-    width: 795px;
-    height: 100%;
-}
-.form-box-right>li:last-child{
-    text-align: center;
-}
-button{
-    width: 100px;
-    height: 60px;
-    padding: 8px;
-    text-align: center;
-    border: 1px solid rgba(187, 187, 187);
-    position: absolute;
-    top: 505px;
-    left: 50%;
-    margin-left: -50px;
-    background-color: #fff;
-    border-radius: 10px;
-    font-weight: 900;
-    font-size: 125%;
-    cursor: pointer;
 
-} */
-/* 加入我们样式结束 */
+
