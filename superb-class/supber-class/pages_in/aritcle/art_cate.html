@@ -11,7 +11,7 @@
 <body>
     <div class="layui-card">
         <div class="layui-card-header">
-            <span>文章分类管理</span>
+            <span>周报分类管理</span>
             <button type="button" class="layui-btn layui-btn-radius layui-btn-normal layui-btn-sm" id="btnAddCate">添加类别</button>
         </div>
         <div class="layui-card-body">
@@ -40,8 +40,8 @@
             <td>{{$value.name}}</td>
             <td>{{$value.alias}}</td>
             <td>
-            <button type="button" class="layui-btn layui-btn-radius  layui-btn-xs btn-edit" >编辑</button>
-            <button type="button" class="layui-btn layui-btn-radius layui-btn-danger layui-btn-xs">删除</button>
+            <button type="button" class="layui-btn layui-btn-radius  layui-btn-xs btn-edit" data-id="{{$value.Id}}">编辑</button>
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.Id}}">删除</button>
             </td>
         </tr>
         {{/each}}
@@ -72,7 +72,7 @@
       </script>
     <!--修改分类的弹出层-->
       <script type="text/html" id="dialog-edit">
-        <form class="layui-form" id="form-edit" >
+        <form class="layui-form" id="form-edit" lay-filter="form-edit">
           <!-- 隐藏域，保存 Id 的值 -->
           <input type="hidden" name="Id">
           <div class="layui-form-item">
