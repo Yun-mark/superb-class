@@ -81,10 +81,10 @@ body {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  width: 64px;
-  height: 64px;
+  width: 55px;
+  height: 55px;
   line-height: 64px;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 50%;
   cursor: pointer;
 }
