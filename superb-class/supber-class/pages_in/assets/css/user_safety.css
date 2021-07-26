@@ -44,12 +44,161 @@ text-align: center;
   color: rgb(45, 206, 184);
 }
 .small-box-phone{
+  background-color: white;
   padding:25px 23px;
-  /* width: 600px;
-  height: 360px; */
+  width: 430px;
+  height: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
 }
 .small-box-phone h2{
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
+}
+.layui-layer-title{
+  font-size: 24px;
+  font-weight: 600;
+  height: 60px;
+}
+.phone-cover, .password-cover{
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color:rgba(1,1,1,.5);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+
+}
+.phone-cover{
+  display: none;
+}
+.password-cover{
+  display: none;
+}
+.layui-input{
+  background-color: #f2f3f5;
+}
+.layui-icon-close{
+  position: relative;
+}
+.layui-icon-close::before{
+  position: absolute;
+  top: -67px;
+  right: -442px;
+  font-size: 30px;
+  color: #8e8f92;
+  cursor: pointer;
+}
+
+/* 图片验证码 */
+.code {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+    /* .input-val {
+        width: 382px;
+        background: #ffffff;
+        height: 43px;
+        padding: 0 2% 0; */
+        /* border-radius: 5px; */
+        /* border: none;
+        border: 1px solid rgba(0,0,0,.2);
+        font-size: 1.0625rem;
+    } */
+.image-code,.image-code-password{
+  width: 100px;
+  display: inline-block;
+}
+#canvas, #canvasPassword{
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 120px;
+  bottom: -3px;
+}
+.phone-code{
+  width: 130px;
+}
+.phone-number{
+  width: 223px;
+}
+.layui-btn{
+  margin:   25px 23%;
+  font-weight: 600;
+  font-size: 20px;
+  background-color: #f2f3f5;
+  
+}
+/* .btn,.btnPass {
+    width: 100px;
+    height: 40px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto 0;
+    display: block;
+    font-size: 1.2rem;
+    color: #e22e1c;
+    cursor: pointer;
+    position: relative;
+    right: 300px;
+} */
+.words{
+  display: inline-block;
+  position: relative;
+}
+.words::after{
+  content: "看不清换一张";
+  font-size: 10px;
+  position: absolute;
+  display: inline-block;
+  left: 126px;
+  bottom: -3px;
+  width: 72px;
+  color: rgb(13, 202, 193);
+  cursor: pointer;
+}
+
+/* 修改密码 */
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.confirm-new-password, .new-password, .old-password{
+  width: 223px;
+}
+.password-words{
+  display: inline-block;
+  position: relative;
+}
+.password-words::after{
+  content: "密码由8-16位数字、字母组成";
+  font-size: 10px;
+  position: absolute;
+  display: inline-block;
+  left: 112px;
+  bottom: 0px;
+  width: 160px;
+  color: #8e8f92;
+  cursor: pointer;
+}
+.layui-form-item{
+  position: relative;
+}
+.eye{
+  position: absolute;
+  top: 6px;
+  right: 61px;
+  cursor: pointer;
 }
