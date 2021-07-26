@@ -28,14 +28,31 @@ $(function() {
       //阻止表单的默认重置行为
       e.preventDefault()
       initUserInfo()
+    }) 
+
+
+    //
+    $('.layui-form').on('submit',function(e){
+      //阻止默认
+      e.preventDefault()
+      $.ajax({
+        method:'POST',
+        url:'/my/userinfo',
+        data: $(this).serialize(),
+        success:function(res){
+          if(res.status!== 0){
+            return layer.msg('更新用户信息失败！')
+          }
+          layer.msg('更新用户信息成功!')
+
+          //调用父页面的方法
+          window.parent.getUserInfo()
+        }
+      })
     })
 
-
-
-
-
-    
   })
+  
 function renderAvatar(user) {
       //获取用户的名称
       var name = user.nickname || user.username
@@ -47,7 +64,7 @@ function renderAvatar(user) {
       }else{
           //文本头像
           $('.layui-nav-img').hide()
-          var first = name[0].toUpperCase()
+          var first = name.slice(-2).toUpperCase()
           $('.text-avatar').html(first).show()
       }
     }

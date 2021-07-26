@@ -1,19 +1,16 @@
 /* 加入我们样式开始 */
 body{
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  
+    overflow:visible;
 }
 .form{
     width: 100%;
-    height: 1095px;
 }
-.wrap{
-    width: 1090px;
-    margin: 0 auto;
-}
+
 .form-box{
     width: 100%;
     height: 385px;
+    display: grid;
     background-color: rgba(0,0,0,0);
     background: linear-gradient(to top right, #191654,#43C6AC);
     box-shadow:8px 8px 5px 0px #191654 ;
@@ -31,9 +28,8 @@ h2{
     margin-bottom: 15px;
 }
 .form-box-left{
-    width: 160px;
+    width: 100%;
     height: 100%;
-    float: left;
     border-right: 1px solid #45f3ff;
     position: relative;
 }
@@ -43,41 +39,38 @@ h2{
     position: absolute;
     background-color: skyblue;
     border-radius: 50%;
-    top: 20px;
+    top: 14%;
     right: -9px;
 }
 .form-box-left>ul>li:nth-child(2)>img{
-     top: 180px;
+     top: 40%;
 }
 .form-box-left>ul>li:last-child>img{
-     top: 340px;
+     top: 80%;
 }
-
+.form-box-left ul{
+    height: 100%;
+}
 .form-box-left li{
-    height: 150px;
+    height: 33%;
     text-align: right;
     padding-right: 10px;
-    font-size: 24px;
+    font-size: 18px;
     list-style: none;
     margin-top: 10px;
     color: #43C6AC;
 }
 
 .form-box-right{
-    width: 840px;
     margin-left: 40px;
     height: 100%;
-    float: left;
     position: relative;
     transition: 0.5s;
 }
 .row{
     position: relative;
     width: 100%;
-    height: 85px;
     display: grid;
-    /* grid-template-columns: repeat(1fr,1fr); */
-    grid-template-columns: repeat(2,400px);
     vertical-align: top;
 
 }
@@ -88,9 +81,7 @@ h2{
     margin: 30px 0 10px;
     transition: 0.5s;
 }
-.form-box-right .row>.col:last-child{
-    margin-left: 50px;
-}
+
 .inputBox{
     position: relative;
     width: 100%;
@@ -114,19 +105,9 @@ h2{
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 60px;
 }
-.inputBox .radio input{
-    width: 16px;
-    height: 16px;
-   margin-left: 20px;
-}
-.inputBox .radio label{
-    color: #43C6AC;
-    margin-left: 40px;
-}
-
 .inputBox .text{
     position: absolute;
     top: 0;
@@ -139,7 +120,12 @@ h2{
     transition: 0.5s;
     pointer-events: none;
 }
-
+.inputBox .radio label{
+    font-size: 14px;
+}
+.inputBox .radio label,.inputBox .radio input{
+    cursor: pointer;
+}
  .inputBox .line{
     position: absolute;
     bottom: 0;
@@ -154,6 +140,7 @@ h2{
 .inputBox input:focus + .text,
 .inputBox input:valid + .text
 {
+    color: lightblue;
     top: -45px;
     left: -10px;
 }
@@ -166,9 +153,6 @@ h2{
 .form-box-right .textarea{
     margin-left: 120px;
     position: relative;
-    width: 100%;
-    height: 80px;
-    padding: 10px 0;
 }
 .form-box-right .textarea textarea{
     height: 100%;
@@ -177,6 +161,7 @@ h2{
 
 .form-box-right textarea:focus + .text,
 .form-box-right textarea:valid + .text{
+    color: lightblue;
     top: -45px;
     left: -10px;
 }
@@ -184,7 +169,7 @@ h2{
 .form-box-right textarea:valid ~ .line{
     height: 100%;
 }
-input[type="submit"]{
+.submit{
     border: none;
     padding: 7px 35px;
     cursor: pointer;
@@ -194,65 +179,136 @@ input[type="submit"]{
     font-size: 28px;
     border-radius: 31px;
     position: absolute;
-    top: 48px;
+    bottom:0px;
     left: 50%;
+    transform: translate(-50%);
 }
-/* .form-box-right li{
-    height: 100px;
-    width: 100%;
-    text-align: left;
-    list-style: none;
-    font-size: 26px;
-    padding: 0 10px;
-    z-index: 1;
-    color: #000;
-}
-.form-box span{
-    font-size: 28px;
-}
-.form-box-sp{
-    margin-left: 105px;
-}
-.form-box-input{
-    height: 50px;
-    border: none;
-    background-color: rgba(0,0,0,0);
-    border-bottom: 1px solid rgba(187, 187, 187);
-    width:300px;
-    outline: none;
-    font-size: 26px;
-}
-.form-box-input:active {
-    border: none;
-}
-.form-box-right>form>ul>li:nth-child(2)>input{
-    margin-left: 12px;
-}
-.form-box label{
-    font-size: 16px;
-}
-.jieshao{
-    width: 795px;
-    height: 100%;
-}
-.form-box-right>li:last-child{
-    text-align: center;
-}
-button{
-    width: 100px;
-    height: 60px;
-    padding: 8px;
-    text-align: center;
-    border: 1px solid rgba(187, 187, 187);
-    position: absolute;
-    top: 505px;
-    left: 50%;
-    margin-left: -50px;
-    background-color: #fff;
-    border-radius: 10px;
-    font-weight: 900;
-    font-size: 125%;
-    cursor: pointer;
 
-} */
-/* 加入我们样式结束 */
+
+/* 移动端开始 */
+@media screen and (max-width:768px) {
+    .wrap{
+        width: 98%;
+        margin: 0 auto;
+    }
+    .form-box{
+        height: 490px;
+        grid-template-columns: 15% 85%;  
+
+    }
+    .form-box-right{
+        margin-left: 10px;
+
+    }
+    .row{
+        width: 100%;
+        grid-template-columns: repeat(1,80%);
+        grid-template-rows: repeat(2,85px);
+    }
+    .form-box-right .row>.col:last-child{
+        margin-left: 0;
+    }
+    .form-box-right .row>.col:last-child{
+        margin-left: 0;
+    }
+    .inputBox .radio input{
+        width: 13px;
+        height: 13px;
+        margin-top: 4px;
+       margin-left: -5px;
+    }
+    .inputBox .radio label{
+        color: #43C6AC;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .form-box-right .textarea{
+        margin-left: 0;
+        width: 100%;
+        height: 70px;
+    }
+    .submit{
+        font-size: 20px;
+    }
+
+}
+/* 移动端结束 */
+
+/* ipad端开始 */
+@media screen and (min-width:768px) and (max-width:992px) {
+    .wrap{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .form-box{
+        height: 340px;
+        grid-template-columns: 15% 85%;  
+    }
+    .row{
+        width: 100%;
+        grid-template-columns: repeat(2,44%);
+        grid-template-rows: 85px;
+    }
+    .form-box-right .row>.col:last-child{
+        margin-left: 50px;
+    }
+    .inputBox .radio input{
+        width: 13px;
+        height: 13px;
+        margin-top: 4px;
+       margin-left: 0px;
+    }
+    .form-box-right .textarea{
+        margin-left: 95px;
+    }
+    .inputBox .radio label{
+        color: #43C6AC;
+        margin-left: 15px;
+    }
+    .form-box-right .textarea{
+        width: 100%;
+        height: 60px;
+    }
+    .submit{
+        font-size: 22px;
+        bottom: 10px;
+    }
+}
+
+/* ipad端结束 */
+
+/* pc端开始 */
+@media screen and (min-width:992px) {
+    .wrap{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .form-box{
+        grid-template-columns: 15% 85%;  
+    }
+    .row{
+        width: 100%;
+        grid-template-columns: repeat(2,45%);
+        grid-template-rows: 85px;
+    }
+    .form-box-right .row>.col:last-child{
+        margin-left: 50px;
+    }
+    .inputBox .radio input{
+        width: 15px;
+        height: 15px;
+        margin-top: 4px;
+       margin-left: 5px;
+    }
+    .inputBox .radio label{
+        color: #43C6AC;
+        margin-left: 22px;
+    }
+    .form-box-right .textarea{
+        width: 100%;
+        height: 95px;
+    }
+}
+
+/* pc端结束 */
