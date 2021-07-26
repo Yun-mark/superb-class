@@ -60,5 +60,23 @@ $(function (){
              }
          })
     })
+
+    $('.eye').each(function(index, domEle){
+      $(domEle).on('click', function(){
+        let i = index;
+        let e = $(domEle)
+        $('.eye-password').each(function(index, domEle){
+          if(i === index && $(domEle).prop("type") === "password"){
+            e.prop("src","./assets/images/eye-open.png");
+            $(domEle).prop("type", "text");
+          }
+          else if(i === index && $(domEle).prop("type") === "text"){
+            e.prop("src","./assets/images/eye-close.png");
+            $(domEle).prop("type", "password");
+          }
+        })
+      })
+    })
+    
     
 })
