@@ -1,10 +1,17 @@
 
 $(function(){
   let form = layui.form;
+  let layer = layui.layer;
   var show_num = [];
   
   // 修改手机号弹窗
   $('#changeIphone').on('click', function(){
+    // 初始化一下
+    $(".image-code").val('');
+    $("#newPhone").val('');
+    $('.phone-wrong1').hide()
+    $('.phone-wrong2').hide()
+
     $('.phone-cover').show();
     draw(show_num,document.getElementById('canvas'));
     $('#canvas').prop('width','100');
@@ -13,22 +20,6 @@ $(function(){
       draw(show_num,document.getElementById('canvas'));
     })
     $('.words').click();
-    $(".btn").on('click',function(){
-      var val = $(".image-code").val().toLowerCase();
-      var num = show_num.join("");
-      if(val==''){
-          alert('请输入验证码！');
-      }else if(val == num){
-          alert('提交成功！');
-          $(".image-code").val('');
-          draw(show_num,document.getElementById('canvas'));
-
-      }else{
-          alert('验证码错误！请重新输入！');
-          $(".image-code").val('');
-          draw(show_num,document.getElementById('canvas'));
-      }
-  })
   })
   $('.phone-close').click(function() {
       $(".phone-cover").hide();
@@ -38,7 +29,22 @@ $(function(){
 
   // 修改密码弹窗
   $('#changePassword').on('click', function(){
+    // 初始化一下
+    $(".image-code-password").val('');
+    $("#newPassword").val('');
+    $(".confirm-new-password").val('');
+    $('.password-wrong1').hide()
+    $('.password-wrong2').hide()
+    $('.password-wrong3').hide()
+
     $('.password-cover').show();
+    $('.eye').each(function(index, domEle){
+      $(domEle).prop("src","../assets/images/eye-close.png");
+    })
+    $('.eye-password').each(function(index, domEle){
+      $(domEle).prop("type", "password");
+    })
+
     draw(show_num,document.getElementById('canvasPassword'));
 
     $('#canvasPassword').prop('width','100');
@@ -47,22 +53,6 @@ $(function(){
       draw(show_num,document.getElementById('canvasPassword'));
   })
     $('.words').click();
-    $(".btnPass").on('click',function(){
-      var val = $(".image-code-password").val().toLowerCase();
-      var num = show_num.join("");
-      if(val==''){
-          alert('请输入验证码！');
-      }else if(val == num){
-          alert('提交成功！');
-          $(".image-code-password").val('');
-          draw(show_num,document.getElementById('canvasPassword'));
-
-      }else{
-          alert('验证码错误！请重新输入！');
-          $(".image-code-password").val('');
-          draw(show_num,document.getElementById('canvasPassword'));
-      }
-  })
 })
   $('.password-close').click(function() {
       $(".password-cover").hide();
@@ -85,19 +75,92 @@ $(function(){
       })
     })
   })
-  
 
-
-
-  
-    
   //获取手机号
   // $.ajax({
     
   // })
-  
 
+  //验证手机号是否符合规范
+  let regPhone = /^1[3|4|5|8][0-9]{9}$/;
+  $('#newPhone').blur(function(){
+    if(regPhone.test($('#newPhone').prop('value')) === false){
+      $('.phone-wrong1').show()
+      $('.phone-wrong2').hide()
+    }
+    else{
+      if($('#newPhone').prop('value') === $('#oldPhone').prop('value')){
+        $('.phone-wrong1').hide()
+        $('.phone-wrong2').show()
+      }
+      else{
+        $('.phone-wrong1').hide()
+        $('.phone-wrong2').hide()
+      }
+    }
+  })
 
+  $(".btn-phone").on('click',function(event){
+    //阻止默认提交事件
+    event.preventDefault()
+    let val = $(".image-code").val().toLowerCase();
+    let num = show_num.join("");
+    if(val==''){
+      layer.msg('请输入验证码！', {icon: 5})
+    }else if(val === num){
+      if($('.phone-wrong1').css('display')==="none" && $('.phone-wrong2').css('display')==="none"){
+        layer.msg('修改成功！', {icon: 6})
+        $(".phone-cover").hide();
+      }
+      else layer.msg('请规范填写信息');
+      
+    }else{
+        layer.msg('验证码错误，请重新填写');
+        draw(show_num,document.getElementById('canvas'));
+    }
+  })
 
+  // 验证密码是否符合规范
+  let regPass = /^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{8,16}$/;
+  $('#newPassword').blur(function(){
+    if(regPass.test($('#newPassword').prop('value')) === false){
+      $('.password-wrong1').show()
+      $('.password-wrong2').hide()
+    }
+    else{
+      if($('#newPassword').prop('value') === $('#oldPassword').prop('value')){
+        $('.password-wrong1').hide()
+        $('.password-wrong2').show()
+      }
+      else{
+        $('.password-wrong1').hide()
+        $('.password-wrong2').hide()
+      }
+    }
+  })
+  $('.confirm-new-password').blur(function(){
+    if($('.confirm-new-password').prop('value') === $('#newPassword').prop('value'))
+      $('.password-wrong3').hide()  
+    else $('.password-wrong3').show()
+  })
+
+  $(".btn-password").on('click',function(event){
+    //阻止默认提交事件
+    event.preventDefault()
+    let val = $(".image-code-password").val().toLowerCase();
+    let num = show_num.join("");
+    if(val==''){
+      layer.msg('请输入验证码！', {icon: 5})
+    }else if(val === num){
+      if($('.password-wrong1').css('display')==="none" && $('.password-wrong2').css('display')==="none"&&$('.password-wrong3').css('display')==="none"){
+        layer.msg('修改成功！', {icon: 6})    
+        $(".password-cover").hide();
+      }    
+      else layer.msg('请规范填写信息');
+    }else{
+        layer.msg('验证码错误，请重新填写');
+        draw(show_num,document.getElementById('canvas'));
+    }
+  })
 
 })

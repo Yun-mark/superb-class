@@ -35,38 +35,39 @@
       <div class="layui-form-item">
         <label class="layui-form-label">原手机号</label>
         <div class="layui-input-block">
-          <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input phone-number" value="13625490889" disabled> 
+          <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input phone-number" value="13625490889" disabled id="oldPhone"> 
         </div>
     </div>
   
     <div class="layui-form-item">
       <label class="layui-form-label">新手机号</label>
-      <div class="layui-input-block">
+      <div class="layui-input-inline">
         <input type="text" name="newPhone" required  lay-verify="required" autocomplete="off" class="layui-input phone-number" id="newPhone">
       </div>
+      <div class="layui-form-mid phone-wrong1">格式错误</div> 
+      <div class="layui-form-mid phone-wrong2">与原手机号相同</div>
   </div>
   
   <div class="layui-form-item">    
     <label class="layui-form-label">图形数字码</label>  
     <div class="layui-input-block ">
-        <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input image-code">
+        <input type="text" name="title" autocomplete="off" class="layui-input image-code">
         <canvas id="canvas" width="100" height="43"></canvas>
         <div class="words"></div>
-        <!-- <button class="btn">提交</button> -->
     </div>
-    <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div>  -->
+    
   </div>
   
-  <div class="layui-form-item">
+  <!-- <div class="layui-form-item">
     <label class="layui-form-label">验证码</label>
     <div class="layui-input-block">
       <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input phone-code">
     </div>
-  </div>
+  </div> -->
 
   <div class="layui-form-item">
     <div class="layui-input-block">
-      <button class="layui-btn layui-btn-primary" lay-submit lay-filter="formDemo">提交</button>
+      <button class="layui-btn layui-btn-primary btn-phone" lay-submit lay-filter="formDemo">提交</button>
     </div>
   </div>
     </form>
@@ -77,7 +78,7 @@
 
 <!-- 修改密码弹窗 -->
 <div class="password-cover">
-  <div class="small-box-phone" >
+  <div class="small-box-password" >
     <h2>修改密码</h2>
     <i class="layui-icon layui-icon-close password-close"></i>  
     <form class="layui-form" action="">
@@ -85,34 +86,36 @@
       <div class="layui-form-item">
         <label class="layui-form-label">原密码</label>
         <div class="layui-input-block">
-          <input type="password" name="title" required  lay-verify="required" autocomplete="off" class="layui-input old-password eye-password" value="13625490889" disabled> 
+          <input type="password" name="title" required  lay-verify="required" autocomplete="off" class="layui-input old-password eye-password" value="136254908kj" disabled id="oldPassword"> 
         </div>
         <img src="../assets/images/eye-close.png" alt="eye" class="eye">
     </div>
   
     <div class="layui-form-item">
       <label class="layui-form-label">新密码</label>
-      <div class="layui-input-block">
-        <input type="password" name="newPhone" required  lay-verify="required" autocomplete="off" class="layui-input new-password eye-password">
+      <div class="layui-input-inline">
+        <input type="password" name="newPassword" required  lay-verify="required" autocomplete="off" class="layui-input new-password eye-password" id="newPassword">
       </div>
       <img src="../assets/images/eye-close.png" alt="eye" class="eye">
+      <div class="layui-form-mid password-wrong1">格式错误</div> 
+      <div class="layui-form-mid password-wrong2">与原密码相同</div>
   </div>
   
   <div class="layui-form-item">
     <label class="layui-form-label">确认密码</label>
-    <div class="layui-input-block">
+    <div class="layui-input-inline">
       <input type="password" name="title" required  lay-verify="required" autocomplete="off" class="layui-input confirm-new-password eye-password">
     </div>
     <img src="../assets/images/eye-close.png" alt="eye" class="eye">
+    <div class="layui-form-mid password-wrong3">两次密码不一致</div>
   </div>
 
   <div class="layui-form-item">    
     <label class="layui-form-label">图形数字码</label>  
     <div class="layui-input-block ">
-        <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input image-code-password">
+        <input type="text" name="title" autocomplete="off" class="layui-input image-code-password">
         <canvas id="canvasPassword" width="100" height="43"></canvas>
         <div class="words"></div>
-        <!-- <button class="btnPass">提交</button> -->
     </div> 
   </div>
   
@@ -120,7 +123,7 @@
 
   <div class="layui-form-item">
     <div class="layui-input-block">
-      <button class="layui-btn layui-btn-primary" lay-submit lay-filter="formDemo">提交</button>
+      <button class="layui-btn layui-btn-primary btn-password" lay-submit lay-filter="formDemo" >提交</button>
     </div>
   </div>
     </form>

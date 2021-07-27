@@ -43,7 +43,7 @@ text-align: center;
   text-align: right;
   color: rgb(45, 206, 184);
 }
-.small-box-phone{
+.small-box-phone,.small-box-password{
   background-color: white;
   padding:25px 23px;
   width: 430px;
@@ -53,6 +53,9 @@ text-align: center;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
+}
+.small-box-password{
+  width: 460px;
 }
 .small-box-phone h2{
   font-size: 24px;
@@ -88,12 +91,19 @@ text-align: center;
 }
 .layui-icon-close::before{
   position: absolute;
-  top: -67px;
-  right: -442px;
   font-size: 30px;
   color: #8e8f92;
   cursor: pointer;
 }
+.phone-close::before{
+  top: -67px;
+  right: -442px;
+}
+.password-close::before{
+  top: -43px;
+  left: 440px;
+}
+
 
 /* 图片验证码 */
 .code {
@@ -101,16 +111,6 @@ text-align: center;
   margin: 0 auto;
   position: relative;
 }
-    /* .input-val {
-        width: 382px;
-        background: #ffffff;
-        height: 43px;
-        padding: 0 2% 0; */
-        /* border-radius: 5px; */
-        /* border: none;
-        border: 1px solid rgba(0,0,0,.2);
-        font-size: 1.0625rem;
-    } */
 .image-code,.image-code-password{
   width: 100px;
   display: inline-block;
@@ -137,20 +137,6 @@ text-align: center;
   background-color: #f2f3f5;
   
 }
-/* .btn,.btnPass {
-    width: 100px;
-    height: 40px;
-    background: #f1f1f1;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 20px auto 0;
-    display: block;
-    font-size: 1.2rem;
-    color: #e22e1c;
-    cursor: pointer;
-    position: relative;
-    right: 300px;
-} */
 .words{
   display: inline-block;
   position: relative;
@@ -199,7 +185,27 @@ text-align: center;
 .eye{
   position: absolute;
   top: 6px;
-  right: 61px;
+  left: 339px;
   cursor: pointer;
 }
-
+.layui-form-mid{
+  color: red; 
+  position: absolute;
+  font-size: 13px;
+  display: none;
+}
+.phone-wrong1{
+  right: 30px;
+}
+.phone-wrong2{
+  right: -9px;
+}
+.password-wrong1,.password-wrong2{
+  left: 372px;
+}
+.password-wrong3{
+  right: -14px;
+}
+.demo-class{
+  width: 20px;
+}
