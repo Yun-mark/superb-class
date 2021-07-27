@@ -71,3 +71,9 @@ html, body{
 .layui-btn{
     border-radius: 20px;
 }
+.eye{
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  cursor: pointer;
+}
