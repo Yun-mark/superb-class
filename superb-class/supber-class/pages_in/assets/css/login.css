@@ -17,7 +17,7 @@ html, body{
 	background: linear-gradient(to top right, #191654,#43C6AC);
     position: absolute;
     left: 50%;
-    top:50%;
+    top:37%;
     transform: translate(-50%,-50%);
     
 	border-radius: 20px;

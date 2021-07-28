@@ -1,11 +1,4 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-    font-family: 'Raleway';
-  }
-  
+
   *{
     margin: 0;
     padding: 0;
@@ -49,7 +42,8 @@ html, body {
     width: 220px;
     font-size: 48px;
     text-align: center;
-    margin-left: 650px;
+    left: 650px;
+    top:-290px;
   }
    .header h3{
     position: absolute;
@@ -59,14 +53,13 @@ html, body {
     font-size: 24px;
     text-align: center;
     left: 650px;
-    top: 70px;
+    top: -230px;
   }
 
   
 .contactForm{
-  position: absolute;
   margin-left: 950px;
-  margin-top:150px;
+  margin-top:-385px;
   width: 500px;
   background: linear-gradient(to top right, #191654,#43C6AC);
   box-shadow:8px 8px 5px 0px #191654 ;
@@ -142,11 +135,11 @@ html, body {
   #wrapper {
     width: 800px;
     height: 420px;
-    position: absolute;
+    margin-bottom: -40px;
     background: linear-gradient(to top right,#43C6AC, #191654);
     box-shadow:8px 8px 5px 0px #191654 ;
     margin-left: 70px;
-    margin-top: 130px;
+    margin-top: -170px;
     display: flex;
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -244,7 +237,7 @@ html, body {
   #right-side #first, #right-side #second, #right-side #third {
     position: absolute;
     height: 300px;
-    width: 75%;
+    width: 33%;
     -webkit-transition: all .6s ease-in-out;
             transition: all .6s ease-in-out;
     margin-top: -350px;

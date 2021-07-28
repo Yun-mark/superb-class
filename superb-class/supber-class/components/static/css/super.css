@@ -4,30 +4,28 @@
     transition:  all 0.5s;
 }
 body{
-	height: 860px;
-background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+	width: 100%;
+   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 .t1{
-    margin: 0 auto;
-    margin-top: 10px;
-    width: 192px;
-    height: 72px;
+    margin: -330px auto;
     color:#43C6AC;
     font-size: 48px;
     text-align: center;
     font-weight: bold; 
-
 }
 .t2{
-    margin: 0 auto;
+    margin: 350px auto;
     width: 400px;
     height: 42px;
     color:  #43c6aca9;
     font-size: 28px;
 }
 .middle{
-  width: 1210px;
-  margin: 0 auto;
+  position: absolute;
+  top:50px;
+  width: 100%;
+  margin: 130px auto;
   padding: 5px;
   padding-left: 20px;
 }
@@ -45,7 +43,6 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
   overflow:hidden;
   background: linear-gradient(to top right,#191654,#43C6AC );
   box-shadow: 10px 10px 5px 0px #191654 	;
-
 } 
 .box .icon-cont{
 	border: 5px solid rgba(255,255,255,0.3);
@@ -196,20 +193,15 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 
 
-
-
-
-
-
 button{
     position: absolute;
-    width: 460px;
-    height: 85px;
+    width: 30%;
+	height: 10%;
     opacity: 0.85;
     border-radius: 30px;
     font-size: 24px;
     text-align: center;
-    top: 500px;
+    top: 550px;
     float: left;
     z-index: 100;
 	box-shadow: 10px 10px 5px 0px #191654;

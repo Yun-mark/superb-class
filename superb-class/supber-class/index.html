@@ -5,67 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>计科卓越</title>
-    <link rel="stylesheet" href="./components/static/css/common.css">
-    <link rel="stylesheet" href="./components/static/css/fullPage.css">
-    <link rel="stylesheet" href="./components/static/css/iconfont.css">
+    <link rel="icon" href="./components/static/img/zhuoyue icon.ico">
+    <link rel="stylesheet" href="./components/static/css/layui.css">
+    <link rel="stylesheet" href="./components/static/css/index.css">
+    <link rel="stylesheet" href="./pages_in/assets/fonts/iconfont.css">
     <link rel="stylesheet" href="./components/static/css/nav.css">
-    <link rel="icon" href="../supber-class/components/static/img/zhuoyue icon.ico">
 </head>
+    
 <body>
-    <div class="header">
-        <div class="header_in">
-        <div class="logo"></div>
-        <div class="nav">
-        <ul>
-            <li><a href="./index.html" target="_parent">关于我们</a></li>
-            <li><a href="./pages/plan/index.html" target="_parent">成长计划</a></li>
-            <li><a href="./pages/companies/index.html" target="_parent">卓越赛事</a></li>
-            <li><a href="./pages/ourStories/index.html" target="_parent">成员风采</a></li>
-            <li><a href="./pages/ResourceCommunity/index.html" target="_parent">资源社区</a></li>
-            <li><a href="./pages/jionUs/index.html" target="_parent">加入我们</a></li>
-            <li><a href="">••••</a></li>
-        </ul>
+      <div class="layui-layout">
+         <ul class="layui-nav layui-bg-cyan" lay-bar="disabled" >
+            <li class="layui-nav-item logo"></li>
+            <li class="layui-nav-item option" lay-unselect><a href="#">菜单栏</a></li>
+            <li class="layui-nav-item layui-this "><a href="./index.html">关于我们</a></li>
+            <li class="layui-nav-item "><a href="./pages/plan/index.html" target="fm">成长计划</a></li>
+            <li class="layui-nav-item "><a href="./pages/companies/index.html" target="fm">卓越赛事</a></li>
+            <li class="layui-nav-item "><a href="./pages/ourStories/index.html" target="fm">成员风采</a></li>
+            <li class="layui-nav-item "><a href="./pages/jionUs/index.html" target="fm">加入我们</a></li>
+            <li class="layui-nav-item ">
+              <a href="javascript:;">更多信息</a>
+              <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="./pages/ResourceCommunity/index.html" target="fm">资源社区</a></dd>
+              </dl>
+            </li>
+            <li class="layui-nav-item login 1"><a href="./pages_in/login.html" target="fm">登录</a></li>
+          </ul>
         </div>
-        <div class="login"><a href="../pages_in/login.html" target="_parent">登录</a></div>
-    </div>
-    </div>
-    
-    <div id="container" class="section-wrap fullpage">  
-        <!--顶部导航栏-->
-        
-      <!--第一屏 轮播图-->
-      <div id="section-1" class="section">
-     <iframe id="switch" src="./pages/aboutUs/lb/index.html" frameborder="0"></iframe>
-    </div>
-    <!--第二屏 计科卓越--> 
-    <div id="section-2"  class="section">
-        <iframe  id="superb" src="./pages/aboutUs/superb/index.html" frameborder="0"></iframe>
-    </div>
-    <!--第三屏 联系我们-->
-    <div class="section-3"  class="section">
-        <iframe id="contactUs" src="./pages/aboutUs/contactUs/index.html" frameborder="0">
-        </iframe> 
-    </div>
-    <!--第四屏  footer-->
-    <div class="section-4"  class="section">
-        <iframe id="footer" src="./pages/aboutUs/footer/index.html" frameborder="0" >
-        </iframe>
-    </div>
-</div>
-    
-    <ul class="section-btn">
-        <li class="on"></li>    
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <div class="arrow arrowIndex">
-        <span class="arrDown iconfont icon-shangxiajiantou" style="color: white;"></span>
-        <div style="color: white;">下一页</div>
+      <div class="layui-body">
+        <iframe src="./pages/aboutUs/aboutUs.html" frameborder="0" name="fm"></iframe>
       </div>
-         
+    <script src="./pages_in/assets/lib/layui/layui.all.js"></script>     
     <script src="./components/static/js/jquery.min.js"></script>
-    <script src="./components/static/js/fullPage.js"></script>
-    <script src="./components/static/js/fullPage.min.js"></script>
+    <script>
+      //注意：导航 依赖 element 模块，否则无法进行功能性操作
+      layui.use('element', function(){
+        var element = layui.element;
+         
+      });
+      </script>
 </body>
 </html>
