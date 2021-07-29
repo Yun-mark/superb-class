@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+body{
+    background-color: rgb(245,247,251);
+    overflow: visible;
+    height: 5000px;
+}
+
+/* 设置标题 */
+#h{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: rgb(58,76,85) ;
+}
+
+.tab{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.li_list li{
+    float: left;
+    height: 40px;
+    width: 150px;
+    background-color:white;
+    border: 1px solid rgb(216,217,217);
+    margin-right: 30px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    
+    box-shadow: 10px 10px 5px 0px gainsboro;
+}
+
+.li_list li:hover{
+    color: white;
+    background-color: #009688 ;
+}
+
+.li_list{
+    margin-bottom: 60px;
+    height: 40px;
+    margin-left: 50px;
+}
+
+.tab_con .item{
+    height: 300px;
+    width: 200px;
+    background-color: rgb(245,247,251);
+    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 10px 10px 5px 0px gainsboro;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 200px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    display: none;
+    color: white;
+    font-size: 12px;
+    padding-top: 250px;
+    text-indent: 2em;
+}
+.item:hover {
+    transform: translate(0,-10px);
+    transition: 0.8s;
+}
+img{
+    height: 200px;
+    width: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.item p{
+    text-align: center;
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;color:rgb(58,76,85) ;
+}
+
+#name{
+    border-bottom: 2px solid rgb(49,123,134);
+    font-size: 20px;
+}
+
+.tab_con{
+    display: none;
+    height: 3000px;
+    width: 1250px;
+}

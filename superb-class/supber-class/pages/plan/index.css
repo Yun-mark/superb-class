@@ -5,7 +5,7 @@
   font-family: SourceHanSansSC-regular;
 }
 body{
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background-color:rgba(245,247,251);
   overflow:visible;
 }
 li {
@@ -63,13 +63,13 @@ html {
 }
 #box #content .title {
   margin: 0.225rem 1.1rem 0.2625rem 0;
-  background: linear-gradient(to top right, #191654,#43C6AC);
-  box-shadow: 10px 10px 30px #191654 ;
+  background-color: #f0f0f4;
+  box-shadow: 10px 10px 5px 0px gainsboro;
   width: 18.825rem;
   height: 1.3375rem;
 }
 #box #content .title h1 {
-  color: #43C6AC;
+  color: #000;
   font-size: 0.75rem;
   width: 6.25rem;
   height: 1.1125rem;
@@ -77,7 +77,7 @@ html {
   line-height: 1.35rem;
 }
 .liBefore {
-  color: #fff;
+  color: #000;
   font-size: 0.35rem;
 }
 .liBefore::before {
@@ -101,11 +101,9 @@ html {
   height: 8.2375rem;
   background: #fff;
 }
-
-.block1,
-.block2 {
+.block1,.block2 {
   width: 18.825rem;
-  background: linear-gradient(to top right, #191654,#43C6AC);
+  background-color: #f0f0f4;
   margin-bottom: 1.2375rem;
 }
 .block1 > h1,
@@ -113,23 +111,22 @@ html {
   width: 18.825rem;
   height: 1.075rem;
   text-align: center;
-  color: #43c6aca9;
+  color: #000;
   font-size: 0.45rem;
   line-height: 1.03rem;
 }
-.text1,
-.text2,
-.text3 {
+.text1,.text2,.text3 {
   vertical-align: middle;
   display: inline-block;
   margin-bottom: 0.3rem;
   transition: all 0.3s;
   border-radius: 0.3rem;
-  box-shadow: 0 10px 30px #191654;
+  box-shadow: 10px 10px 5px 0px gainsboro;
 }
 .text1:hover,.text2:hover,.text3:hover{
   transform: translate(0,-5px);
 }
+
 .text1,
 .text2,
 .text3 div {
@@ -154,18 +151,19 @@ html {
   top: 0.06rem;
   right: 0.3rem;
 }
-
-.text1 div h1 {
-  color: #43c6aca9;
+.text1 div h1 ,
+.text2 div h1 ,
+.text3 div h1{
+  color: #000;
   font-size: 0.45rem;
   text-align: center;
   display: inline-block;
   padding-bottom: 0.03rem;
-  border-bottom: 0.025rem solid #E1E3E6;
+  border-bottom: 2px solid rgb(49,123,134);
 }
 .text1 p {
   width: 3.9625rem;
-  color: #EDF1F2;
+  color: #000;
   margin-left: 0.85rem;
 }
 .text1 p:nth-of-type(1) {
@@ -182,23 +180,14 @@ html {
   display: inline-block;
   text-align: center;
 }
-
-.text2 div h1 {
-  color: #43c6aca9;
-  font-size: 0.45rem;
-  text-align: center;
-  display: inline-block;
-  padding-bottom: 0.03rem;
-  border-bottom: 0.025rem solid #E1E3E6;
-}
 .text2 p {
   width: 3.9625rem;
-  color: #EDF1F2;
+  color: #000;
   margin: 0.1375rem 0 0 2.6375rem;
 }
 .text2 ul {
   width: 3.9625rem;
-  color: #EDF1F2;
+  color: #000;
   margin: 0.1375rem 0 0 2.6375rem;
 }
 .text2:nth-of-type(1) {
@@ -211,36 +200,31 @@ html {
   display: inline-block;
   text-align: center;
 }
-
-.text3 div h1 {
-  color: #43c6aca9;
-  font-size: 0.45rem;
-  text-align: center;
-  display: inline-block;
-  padding-bottom: 0.03rem;
-  border-bottom: 0.025rem solid #E1E3E6;
-}
 .text3 p {
   width: 3.9625rem;
-  color: #EDF1F2;
+  color: #000;
   margin: 0.1rem 0 0.1rem 0.85rem;
 }
 .text3 p:nth-of-type(1) {
   margin-top: 0.35rem;
+}
+.text1:hover span,
+.text2:hover span,
+.text3:hover span{
+  transition: all 0.3s;
+  background-color: #d6ecf0;
 }
 .text3:nth-of-type(1),
 .text3:nth-of-type(2),
 .text3:nth-of-type(3) {
   position: relative;
 }
-
 .text3:nth-of-type(1) p {
   margin: 0.15rem 0 0.1rem 0.85rem;
 }
 .text3:nth-of-type(1) p:nth-of-type(1) {
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
 }
-
 
 /* 移动端开始 */
 @media screen and (max-width:767px) {
@@ -295,6 +279,9 @@ html {
 #box #tab ul::before {
   height: 35rem;
 }
+.text3:nth-of-type(1) p:nth-of-type(1) {
+  margin-top: 1.7rem;
+}
 }
 /* 移动端结束 */
 
@@ -339,7 +326,6 @@ html {
     font-size: 0.65rem;
   }
 }
-
 /* ipad端结束 */
 
 /* pc端开始 */
