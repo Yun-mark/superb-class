@@ -4,7 +4,10 @@
   box-sizing: border-box;
   font-family: SourceHanSansSC-regular;
 }
-
+body{
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  overflow:visible;
+}
 li {
   list-style-type: none;
 }
@@ -51,6 +54,7 @@ html {
   border-radius: 50%;
   background-color: #c2c7cc;
 }
+
 #box #content {
   margin-left: 4.1rem;
   height: 10.8rem;
@@ -59,12 +63,13 @@ html {
 }
 #box #content .title {
   margin: 0.225rem 1.1rem 0.2625rem 0;
-  background: #fff;
+  background: linear-gradient(to top right, #191654,#43C6AC);
+  box-shadow: 10px 10px 30px #191654 ;
   width: 18.825rem;
   height: 1.3375rem;
 }
 #box #content .title h1 {
-  color: #505559;
+  color: #43C6AC;
   font-size: 0.75rem;
   width: 6.25rem;
   height: 1.1125rem;
@@ -72,7 +77,7 @@ html {
   line-height: 1.35rem;
 }
 .liBefore {
-  color: #000;
+  color: #fff;
   font-size: 0.35rem;
 }
 .liBefore::before {
@@ -96,9 +101,11 @@ html {
   height: 8.2375rem;
   background: #fff;
 }
+
 .block1,
 .block2 {
-  background: #fff;
+  width: 18.825rem;
+  background: linear-gradient(to top right, #191654,#43C6AC);
   margin-bottom: 1.2375rem;
 }
 .block1 > h1,
@@ -106,23 +113,27 @@ html {
   width: 18.825rem;
   height: 1.075rem;
   text-align: center;
-  color: #505559;
+  color: #43c6aca9;
   font-size: 0.45rem;
-  background-color: rgba(235, 244, 255, 0.9);
   line-height: 1.03rem;
 }
 .text1,
 .text2,
 .text3 {
   vertical-align: middle;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  transition: all 0.3s;
+  border-radius: 0.3rem;
+  box-shadow: 0 10px 30px #191654;
+}
+.text1:hover,.text2:hover,.text3:hover{
+  transform: translate(0,-5px);
 }
 .text1,
 .text2,
 .text3 div {
   vertical-align: middle;
-}
-.text1 ,.text2 ,.text3{
-  display: inline-block;
 }
 .text1 div {
   height: 0.525rem;
@@ -131,17 +142,21 @@ html {
   display: inline-block;
   text-align: center;
 }
-.text1 div span {
+.text1 div span ,
+.text2 div span ,
+.text3 div span{
   display: inline-block;
   width: 0.5rem;
   height: 0.5rem;
   border: 1px solid #E1E3E6;
   position: relative;
+  background-color: #FFFFF5;
   top: 0.06rem;
   right: 0.3rem;
 }
+
 .text1 div h1 {
-  color: #757575;
+  color: #43c6aca9;
   font-size: 0.45rem;
   text-align: center;
   display: inline-block;
@@ -150,7 +165,7 @@ html {
 }
 .text1 p {
   width: 3.9625rem;
-  color: #505559;
+  color: #EDF1F2;
   margin-left: 0.85rem;
 }
 .text1 p:nth-of-type(1) {
@@ -160,17 +175,6 @@ html {
 .text1:nth-of-type(2) {
   position: relative;
 }
-.text1:nth-of-type(1)::after,
-.text1:nth-of-type(2)::after {
-  content: "";
-  position: absolute;
-  top: 0.225rem;
-  right: 0;
-  width: 0.0125rem;
-  height: 2.2875rem;
-  background-color: rgba(225, 227, 230, 0.65);
-}
-
 .text2 div {
   height: 0.525rem;
   margin-top: 0.1625rem;
@@ -178,17 +182,9 @@ html {
   display: inline-block;
   text-align: center;
 }
-.text2 div span {
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 1px solid #E1E3E6;
-  position: relative;
-  top: 0.06rem;
-  right: 0.3rem;
-}
+
 .text2 div h1 {
-  color: #757575;
+  color: #43c6aca9;
   font-size: 0.45rem;
   text-align: center;
   display: inline-block;
@@ -197,27 +193,17 @@ html {
 }
 .text2 p {
   width: 3.9625rem;
-  color: #505559;
+  color: #EDF1F2;
   margin: 0.1375rem 0 0 2.6375rem;
 }
 .text2 ul {
   width: 3.9625rem;
-  color: #505559;
+  color: #EDF1F2;
   margin: 0.1375rem 0 0 2.6375rem;
 }
 .text2:nth-of-type(1) {
   position: relative;
 }
-.text2:nth-of-type(1)::after {
-  content: "";
-  position: absolute;
-  top: 0.225rem;
-  right: 0;
-  width: 0.0125rem;
-  height: 2.2875rem;
-  background-color: rgba(225, 227, 230, 0.65);
-}
-
 .text3 div {
   height: 0.525rem;
   margin-top: 0.1625rem;
@@ -225,17 +211,9 @@ html {
   display: inline-block;
   text-align: center;
 }
-.text3 div span {
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 1px solid #E1E3E6;
-  position: relative;
-  top: 0.06rem;
-  right: 0.3rem;
-}
+
 .text3 div h1 {
-  color: #757575;
+  color: #43c6aca9;
   font-size: 0.45rem;
   text-align: center;
   display: inline-block;
@@ -244,7 +222,7 @@ html {
 }
 .text3 p {
   width: 3.9625rem;
-  color: #505559;
+  color: #EDF1F2;
   margin: 0.1rem 0 0.1rem 0.85rem;
 }
 .text3 p:nth-of-type(1) {
@@ -255,17 +233,7 @@ html {
 .text3:nth-of-type(3) {
   position: relative;
 }
-.text3:nth-of-type(1)::after,
-.text3:nth-of-type(2)::after,
-.text3:nth-of-type(3)::after {
-  content: "";
-  position: absolute;
-  top: 0.225rem;
-  right: 0;
-  width: 0.0125rem;
-  height: 2.2875rem;
-  background-color: rgba(225, 227, 230, 0.65);
-}
+
 .text3:nth-of-type(1) p {
   margin: 0.15rem 0 0.1rem 0.85rem;
 }
@@ -274,20 +242,14 @@ html {
 }
 
 
-
 /* 移动端开始 */
 @media screen and (max-width:767px) {
-  body{
-    overflow:visible;
-  }
+ 
   #box{
-    height: 1200px;
+    height: 1500px;
   }
   #box #content {
     width: 18.7rem;
-  }
-  .block1,.block2 {
-    width: 17.825rem;
   }
   .text1,.text2,.text3{
     width: 100%;
@@ -338,24 +300,19 @@ html {
 
 /* ipad端开始 */
 @media screen and (min-width:768px) and (max-width:992px) {
-  body{
-    overflow:visible;
-  }
+
   #box{
     height: 1500px;
   }
   #box #content {
     width: 18.7rem;
   }
-  .block1,.block2 {
-    width: 17.825rem;
-  }
   .text1,.text2{
-    width: 8.19rem;
+    width: 9.19rem;
   font-size: 0.375rem;
   }
   .text3{
-    width: 5.632rem;
+    width: 4.512rem;
   font-size: 0.375rem;
   }
   .text1 p{
@@ -387,22 +344,22 @@ html {
 
 /* pc端开始 */
 @media screen and (min-width:992px) {
+  #box{
+    height: 800px;
+  }
   #box #content {
     width: 19.7rem;
-  }
-  .block1,.block2 {
-    width: 19.825rem;
   }
   .text1 {
     width: 6.19rem;
     font-size: 0.175rem;
   }
   .text2 {
-    width: 9.36rem;
+    width: 9.3rem;
     font-size: 0.175rem;
   }
   .text3 {
-    width: 4.632rem;
+    width: 4.622rem;
     font-size: 0.175rem;
   }
 }
