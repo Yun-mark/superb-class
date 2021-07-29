@@ -4,6 +4,21 @@ $(function(){
   let layer = layui.layer;
   var show_num = [];
   
+  //获取用户信息
+  function getUserInfo (){
+    $.ajax({
+         method:'GET',
+         url:'/userHome/info',
+         success: function(res){
+             if(res.code !== 200){
+                 return  layui.layer.msg('获取用户的基本信息失败!')
+             }
+            $('#oldPhone').
+         },
+         //不论成功与否，都会调用complete回调函数
+    })
+}
+
   // 修改手机号弹窗
   $('#changeIphone').on('click', function(){
     // 初始化一下
@@ -76,10 +91,7 @@ $(function(){
     })
   })
 
-  //获取手机号
-  // $.ajax({
-    
-  // })
+
 
   //验证手机号是否符合规范
   let regPhone = /^1[3|4|5|8][0-9]{9}$/;

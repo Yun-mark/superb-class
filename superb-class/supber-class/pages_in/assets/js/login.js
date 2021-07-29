@@ -30,9 +30,9 @@ $(function (){
        //阻止表单的默认提交
        e.preventDefault()
        //发起ajax的post请求
-       $.post('/api/reguser',{ username: $('#form_reg [name=username]').val(),
+       $.post('/user/register',{ username: $('#form_reg [name=username]').val(),
         password: $('#form_reg [name=password]').val()  }, function(res){
-            if(res.status !== 0) {
+            if(res.code !== 200) {
                 return layer.msg(res.message)
             }
             layer.msg('注册成功，请登录')
@@ -46,16 +46,16 @@ $(function (){
     $('#form_login').submit('click',function(e){
          e.preventDefault()
          $.ajax({
-             url:'/api/login' ,
+             url:'/user/login' ,
              method:'POST',
              data: $(this).serialize(),
              success: function(res){
-                 if(res.status!== 0){
+                 if(res.code!== 200){
                      return layer.msg('登录失败!')
                  }
                  layer.msg('登录成功！')
                  //将登录成功得到的token字符串，保存到localStorage中
-                 localStorage.setItem('token',res.token)
+                 localStorage.setItem('token',res.data.token)
                  location.href = './index.html'
              }
          })

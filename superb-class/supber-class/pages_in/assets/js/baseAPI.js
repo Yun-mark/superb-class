@@ -4,20 +4,20 @@
 
 $.ajaxPrefilter(function (options){
    //在发起真正的ajax请求之前，统一拼接请求的根路径
-   options.url = 'http://api-breakingnews-web.itheima.net' + options.url
+   options.url = 'http://supertest.nat300.top' + options.url
 
 
-  if(options.url.indexOf('/my/')!==-1){
+  if(options.url.indexOf('/userHome/')!==-1){
    options.headers = {
-      Authorization: localStorage.getItem('token')|| ''
-    }
+     token : localStorage.getItem('token')|| '' 
+   } 
   }
-   options.complete = function(res){
-      if(res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！'){
-         localStorage.removeItem('token')
-         //强制跳转登录
-         location.href = './login.html'
-      }
-   }
+  //  options.complete = function(res){
+  //     if(res.responseJSON.status === 500 ){
+  //        localStorage.removeItem('token')
+  //        //强制跳转登录
+  //        location.href = './login.html'
+  //     }
+  //  }
 })
 

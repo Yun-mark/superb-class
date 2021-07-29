@@ -13,9 +13,9 @@ $(function() {
     function initUserInfo(){
       $.ajax({
         method:'GET',
-        url:'/my/userinfo',
+        url:'/userHome/info',
         success:function (res) {
-          if(res.status!== 0){
+          if(res.code!== 200){
             return layer.msg('获取用户信息失败！')
           }
           form.val('formUserInfo',res.data)
@@ -37,10 +37,10 @@ $(function() {
       e.preventDefault()
       $.ajax({
         method:'POST',
-        url:'/my/userinfo',
+        url:'/userHome/updateUser',
         data: $(this).serialize(),
         success:function(res){
-          if(res.status!== 0){
+          if(res.code!== 200){
             return layer.msg('更新用户信息失败！')
           }
           layer.msg('更新用户信息成功!')
