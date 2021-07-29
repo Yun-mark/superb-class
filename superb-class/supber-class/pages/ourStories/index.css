@@ -7,7 +7,7 @@ li{
     list-style: none;
 }
 body{
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background-color: rgb(245,247,251);
     overflow: visible;
     height: 5000px;
 }
@@ -18,7 +18,7 @@ body{
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: rgb(67,198,172);
+    color: rgb(58,76,85) ;
 }
 
 .tab{
@@ -36,11 +36,13 @@ body{
     text-align: center;
     line-height: 40px;
     border-radius: 10px;
+    
+    box-shadow: 10px 10px 5px 0px gainsboro;
 }
 
 .li_list li:hover{
     color: white;
-    background-color: rgb(50,145,248);
+    background-color: #009688 ;
 }
 
 .li_list{
@@ -52,14 +54,14 @@ body{
 .tab_con .item{
     height: 300px;
     width: 200px;
-    background: linear-gradient(to top right,#191654,#43C6AC );
+    background-color: rgb(245,247,251);
     float: left;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 30px;
     border-radius: 10px;
     position: relative;
-    box-shadow: 10px 10px 5px 0px #191654;
+    box-shadow: 10px 10px 5px 0px gainsboro;
 }
 .mask{
     position: absolute;
@@ -89,8 +91,7 @@ img{
     text-align: center;
     font-size: 12px;
     height: 50px;
-    line-height: 50px;
-    color: rgb(67,198,172);
+    line-height: 50px;color:rgb(58,76,85) ;
 }
 
 #name{

@@ -5,7 +5,7 @@
   font-family: SourceHanSansSC-regular;
 }
 body{
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background-color: rgb(245,247,251);
   overflow:visible;
 }
 li {
@@ -38,7 +38,7 @@ html {
   left: 0;
   width: 0.025rem;
   height: 8rem;
-  background: #C2C7CC;
+  background: #009688;
 }
 #box #tab ul li {
   margin: 1.25rem 0;
@@ -52,7 +52,7 @@ html {
   content: "";
   position: absolute;
   border-radius: 50%;
-  background-color: #c2c7cc;
+  background-color: #009688;
 }
 
 #box #content {
@@ -64,20 +64,19 @@ html {
 #box #content .title {
   margin: 0.225rem 1.1rem 0.2625rem 0;
   background: linear-gradient(to top right, #191654,#43C6AC);
-  box-shadow: 10px 10px 30px #191654 ;
+  box-shadow: 10px 10px 30pxgainsboro ;
   width: 18.825rem;
   height: 1.3375rem;
 }
-#box #content .title h1 {
-  color: #43C6AC;
+#box #content .title h1 { 
+  color: rgb(58,76,85);
   font-size: 0.75rem;
   width: 6.25rem;
   height: 1.1125rem;
   margin: 0.125rem 0 0.1rem 0.4rem;
   line-height: 1.35rem;
 }
-.liBefore {
-  color: #fff;
+.liBefore { color: rgb(58,76,85);
   font-size: 0.35rem;
 }
 .liBefore::before {
@@ -87,7 +86,7 @@ html {
   top: 0.175rem;
 }
 .liAfter {
-  color: #3291F8;
+  color: rgb(58,76,85);
   font-size: 0.45rem;
 }
 .liAfter::before {
@@ -105,7 +104,7 @@ html {
 .block1,
 .block2 {
   width: 18.825rem;
-  background: linear-gradient(to top right, #191654,#43C6AC);
+  background: rgb(245,247,251);
   margin-bottom: 1.2375rem;
 }
 .block1 > h1,
@@ -113,7 +112,7 @@ html {
   width: 18.825rem;
   height: 1.075rem;
   text-align: center;
-  color: #43c6aca9;
+  color: rgb(58,76,85);
   font-size: 0.45rem;
   line-height: 1.03rem;
 }
@@ -125,7 +124,7 @@ html {
   margin-bottom: 0.3rem;
   transition: all 0.3s;
   border-radius: 0.3rem;
-  box-shadow: 0 10px 30px #191654;
+  box-shadow: 0 10px 30px gainsboro;
 }
 .text1:hover,.text2:hover,.text3:hover{
   transform: translate(0,-5px);
@@ -165,7 +164,7 @@ html {
 }
 .text1 p {
   width: 3.9625rem;
-  color: #EDF1F2;
+  color: rgb(58,76,85);
   margin-left: 0.85rem;
 }
 .text1 p:nth-of-type(1) {
@@ -193,12 +192,12 @@ html {
 }
 .text2 p {
   width: 3.9625rem;
-  color: #EDF1F2;
+  color: rgb(58,76,85);
   margin: 0.1375rem 0 0 2.6375rem;
 }
 .text2 ul {
   width: 3.9625rem;
-  color: #EDF1F2;
+  color: rgb(58,76,85);
   margin: 0.1375rem 0 0 2.6375rem;
 }
 .text2:nth-of-type(1) {
@@ -222,7 +221,7 @@ html {
 }
 .text3 p {
   width: 3.9625rem;
-  color: #EDF1F2;
+  color: rgb(58,76,85);
   margin: 0.1rem 0 0.1rem 0.85rem;
 }
 .text3 p:nth-of-type(1) {
