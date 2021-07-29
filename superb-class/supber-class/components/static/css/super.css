@@ -8,14 +8,14 @@ body{
    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 .t1{
-    margin: -330px auto;
+    margin: -388px auto;
     color:#43C6AC;
     font-size: 48px;
     text-align: center;
     font-weight: bold; 
 }
 .t2{
-    margin: 350px auto;
+    margin: 394px auto;
     width: 400px;
     height: 42px;
     color:  #43c6aca9;
@@ -23,7 +23,7 @@ body{
 }
 .middle{
   position: absolute;
-  top:50px;
+  top: -6px;
   width: 100%;
   margin: 130px auto;
   padding: 5px;
@@ -201,7 +201,7 @@ button{
     border-radius: 30px;
     font-size: 24px;
     text-align: center;
-    top: 550px;
+    top: 494px;
     float: left;
     z-index: 100;
 	box-shadow: 10px 10px 5px 0px #191654;
