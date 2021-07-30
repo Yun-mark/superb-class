@@ -18,6 +18,14 @@ $(function() {
           if(res.code!== 200){
             return layer.msg('获取用户信息失败！')
           }
+          if(res.data.gender == 0){
+            $("input[name=gender][value=1]").prop("checked","false");
+            $("input[name=gender][value=0]").prop("checked","true");
+           }
+           if(res.data.identity == 0){
+            $("input[name=identity][value=1]").prop("checked","false");
+            $("input[name=identity][value=0]").prop("checked","true");
+           }
           form.val('formUserInfo',res.data)
           renderAvatar(res.data)
         }
@@ -57,9 +65,9 @@ function renderAvatar(user) {
       //获取用户的名称
       var name = user.nickname || user.username
       //按需渲染用户的头像
-      if(user.user_pic !== null){
+      if(user.userPic !== null){
           //头像
-          $('layui-nav-img').attr('src',user.user_pic).show()
+          $('layui-nav-img').attr('src',user.userPic).show()
           $('text-avatar').hide()
       }else{
           //文本头像

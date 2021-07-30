@@ -9,6 +9,7 @@ $.ajaxPrefilter(function (options){
 
   if(options.url.indexOf('/userHome/')!==-1){
    options.headers = {
+     Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
      token : localStorage.getItem('token')|| '' 
    } 
   }

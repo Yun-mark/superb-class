@@ -29,8 +29,7 @@ function getUserInfo (){
                  return  layui.layer.msg('获取用户的基本信息失败!')
              }
              renderAvatar(res.data)
-         },
-         //不论成功与否，都会调用complete回调函数
+         }
     })
 }
 
@@ -40,9 +39,9 @@ function renderAvatar(user) {
     //设置欢迎的文本
     $('#welcome').html('Hi,&nbsp;&nbsp;' + name)
     //按需渲染用户的头像
-    if(user.user_pic !== null){
+    if(user.userPic !== null){
         //头像
-        $('layui-nav-img').attr('src',user.user_pic).show()
+        $('layui-nav-img').attr('src',user.userPic).show()
         $('text-avatar').hide()
     }else{
         //文本头像

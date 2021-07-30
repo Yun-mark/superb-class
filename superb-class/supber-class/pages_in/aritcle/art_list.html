@@ -12,7 +12,10 @@
     
     <div class="layui-card">
         <div class="layui-card-header">
-            <span>个人周报列表</span>
+            <a href="javascript:;" class="userinfo">
+            <span class="text-avatar"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>   
+            <span>的周报列表</span>
         </div>
         <div class="layui-card-body">
 
@@ -63,8 +66,8 @@
       {{each data}}
       <tr>
         <td>{{$value.title}}</td>
-        <td>{{$value.cate_name}}</td>
-        <td>{{$value.pub_date|dataFormat}}</td>
+        <td>{{$value.cateName}}</td>
+        <td>{{$value.publishdate|dataFormat}}</td>
         <td>{{$value.state}}</td>
         <td>
           <button type="button" class="layui-btn layui-btn-xs">编辑</button>
@@ -92,5 +95,6 @@
      <script src="../assets/lib/template-web.js"></script> 
       <!-- 导入自己的 js --> 
      <script src="../assets/js/article/art_list.js"></script>
+     <script src="../assets/js/index.js"></script>
 </body>
 </html>

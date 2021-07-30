@@ -9,10 +9,11 @@ $(function(){
   function initArtCateList(){
       $.ajax({
           method:'GET',
-          url:'/my/article/cates',
+          url:'/category/get',
           success: function(res){
           var htmlStr = template('tpl-table',res)
            $('tbody').html(htmlStr)  
+           console.log(res);
         }
       })
   }
@@ -34,11 +35,11 @@ $(function(){
     e.preventDefault()
     $.ajax({
       method:'POST',
-      url:'/my/article/addcates',
+      url:'/category/add',
       data:$(this).serialize(),
       success: function(res){
-        if(res.status !== 0){
-          return layer.msy('新增分类失败！')
+        if(res.code !== 200){
+          return layer.msg('新增分类失败！')
         }
         initArtCateList()
         layer.msg('新增分类成功!')
@@ -64,7 +65,7 @@ $(function(){
       // 发起请求获取对应分类的数据
       $.ajax({
         method: 'GET',
-        url: '/my/article/cates/' + id,
+        url: '/category/get',
         success: function(res) {
           form.val('form-edit', res.data)
         }
@@ -79,10 +80,10 @@ $('body').on('submit', '#form-edit', function(e) {
   e.preventDefault()
   $.ajax({
     method: 'POST',
-    url: '/my/article/updatecate',
+    url: '/category/update',
     data: $(this).serialize(),
     success: function(res) {
-      if (res.status !== 0) {
+      if (res.code !== 200) {
         return layer.msg('更新分类数据失败！')
       }
       layer.msg('更新分类数据成功！')
@@ -99,10 +100,10 @@ $('tbody').on('click', '.btn-delete', function() {
   layer.confirm('确认删除?', { icon: 3, title: '提示' }, function(index) {
     $.ajax({
       method: 'GET',
-      url: '/my/article/deletecate/' + id,
+      url: '/category/delete/' + id,
       success: function(res) {
-        if (res.status !== 0) {
-          return layer.msg('删除分类失败！')
+        if (res.code !== 200) {
+          return layer.msg(res.message)
         }
         layer.msg('删除分类成功！')
         layer.close(index)

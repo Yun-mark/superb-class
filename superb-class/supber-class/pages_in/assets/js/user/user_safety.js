@@ -14,7 +14,7 @@ $(function(){
                  return  layui.layer.msg('获取用户的基本信息失败!')
              }
             $('#oldPhone').
-         },
+         }
          //不论成功与否，都会调用complete回调函数
     })
 }

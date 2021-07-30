@@ -28,15 +28,15 @@
           <div class="layui-form-item">
             <label class="layui-form-label">性别</label>
             <div class="layui-input-block">
-              <input type="radio" name="sex" value="男" title="男">
-              <input type="radio" name="sex" value="女" title="女" checked>
+              <input type="radio" name="gender" value="1" title="男" >
+              <input type="radio" name="gender" value="0" title="女" checked="">
             </div>
           </div>
           <div class="layui-form-item">
             <label class="layui-form-label">职位</label>
             <div class="layui-input-block">
-              <input type="checkbox" name="like[teacher]" title="老师">
-              <input type="checkbox" name="like[student]" title="学生" checked>
+              <input type="radio" name="identity" value="1" title="老师" checked="">
+              <input type="radio" name="identity" value="0" title="学生" >
             </div>
           </div>
           <div class="layui-form-item">
@@ -51,7 +51,6 @@
               <input type="text" name="nickname" required lay-verify="required|nickname" placeholder="请输入用户昵称" autocomplete="off" class="layui-input" />
             </div>
           </div>
-          
           <div class="layui-form-item">
             <div class="layui-input-block">
               <button class="layui-btn" lay-submit lay-filter="formDemo">保存修改</button>
