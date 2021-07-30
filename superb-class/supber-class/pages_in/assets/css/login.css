@@ -17,7 +17,7 @@ html, body{
 	background: linear-gradient(to top right, #191654,#43C6AC);
     position: absolute;
     left: 50%;
-    top:37%;
+    top:50%;
     transform: translate(-50%,-50%);
     
 	border-radius: 20px;
@@ -42,7 +42,7 @@ html, body{
     height: 50px;
     position: relative;
 }
-.layui-icon{
+.layui-icon-password, .layui-icon-username{
     position: absolute;
     left: 15px;
     top: 15px;
@@ -76,4 +76,26 @@ html, body{
   top: 11px;
   right: 12px;
   cursor: pointer;
+}
+
+/* logo */
+#logo{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 60px;
+  margin-left: 10px;
+  top: 3%;
+  width: 300px;
+  height: 60px;
+  background: url(../images/计科卓越logo.png)  no-repeat center;
+  background-size: cover;
+}
+.layui-icon-return{
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  top: 2%;
+  right: 2%;
+  transform: rotate(180deg);
 }

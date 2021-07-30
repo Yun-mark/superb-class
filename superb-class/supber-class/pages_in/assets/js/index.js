@@ -1,6 +1,4 @@
 $(function(){
-
-
     //调用函数，获取用户基本信息
     getUserInfo()
 
@@ -25,10 +23,9 @@ $(function(){
 function getUserInfo (){
     $.ajax({
          method:'GET',
-         url:'/my/userinfo',
-         // headers 就是请求头配置对象
+         url:'/userHome/info',
          success: function(res){
-             if(res.status !== 0){
+             if(res.code !== 200){
                  return  layui.layer.msg('获取用户的基本信息失败!')
              }
              renderAvatar(res.data)

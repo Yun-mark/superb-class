@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body {
+
+    overflow: visible;
+    /* background: linear-gradient(to  top, #8e9eab,#eef2f3); */
+    background-color: rgb(245, 247, 251);
+}
+
+.container {
+    text-align: center;
+    margin-top: -10px;
+
+}
+
+.content {
+    display: flex;
+    /* float: left; */
+
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+
+.list {
+    position: relative;
+    height: 538px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    flex-direction: row;
+
+}
+
+.list .card {
+    margin-top: 100px;
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: #fff;
+    margin: 105px 20px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: .3s ease-in-out;
+    float: left;
+    /* border: 5px solid rgb(231,232,235); */
+}
+
+.list .card:hover {
+    height: 420px;
+    margin: 1px 20px;
+}
+
+.list .card .imgBx {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 5px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.list .card .imgBx img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* margin-left: -20px; */
+}
+
+.list .card .content1 {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: left;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.list .card:hover .content1 {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: .3s;
+}
+
+
+.content1 {
+    border: 1px solid #f4f4f4;
+    height: 100%;
+
+    /* overflow: hidden; */
+}
+
+.card span {
+    position: relative;
+    top: -40px;
+    left: 10px;
+    text-align: center;
+}
+
+li {
+    cursor: pointer;
+
+    list-style-type: none;
+}
+
+
+
+.container h3 {
+    margin-left: 20px;
+}
+
+.line {
+    color: #009688;
+    margin-top: -10px;
+}
