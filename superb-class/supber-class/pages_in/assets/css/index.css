@@ -13,7 +13,6 @@
     margin-right: 8px;
     margin-left: 20px;
 }
-
 .layui-body{
     overflow: hidden;
     background-color: #e2e2e2;
@@ -37,6 +36,8 @@ a{
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
+    background-color:  #ebebe4;
+    box-shadow: 5px 5px 2px 0px gainsboro;
 }
 .layui-colla-title .layui-colla-icon{
     font-size: 20px;
@@ -63,7 +64,7 @@ iframe {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: #009688;
+    background-color:#009688;
     border-radius: 50%;
     line-height: 40px;
     text-align: center;
@@ -90,6 +91,7 @@ iframe {
     font-size: 40px;
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 5px 5px 2px 0px gainsboro;
 }
 .layui-nav-child .layui-icon{
     margin-left: 8px;
@@ -107,6 +109,9 @@ iframe {
     position: relative;
     bottom: 6%;
 }
+.layui-colla-item #welcome{ 
+   color: #009688;
+}
 .layui-card{
     display: inline-block;
 }
@@ -116,6 +121,7 @@ iframe {
     float: left;
     border-radius: 10px;
     margin: 1%;
+    box-shadow: 5px 5px 2px 0px gainsboro;
 }
 .card2{
     width: 30%;
@@ -123,6 +129,7 @@ iframe {
     height: 600px;
     margin: 1%;
     border-radius: 10px;
+    box-shadow: 5px 5px 2px 0px gainsboro;
 }
 .layui-card-header{
     height: 60px;
@@ -144,7 +151,16 @@ iframe {
     margin-top: 20px;
     font-size: 20px;
 }
+.three{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+}
 .layui-card-body span{
     display: block;
-    margin: 22% ;
+    margin: 28% ;
 }
+.layui-table{
+    color: #2F4056;
+}
+

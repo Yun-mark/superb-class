@@ -22,7 +22,7 @@
             <span class="text-avatar">A</span>
             <span id="welcome">欢迎</span>
         </div>
-          <h2 class="layui-colla-title"><p>我的周报数据</p></h2>
+          <h2 class="layui-colla-title"><p>点击收起</p></h2>
           <div class="layui-colla-content layui-show" > 
             <div class="container-fluid">
               <div class="row spannel_list">
@@ -76,28 +76,12 @@
         <div class="layui-card-body">
 
           <!--筛选区域-->
-          <form class="layui-form" id="form-search">
-            <div class="layui-form-item layui-inline">
-              <select name="cate_id"></select>
-            </div>
-            <div class="layui-form-item layui-inline">
-              <select name="state">
-                <option value="">所有状态</option>
-                <option value="已发布">已发布</option>
-                <option value="草稿">草稿</option>
-              </select>
-            </div>
-            <div class="layui-form-item layui-inline">
-              <button class="layui-btn" lay-submit lay-filter="formDemo">筛选</button>
-            </div>
-          </form>
           <!--列表区域-->
-          <table class="layui-table">
+          <table class="layui-table" lay-even lay-skin="nob" lay-size="lg">
               <colgroup>
                 <col>
-                <col width="150">
+                <col width="150" >
                 <col width="180">
-                <col width="150">
                 <col width="150">
               </colgroup>
               <thead>
@@ -106,7 +90,6 @@
                   <th>分类</th>
                   <th>发布时间</th>
                   <th>状态</th>
-                  <th>操作</th>
                 </tr> 
               </thead>
               <tbody></tbody>
@@ -121,13 +104,9 @@
         {{each data}}
         <tr>
           <td>{{$value.title}}</td>
-          <td>{{$value.cate_name}}</td>
-          <td>{{$value.pub_date|dataFormat}}</td>
+          <td>{{$value.cateName}}</td>
+          <td>{{$value.publishdate|dataFormat}}</td>
           <td>{{$value.state}}</td>
-          <td>
-            <button type="button" class="layui-btn layui-btn-xs">编辑</button>
-            <button type="button" class="layui-btn layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.Id}}">删除</button>
-          </td>
         </tr>
         {{/each}}
       </script>
@@ -137,25 +116,21 @@
         <div class="layui-card-header"><p>新建</p></div>
         <div class="layui-card-body">
 
-       <div class="one">
+      <div class="one">
       <i class="layui-icon layui-icon-link" style="font-size: 65px; color: #009688;"></i>
       <span>附件</span>
       </div>
       <div class="two">
-      <i class="layui-icon layui-icon-form" style="font-size: 70px; color: #1E9FFF;"></i>
+      <i class="layui-icon layui-icon-read" style="font-size: 70px; color: #1E9FFF;"></i>
       <span>文档</span>
-      </div>
+    </div>
+      <div class="three">
+        <i class="layui-icon layui-icon-spread-left" style="font-size: 70px; color: #FF5722;"></i>
+        <span>更多</span>
        </div>
       </div> 
       
     
-      <!-- 分类可选项的模板结构 -->
-      <script type="text/html" id="tpl-cate">
-        <option value="">所有分类</option>
-        {{each data}}
-        <option value="{{$value.Id}}">{{$value.name}}</option>
-        {{/each}}
-      </script>
 
 
       <script src="../assets/lib/layui/layui.all.js"></script>
@@ -169,7 +144,6 @@
         </script>
         <!--模板引擎的js-->
       <script src="../assets/lib/template-web.js"></script> 
-        <script src="../assets/js/baseAPI.js"></script>
         <script src="../assets/js/index.js"></script>
         <script>
           var oChart = echarts.init(document.getElementById('curve_1'));

@@ -11,6 +11,13 @@ body{
     justify-content: space-between;
    
 }
+.layui-table{
+    color: #2F4056;
+}
+.layui-card{
+    box-shadow: 5px 5px 3px 0px gainsboro;
+    border-radius: 10px;
+}
 span{
     margin-left: 1%;
     font-size: 25px;

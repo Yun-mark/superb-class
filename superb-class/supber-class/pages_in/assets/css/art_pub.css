@@ -37,3 +37,7 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
 }
+.layui-card{
+  box-shadow: 5px 5px 2px 0px gainsboro;
+    border-radius: 10px;
+}

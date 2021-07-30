@@ -9,6 +9,8 @@ body{
 .main-box{
 padding: 30px 40px 10px;
 /* height: 500px; */
+box-shadow: 5px 5px 2px 0px gainsboro;
+border-radius: 10px;
 }
 .user-safety-title{
 font-size: 30px;

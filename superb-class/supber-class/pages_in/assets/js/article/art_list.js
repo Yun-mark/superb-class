@@ -25,33 +25,32 @@ $(function() {
   
     // 定义一个查询的参数对象，将来请求数据的时候，
     // 需要将请求参数对象提交到服务器
-    var q = {
-      pagenum: 1, // 页码值，默认请求第一页的数据
-      pagesize: 2, // 每页显示几条数据，默认每页显示2条
-      cate_id: '', // 文章分类的 Id
-      state: '' // 文章的发布状态
-    }
+    // var q = {
+    //   pagenum: 1, // 页码值，默认请求第一页的数据
+    //   pagesize: 2, // 每页显示几条数据，默认每页显示2条
+    //   cate_id: '', // 文章分类的 Id
+    //   state: '' // 文章的发布状态
+    // }
   
     initTable()
-    initCate()
+    //initCate()
   
     // 获取文章列表数据的方法
     function initTable() {
       $.ajax({
         method: 'GET',
-        url: '/article/all',
-        data: q,
+        url: '/article/get',
+       // data: q,
         success: function(res) {
           if (res.code !== 200) {
-            return layer.msg('获取文章列表失败！')
+            return layer.msg('获取文章列表失败！') 
           }
-          layer.msg(res.message)
+          //layer.msg('获取周报列表成功!')
           // 使用模板引擎渲染页面的数据
-          var htmlStr = template('tpl-table', res.data)
-          // console.log(res.data);
+          var htmlStr = template('tpl-table', res)
           $('tbody').html(htmlStr)
           // 调用渲染分页的方法
-          // renderPage(res.total)
+        //   renderPage(res.total)
         }
       })
     }
@@ -60,9 +59,9 @@ $(function() {
     function initCate() {
       $.ajax({
         method: 'GET',
-        url: '/my/article/cates',
+        url: '/article/cates',
         success: function(res) {
-          if (res.status !== 0) {
+          if (res.code !== 0) {
             return layer.msg('获取分类数据失败！')
           }
           // 调用模板引擎渲染分类的可选项
@@ -86,6 +85,8 @@ $(function() {
       // 根据最新的筛选条件，重新渲染表格的数据
       initTable()
     })
+
+    
   
     // 定义渲染分页的方法
     function renderPage(total) {
@@ -131,9 +132,9 @@ $(function() {
       layer.confirm('确认删除?', { icon: 3, title: '提示' }, function(index) {
         $.ajax({
           method: 'GET',
-          url: '/my/article/delete/' + id,
+          url: '/article/dustbin/' + id,
           success: function(res) {
-            if (res.status !== 0) {
+            if (res.code !== 200) {
               return layer.msg('删除文章失败！')
             }
             layer.msg('删除文章成功！')
