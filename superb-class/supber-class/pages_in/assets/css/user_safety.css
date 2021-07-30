@@ -169,7 +169,7 @@ text-align: center;
   position: relative;
 }
 .password-words::after{
-  content: "密码由8-16位数字、字母组成";
+  content: "密码由6-16位数字、字母组成";
   font-size: 10px;
   position: absolute;
   display: inline-block;

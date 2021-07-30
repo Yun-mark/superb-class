@@ -95,7 +95,7 @@ $(function() {
   function publishArticle(fd) {
     $.ajax({
       method: 'POST',
-      url: '/my/article/add',
+      url: '/article/create',
       data: fd,
       // 注意：如果向服务器提交的是 FormData 格式的数据，
       // 必须添加以下两个配置项

@@ -35,6 +35,7 @@ $(function() {
     $('.layui-form').on('submit',function(e){
       //阻止默认
       e.preventDefault()
+      console.log( $(this).serialize());
       $.ajax({
         method:'POST',
         url:'/userHome/updateUser',

@@ -3,9 +3,9 @@ $(function(){
   let form = layui.form;
   let layer = layui.layer;
   var show_num = [];
-  
+  initUserInfo()
   //获取用户信息
-  function getUserInfo (){
+  function initUserInfo(){
     $.ajax({
          method:'GET',
          url:'/userHome/info',
@@ -13,11 +13,21 @@ $(function(){
              if(res.code !== 200){
                  return  layui.layer.msg('获取用户的基本信息失败!')
              }
-            $('#oldPhone').
+            let phone = '';
+            for(let i = 0; i<res.data.phonenumber.length; i++){
+              if(i>=3 && i<=6)
+                phone = phone + '*';
+              else
+                phone = phone + res.data.phonenumber[i];
+            }
+            $('#oldPhone').prop('value',res.data.phonenumber)
+            $('#spanPhone').text(phone)
+            // $('#oldPassword').prop('value',res.data.password)
          },
          //不论成功与否，都会调用complete回调函数
     })
-}
+  }
+
 
   // 修改手机号弹窗
   $('#changeIphone').on('click', function(){
@@ -113,6 +123,7 @@ $(function(){
   })
 
   $(".btn-phone").on('click',function(event){
+    initUserInfo()
     //阻止默认提交事件
     event.preventDefault()
     let val = $(".image-code").val().toLowerCase();
@@ -121,19 +132,33 @@ $(function(){
       layer.msg('请输入验证码！', {icon: 5})
     }else if(val === num){
       if($('.phone-wrong1').css('display')==="none" && $('.phone-wrong2').css('display')==="none"){
-        layer.msg('修改成功！', {icon: 6})
-        $(".phone-cover").hide();
+        console.log($('.phone-form').serialize());
+        $.ajax({
+          method:'POST',
+          url:'/userHome/updateTelephone',
+          data: $('.phone-form').serialize(),
+          success:function(res){
+            if(res.code!== 200){
+              return layer.msg('手机号修改失败！')
+            }
+            layer.msg('手机号修改成功!')
+            initUserInfo()
+            $(".phone-cover").hide();
+          }
+        })
+        
       }
       else layer.msg('请规范填写信息');
       
     }else{
         layer.msg('验证码错误，请重新填写');
-        draw(show_num,document.getElementById('canvas'));
+        $('.words').click();
     }
   })
 
   // 验证密码是否符合规范
-  let regPass = /^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{8,16}$/;
+  // let regPass = /^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{8,16}$/;
+  let regPass = /^[0-9a-zA-Z]{6,16}$/
   $('#newPassword').blur(function(){
     if(regPass.test($('#newPassword').prop('value')) === false){
       $('.password-wrong1').show()
@@ -165,13 +190,24 @@ $(function(){
       layer.msg('请输入验证码！', {icon: 5})
     }else if(val === num){
       if($('.password-wrong1').css('display')==="none" && $('.password-wrong2').css('display')==="none"&&$('.password-wrong3').css('display')==="none"){
-        layer.msg('修改成功！', {icon: 6})    
-        $(".password-cover").hide();
+        $.ajax({
+          method:'POST',
+          url:'/userHome/updatePassword',
+          data: $('.password-form').serialize(),
+          success:function(res){
+            if(res.code!== 200){
+              return layer.msg('原密码错误，修改失败！')
+            }
+            $(".password-cover").hide();
+            alert('密码修改成功！')
+          }
+        })
+        
       }    
       else layer.msg('请规范填写信息');
     }else{
         layer.msg('验证码错误，请重新填写');
-        draw(show_num,document.getElementById('canvas'));
+        $('.words').click();
     }
   })
 

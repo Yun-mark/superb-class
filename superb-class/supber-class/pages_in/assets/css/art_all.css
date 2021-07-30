@@ -1,0 +1,129 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding: 20px;
+  background-color: #f2f3f5;
+}
+.main-box{
+  padding: 30px 25px 10px;
+  height: 500px;
+  position: relative;
+  }
+.layui-card-header{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  padding-bottom: 12px;
+  padding-left: 0;
+  border: 0;
+}
+.layui-card-body{
+  padding: 20px 0;
+}
+.search{
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+.search-input{
+  width: 300px ;
+  padding-left: 40px;
+  background-color: #f2f3f5;
+}
+.layui-icon-search{
+  position: absolute;
+  right: 270px;
+  top: 9px;
+  font-size: 20px;
+}
+.layui-colla-title{
+  background-color: white;
+  border: 0;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0;
+  position: relative;
+  /* width: 20%; */
+  /* background-color: aquamarine; */
+}
+.layui-colla-title::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2000px;
+  height: 1px; 
+  top: 20px;
+  left: 138px;
+  background-color: #a7a7a7;
+}
+.layui-collapse{
+  border: 0;
+}
+.layui-colla-item{
+  border: 0;
+}
+.layui-show{
+  border: 0;
+}
+.layui-colla-icon{
+  left: 115px;
+  font-size: 19px;
+  color: #a7a7a7;
+}
+ul{
+  margin-top: 20px;
+}
+ul li{
+  position: relative;
+  margin-bottom: 10px;
+}
+ul li::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  left: 145px;
+  background-color: #a7a7a7;
+}
+span{
+  display: inline-block;
+  color: black;
+}
+.head-image{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #949597;
+  position: absolute;
+  top: -6px;
+}
+.name{
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 60px;
+  width: 100px;
+}
+.art-title,.art-time{
+  font-size: 20px;
+  width: 30%;
+  text-align: center;
+}
+.eye{
+  position: absolute;
+  bottom: 2px;
+}
+.all-art{
+  width: 80px;
+  height: 36px;
+  text-align: center;
+  line-height: 2.7;
+  border: 1px solid black;
+  position: absolute;
+  border-radius: 5px;
+  cursor: pointer;
+  right: 0;
+  bottom: 2px;
+}

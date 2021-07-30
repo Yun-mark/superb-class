@@ -10,7 +10,7 @@ $(function() {
       var y = dt.getFullYear()
       var m = padZero(dt.getMonth() + 1)
       var d = padZero(dt.getDate())
-  
+      
       var hh = padZero(dt.getHours())
       var mm = padZero(dt.getMinutes())
       var ss = padZero(dt.getSeconds())
@@ -39,17 +39,18 @@ $(function() {
     function initTable() {
       $.ajax({
         method: 'GET',
-        url: '/my/article/list',
-        data: q,
+        url: '/article/all',
+        // data: q,
         success: function(res) {
-          if (res.status !== 0) {
+          if (res.code !== 200) {
             return layer.msg('获取文章列表失败！')
           }
           // 使用模板引擎渲染页面的数据
-          var htmlStr = template('tpl-table', res)
+          var htmlStr = template('tpl-table', res.data)
+          // console.log(res.data);
           $('tbody').html(htmlStr)
           // 调用渲染分页的方法
-          renderPage(res.total)
+          // renderPage(res.data.totalCount)
         }
       })
     }
@@ -103,8 +104,8 @@ $(function() {
           // 可以通过 first 的值，来判断是通过哪种方式，触发的 jump 回调
           // 如果 first 的值为 true，证明是方式2触发的
           // 否则就是方式1触发的
-          console.log(first)
-          console.log(obj.curr)
+          // console.log(first)
+          // console.log(obj.curr)
           // 把最新的页码值，赋值到 q 这个查询参数对象中
           q.pagenum = obj.curr
           // 把最新的条目数，赋值到 q 这个查询参数对象的 pagesize 属性中
