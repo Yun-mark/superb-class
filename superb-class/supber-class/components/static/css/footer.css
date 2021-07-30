@@ -19,7 +19,7 @@
     width: 70px;
     height: 50px;
     position: absolute;
-    top: 33%;
+    top: 5%;
     left: 6%;
   }
   
@@ -28,7 +28,7 @@
     height: 45px;
     font-weight: 400;
     position: absolute;
-    top: 21%;
+    top: -4%;
     left: 11%;
   }
   
@@ -36,7 +36,7 @@
     font-family: Arial;
     font-size: 14px;
     line-height: 22px;
-    margin-top: 20px;
+    margin-top: 35px;
     margin-left: 5px;
     padding-bottom: 10px;
     color: rgb(255, 255, 255, 1);
@@ -62,14 +62,14 @@
     line-height: 31px;
     text-align: center;
     position: absolute;
-    top: 84%;
+    top: 118%;
     right: -6%;
   }
   
   .footerLine {
     width: 33.2%;
     height: 60%;
-    margin: 8% 67%;
+    margin: -35% 67%;
     border-right: 1.5px solid #fff;
   }
   
@@ -78,7 +78,8 @@
     height: 70%;
     /* background-color: lightblue; */
     position: absolute;
-    top: 15%;
+    /* top: 15%; */
+    top: 0;
     left: 40%;
     color: #fff;
     font-size: 20px;
@@ -108,18 +109,18 @@
     width: 67px;
     height: 67px;
     margin-top: 30px;
-    margin-left: 31%;
+    margin-left: 24%;
   }
   
   .img1 {
     position: absolute;
-    top: 16%;
+    top: 0;
     right: 18.5%;
   }
   
   .img2 {
     position: absolute;
-    top: 16%;
+    top: 0;
     right: 5%;
   }
   
@@ -128,7 +129,7 @@
     font-size: 12px;
     color: white;
     width: 100%;
-    margin-top: 200px;
+    margin-top: 90px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
   }
