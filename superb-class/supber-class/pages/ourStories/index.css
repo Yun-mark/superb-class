@@ -25,12 +25,15 @@ body{
     width: 1200px;
     margin: 0 auto;
 }
-
+.current{
+    color: white;
+    background-color: #009688 !important;
+}
 .li_list li{
     float: left;
     height: 40px;
     width: 150px;
-    background-color:white;
+    background-color:#f0f0f4;
     border: 1px solid rgb(216,217,217);
     margin-right: 30px;
     text-align: center;
@@ -41,8 +44,7 @@ body{
 }
 
 .li_list li:hover{
-    color: white;
-    background-color: #009688 ;
+    border-color: #009688;
 }
 
 .li_list{
@@ -54,7 +56,7 @@ body{
 .tab_con .item{
     height: 300px;
     width: 200px;
-    background-color: rgb(245,247,251);
+    background-color: #f0f0f4;
     float: left;
     margin-left: 50px;
     margin-right: 50px;
@@ -67,14 +69,14 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 70px;
     width: 200px;
     background-color: rgba(0,0,0,0.5);
     border-radius: 10px;
     display: none;
     color: white;
     font-size: 12px;
-    padding-top: 250px;
+    padding-top: 230px;
     text-indent: 2em;
 }
 .item:hover {
