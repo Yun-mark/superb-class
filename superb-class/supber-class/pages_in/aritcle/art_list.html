@@ -12,7 +12,10 @@
     
     <div class="layui-card">
         <div class="layui-card-header">
-            <span>个人周报列表</span>
+            <a href="javascript:;" class="userinfo">
+            <span class="text-avatar"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>   
+            <span>的周报列表</span>
         </div>
         <div class="layui-card-body">
 
@@ -62,8 +65,8 @@
     <script type="text/html" id="tpl-table">
       {{each data}}
       <tr>
-        <td>{{index}}->{{$value.totalCount}}</td>
-        <td>{{$value.cid}}</td>
+        <td>{{$value.title}}</td>
+        <td>{{$value.cateName}}</td>
         <td>{{$value.publishdate|dataFormat}}</td>
         <td>{{$value.state}}</td>
         <td>
@@ -94,5 +97,6 @@
      <script src="../assets/lib/template-web.js"></script> 
       <!-- 导入自己的 js --> 
      <script src="../assets/js/article/art_list.js"></script>
+     <script src="../assets/js/index.js"></script>
 </body>
 </html>

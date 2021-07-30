@@ -18,13 +18,11 @@
             <table class="layui-table">
                 <colgroup>
                   <col >
-                  <col >
                   <col width="200">
                 </colgroup>
                 <thead>
                   <tr>
                     <th>分类名称</th>
-                    <th>分类别名</th>
                     <th>操作</th>
                   </tr> 
                 </thead>
@@ -37,11 +35,10 @@
        <script type="text/html" id="tpl-table">
         {{each data}}
         <tr>
-            <td>{{$value.name}}</td>
-            <td>{{$value.alias}}</td>
+            <td>{{$value.catename}}</td>
             <td>
-            <button type="button" class="layui-btn layui-btn-radius  layui-btn-xs btn-edit" data-id="{{$value.Id}}">编辑</button>
-            <button type="button" class="layui-btn layui-btn-radius layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.Id}}">删除</button>
+            <button type="button" class="layui-btn layui-btn-radius  layui-btn-xs btn-edit" data-id="{{$value.id}}">编辑</button>
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.id}}">删除</button>
             </td>
         </tr>
         {{/each}}
@@ -54,7 +51,7 @@
           <div class="layui-form-item">
             <label class="layui-form-label">分类名称</label>
             <div class="layui-input-block">
-              <input type="text" name="name" required  lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+              <input type="text" name="catename" required  lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
             </div>
           </div>
           <div class="layui-form-item">
@@ -78,7 +75,7 @@
           <div class="layui-form-item">
             <label class="layui-form-label">分类名称</label>
             <div class="layui-input-block">
-              <input type="text" name="name" required  lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+              <input type="text" name="catename" required  lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
             </div>
           </div>
           <div class="layui-form-item">
@@ -97,7 +94,7 @@
 
       <script src="../assets/lib/layui/layui.all.js"></script>
       <script src="../assets/lib/jquery.js"></script>
-      <script src="../assets/js/baseAPI.js"></script>
+      <script src="../assets/js/baseAPI2.js"></script>
       <script src="../assets/lib/template-web.js"></script>
       <script src="../assets/js/article/art_cate.js"></script>
     </body>

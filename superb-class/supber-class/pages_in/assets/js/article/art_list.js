@@ -40,17 +40,18 @@ $(function() {
       $.ajax({
         method: 'GET',
         url: '/article/all',
-        // data: q,
+        data: q,
         success: function(res) {
           if (res.code !== 200) {
             return layer.msg('获取文章列表失败！')
           }
+          layer.msg(res.message)
           // 使用模板引擎渲染页面的数据
           var htmlStr = template('tpl-table', res.data)
           // console.log(res.data);
           $('tbody').html(htmlStr)
           // 调用渲染分页的方法
-          // renderPage(res.data.totalCount)
+          // renderPage(res.total)
         }
       })
     }
