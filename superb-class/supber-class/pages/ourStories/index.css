@@ -45,6 +45,7 @@ body{
 
 .li_list li:hover{
     border-color: #009688;
+    cursor: pointer;
 }
 
 .li_list{
@@ -69,19 +70,23 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    height: 70px;
-    width: 200px;
+    height: 285px;
+    width: 190px;
     background-color: rgba(0,0,0,0.5);
     border-radius: 10px;
     display: none;
-    color: white;
+    color: rgba(255,255,255,0.7);
     font-size: 12px;
-    padding-top: 230px;
     text-indent: 2em;
+    padding-top: 15px;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .item:hover {
     transform: translate(0,-10px);
     transition: 0.8s;
+    cursor: pointer;
 }
 img{
     height: 200px;
