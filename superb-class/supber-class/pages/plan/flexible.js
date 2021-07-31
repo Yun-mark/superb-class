@@ -18,7 +18,7 @@
     docEl.style.fontSize = rem + "px";
   }
 
-  setRemUnit();
+  setRemUnit(); 
 
   // reset rem unit on page resize
   window.addEventListener("resize", setRemUnit);
