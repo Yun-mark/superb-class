@@ -91,15 +91,24 @@ $(function(){
            if (res.code !== 200) {
              return layer.msg('获取文章列表失败！') 
            }
-           console.log(res);
            // 使用模板引擎渲染页面的数据
            var htmlStr = template('tpl-table', res)
-           console.log(res);
            $('tbody').html(htmlStr)
            // 调用渲染分页的方法
          //   renderPage(res.total)
          }
        })
      }
+})
+
+$(function(){
+  $('.card2').children().children('.item').on('click',function(){
+    layer.alert('该功能程序猿小哥哥还在开发中...', {
+      skin: 'layui-layer-molv' //样式类名
+      ,closeBtn: 0,
+      title:'尊敬的用户',
+      anim: 3
+    });
+  })
 })
 

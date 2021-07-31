@@ -22,7 +22,7 @@
             <span class="text-avatar">A</span>
             <span id="welcome">欢迎</span>
         </div>
-          <h2 class="layui-colla-title"><p>点击收起</p></h2>
+          <h2 class="layui-colla-title" id="chickMe"><p>点击收起</p></h2>
           <div class="layui-colla-content layui-show" > 
             <div class="container-fluid">
               <div class="row spannel_list">
@@ -104,9 +104,9 @@
         {{each data}}
         <tr>
           <td>{{$value.title}}</td>
-          <td>{{$value.cateName}}</td>
+          <td>{{$value.catename}}</td>
           <td>{{$value.publishdate|dataFormat}}</td>
-          <td>{{$value.state}}</td>
+          <td>{{$value.statestr}}</td>
         </tr>
         {{/each}}
       </script>
@@ -116,16 +116,19 @@
         <div class="layui-card-header"><p>新建</p></div>
         <div class="layui-card-body">
 
-      <div class="one">
-      <i class="layui-icon layui-icon-link" style="font-size: 65px; color: #009688;"></i>
+      <div class="one item">
+        <a href="javascript:;">
+      <i class="layui-icon layui-icon-export" style="font-size: 70px; color: #009688;"></i></a>
       <span>附件</span>
       </div>
-      <div class="two">
-      <i class="layui-icon layui-icon-read" style="font-size: 70px; color: #1E9FFF;"></i>
+      <div class="two item">
+        <a href="javascript:;">
+      <i class="layui-icon layui-icon-read" style="font-size: 70px; color: #1E9FFF;"></i></a>
       <span>文档</span>
     </div>
-      <div class="three">
-        <i class="layui-icon layui-icon-spread-left" style="font-size: 70px; color: #FF5722;"></i>
+      <div class="three item">
+        <a href="javascript:;">
+        <i class="layui-icon layui-icon-spread-left" style="font-size: 70px; color: #FF5722;"></i></a>
         <span>更多</span>
        </div>
       </div> 

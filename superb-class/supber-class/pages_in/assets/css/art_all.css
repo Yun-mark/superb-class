@@ -165,3 +165,6 @@ span{
   height: 280px;
   margin: 15px 0;
 }
+.eye img:hover{
+  background-color:#5FB878;
+}

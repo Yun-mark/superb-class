@@ -11,7 +11,7 @@
   <body>
     <!-- 卡片区域 -->
     <div class="layui-card">
-      <div class="layui-card-header">写文章</div>
+      <div class="layui-card-header">写周报</div>
       <div class="layui-card-body">
         <!-- 发布文章的表单 -->
         <form class="layui-form" id="form-pub">
@@ -24,7 +24,7 @@
           </div>
           <!-- 第二行 -->
           <div class="layui-form-item">
-            <label class="layui-form-label">文章类别</label>
+            <label class="layui-form-label">周报类别</label>
             <div class="layui-input-block">
               <select name="catename" lay-verify="required"></select>
             </div>
@@ -32,7 +32,7 @@
           <!-- 第三行 -->
           <div class="layui-form-item">
             <!-- 左侧的 label -->
-            <label class="layui-form-label">文章内容</label>
+            <label class="layui-form-label">周报内容</label>
             <!-- 为富文本编辑器外部的容器设置高度 -->
             <div class="layui-input-block" style="height: 400px;">
               <!-- 重要：将来这个 textarea 会被初始化为富文本编辑器 -->
@@ -54,7 +54,7 @@
 
     <!-- 分类的模板结构 -->
     <script type="text/html" id="tpl-cate">
-      <option value="">请选择文章类别</option>
+      <option value="">请选择周报类别</option>
       {{each data}}
       <option value="{{$value.catename}}">{{$value.catename}}</option>
       {{/each}}

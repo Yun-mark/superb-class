@@ -66,4 +66,30 @@ $(function(){
                         anim: 3
                      })
                 })
-              })
+                $('.test').children('dd').on('click',function(){
+                    layer.alert('该功能程序媛小姐姐还在开发中...', {
+                      skin: 'layui-layer-molv' //样式类名
+                      ,closeBtn: 0,
+                      title:'尊敬的用户',
+                      anim: 1
+                    });
+                  })
+              })           
+              
+$(function(){
+    $('.layui-nav-tree').children('.layui-nav-item1').one('click',function(){
+        layer.tips('点击查看其他同学的优秀周报~', '.layui-nav-item2');
+    })
+})
+$(function(){
+    $('.layui-nav-tree').children().children().children('#look1').one('click',function(){
+        layer.tips('记得勤写周报哦~', '#look2');
+    })
+})
+$(function(){
+    $('.layui-nav-tree').children().children().children('#look3').one('click',function(){
+        layer.tips('不要忘记绑定手机和修改初始密码', '#look4');
+    })
+})
+
+

@@ -65,7 +65,7 @@
     <script type="text/html" id="tpl-table">
       {{each data}}
       <tr>
-        <td>{{$value.title}}</td>
+        <td><a data-id="{{$value.id}}" href="#">{{$value.title}}</a></td>
         <td>{{$value.catename}}</td>
         <td>{{$value.publishdate|dataFormat}}</td>
         <td>{{$value.statestr}}</td>
@@ -84,6 +84,21 @@
         {{each data}}
         <option value="{{$value.Id}}">{{$value.name}}</option>
         {{/each}}
+      </script>
+      <!--周报详情页的模板结构-->
+      <script type="text/html" id="tmpl-artinfo">
+        <div class="artinfo-box">
+          <h1 class="artinfo-title">{{title}}</h1>
+          <div class="artinfo-bar">
+            <span>作者：{{nickname}}</span>
+            <span>发布时间：{{publishdate|dataFormat}}</span>
+            <span>所属分类：{{cateName}}</span>
+            <span>状态：{{statestr}}</span>
+          </div>
+          <hr>
+          <img src="" alt="" class="">
+          <div>{{@ mdcontent}}</div>
+        </div>
       </script>
 
      <!-- 导入 layui 的 js -->

@@ -66,6 +66,8 @@ $(function(){
           skin: 'layui-layer-demo', //样式类名
           closeBtn: 0, //不显示关闭按钮
           anim: 2,
+          title:'点击查看',
+          area: ['90%', '200px'],
           shadeClose: true, //开启遮罩关闭
           content: $('#test')
         }); 
@@ -94,7 +96,7 @@ $(function(){
         console.log(htmlStr);
         layer.open({
               type: 1,
-              title: '预览文章',
+              title: '周报详情页',
               area: ['80%', '80%'],
               maxmin: true, //开启最大化最小化按钮
               content: htmlStr

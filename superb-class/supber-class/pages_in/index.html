@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>故事汇-后台主页</title>
+    <title>计科卓越-内网主页</title>
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/fonts/iconfont.css">
@@ -21,9 +21,9 @@
               <a href="javascript:;">
                 新建
               </a>
-              <dl class="layui-nav-child">
-                <dd><a href=""><i class="layui-icon layui-icon-link"></i>附件</a></dd>
-                <dd><a href=""><i class="layui-icon layui-icon-read"></i>文档</a></dd>
+              <dl class="layui-nav-child test">
+                <dd><a href="javascript:;"><i class="layui-icon layui-icon-export"></i>附件</a></dd>
+                <dd><a href="javascript:;"><i class="layui-icon layui-icon-read"></i>文档</a></dd>
               </dl>
             </li>
             <li class="layui-nav-item layui-hide layui-show-md-inline-block">
@@ -48,21 +48,21 @@
             
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
-                <li class="layui-nav-item layui-this"><a href="./home/card.html" target="fm"><span class="iconfont icon-home"></span>首页</a></li>
-                <li class="layui-nav-item"><a href="./aritcle/art_all.html" target="fm"><span class="iconfont icon-pinglun"></span>周报列表</a></li>
+                <li class="layui-nav-item layui-nav-item1 layui-this"><a href="./home/card.html" target="fm"><span class="iconfont icon-home"></span>首页</a></li>
+                <li class="layui-nav-item layui-nav-item2"><a href="./aritcle/art_all.html" target="fm"><span class="iconfont icon-pinglun"></span>周报列表</a></li>
               <li class="layui-nav-item">
                 <a class="" href="javascript:;"><span class="iconfont icon-16"></span>周报管理</a>
                 <dl class="layui-nav-child">
                   <dd><a href="./aritcle/art_cate.html" target="fm"><i class="layui-icon layui-icon-app"></i> 周报类别</a></dd>
-                  <dd><a href="./aritcle/art_list.html" target="fm"><i class="layui-icon layui-icon-app"></i>个人列表</a></dd>
-                  <dd><a href="./aritcle/art_pub.html" target="fm"><i class="layui-icon layui-icon-app"></i>发布周报</a></dd>
+                  <dd id="look1"><a href="./aritcle/art_list.html" target="fm"><i class="layui-icon layui-icon-app"></i>个人列表</a></dd>
+                  <dd id="look2"><a href="./aritcle/art_pub.html" target="fm"><i class="layui-icon layui-icon-app"></i>发布周报</a></dd>
                 </dl>
               </li>
               <li class="layui-nav-item">
                 <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
                 <dl class="layui-nav-child">
-                  <dd><a href="./user/user_info.html" target="fm"><i class="layui-icon layui-icon-template-1"></i>基本资料</a></dd>
-                  <dd><a href="./user/user_safety.html" target="fm"><i class="layui-icon layui-icon-set"></i>账号安全</a></dd>
+                  <dd id="look3"><a href="./user/user_info.html" target="fm"><i class="layui-icon layui-icon-template-1"></i>基本资料</a></dd>
+                  <dd id="look4"><a href="./user/user_safety.html" target="fm"><i class="layui-icon layui-icon-set"></i>账号安全</a></dd>
                 </dl>
               </li>
               <li class="layui-nav-item">

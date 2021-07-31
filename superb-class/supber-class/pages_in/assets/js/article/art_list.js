@@ -37,6 +37,34 @@ $(function() {
     initTable()
     initCate()
 
+    $('.layui-table').on('click','a', function () {
+      $.ajax({
+        method: 'GET',
+        url: 'http://supertest.nat300.top/article/'+ $(this).attr('data-id'),
+        headers : {
+          Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
+          token : localStorage.getItem('token')|| '' 
+        } ,
+        success: function(res) {
+          if (res.code !== 200) {
+            return layer.msg('获取成员列表失败！') 
+          }
+          console.log(res);
+          const htmlStr = template('tmpl-artinfo', res.data)
+          console.log(htmlStr);
+          layer.open({
+                type: 1,
+                title: '周报详情页',
+                area: ['80%', '80%'],
+                maxmin: true, //开启最大化最小化按钮
+                content: htmlStr
+              })
+              
+            }
+          
+      })
+    })
+
        // 获取文章列表数据的方法
       function initTable() {
         $.ajax({
