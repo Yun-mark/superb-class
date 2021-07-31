@@ -66,9 +66,9 @@
       {{each data}}
       <tr>
         <td>{{$value.title}}</td>
-        <td>{{$value.cateName}}</td>
+        <td>{{$value.catename}}</td>
         <td>{{$value.publishdate|dataFormat}}</td>
-        <td>{{$value.state}}</td>
+        <td>{{$value.statestr}}</td>
         <td>
           <button type="button" class="layui-btn layui-btn-xs">编辑</button>
           <button type="button" class="layui-btn layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.id}}">删除</button>

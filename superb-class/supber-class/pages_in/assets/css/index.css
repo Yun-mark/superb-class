@@ -163,4 +163,6 @@ iframe {
 .layui-table{
     color: #2F4056;
 }
-
+#aboutUs{
+    padding: 0!important;
+}

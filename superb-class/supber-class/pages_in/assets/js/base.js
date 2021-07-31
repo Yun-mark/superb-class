@@ -55,3 +55,16 @@ $(function(){
                 }
             
             }
+
+            $(function(){
+                $('#aboutUs').on("click",function(){
+                    layer.alert('<div style="padding:10px; font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计科卓越内网是一套基于layui的技术，以卓越班同学的实际需求出发，为方便同学们的日常学习生活，用于卓越管理系统的网页界面，该开发版权和使用权限由《计科卓越官网组》所有。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们诚挚的邀请各位老师和同学进行体验和反馈，一起打造“卓越生态”，您的每一个建议，都是对我们最大的信任与支持。</div>',
+                     {
+                        skin: 'layui-layer-molv' ,
+                        closeBtn: 0 ,
+                        title: '关于我们',
+                        area: ['500px', '320px'],
+                        anim: 3
+                     })
+                })
+              })
