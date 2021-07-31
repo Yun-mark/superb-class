@@ -30,7 +30,6 @@ $(function(){
                         if(res.code !== 200){
                             return  layui.layer.msg('获取用户的基本信息失败!')
                         }
-                        console.log(res.data);
                         renderAvatar(res.data)
                     }
                 })

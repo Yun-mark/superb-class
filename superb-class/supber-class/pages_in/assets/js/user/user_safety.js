@@ -13,16 +13,22 @@ $(function(){
              if(res.code !== 200){
                  return  layui.layer.msg('获取用户的基本信息失败!')
              }
-            let phone = '';
-            for(let i = 0; i<res.data.phonenumber.length; i++){
-              if(i>=3 && i<=6)
-                phone = phone + '*';
-              else
-                phone = phone + res.data.phonenumber[i];
+            
+            if(res.data.phonenumber === null){
+              $('#oldPhone').prop('value','请直接输入新手机号')
+              $('#spanPhone').text('暂未绑定手机号')
             }
-            $('#oldPhone').prop('value',res.data.phonenumber)
-            $('#spanPhone').text(phone)
-            // $('#oldPassword').prop('value',res.data.password)
+            else{
+              let phone = '';
+              for(let i = 0; i<res.data.phonenumber.length; i++){
+                if(i>=3 && i<=6)
+                  phone = phone + '*';
+                else
+                  phone = phone + res.data.phonenumber[i];
+              }
+              $('#oldPhone').prop('value',res.data.phonenumber)
+              $('#spanPhone').text(phone)
+            }
          },
          //不论成功与否，都会调用complete回调函数
     })

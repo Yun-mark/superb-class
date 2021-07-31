@@ -134,3 +134,45 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  @media screen and (max-width:767px){
+    .footerPart a img{
+      width: 7%;
+      height: 8%;
+      left: 1%;
+    }
+    .footerBigLogo{
+      font-size: 100%;
+      margin-left: 2%;
+    }
+    .footerLittleLogo{
+      margin-left: -1%;
+      font-size: 70%;
+    }
+
+    .footerImg img {
+      height: 25%;
+      width: 25%;
+      margin-left: 70%;
+      margin-top: 5%;
+    }
+
+    .footerContact p{
+      font-size: 60%;
+    }
+    .footerContact{
+      margin-top: 2%;
+    }
+
+    .footerImg p{
+       margin-left: 80%;
+       font-size: 30%;
+    }
+    .record{
+      margin-top: 25%;
+    }
+    
+    .footerLastLogo{
+      margin-top: 50%;
+    }
+  }
+

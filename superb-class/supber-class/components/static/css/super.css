@@ -219,3 +219,34 @@ button{
     right: 260px;
     border: 0px solid rgba(255, 255, 255, 100);
 }
+
+@media screen and (max-width:767px){
+	button{
+		font-size: 1rem;
+		height: 8%;
+		margin-top: 15%;
+	}
+	#btn-left{
+		left: 65%;
+	}
+	#btn-right{
+		right: 65%;
+	}
+
+	.box{
+		width: 30%;
+		height: 10rem;
+		margin-left: 10%;
+	}
+	.t2{
+		font-size: 1.5rem;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width:767px){
+	.box h3{
+		font-size: 100%;
+		margin-left: 5%;
+	}
+}

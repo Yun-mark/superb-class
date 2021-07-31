@@ -50,12 +50,6 @@
         <div class="layui-colla-content layui-show">
           
           <ul class="second">
-            <li>
-              <span class="head-image">A</span>
-              <span class="name">王9</span>
-              <span class="art-title">最新的一条周报名</span><span class="art-time">最后上传时间</span><span class="eye"><img src="../assets/images/eye-open.png" alt="眼睛"></span>
-              <span class="all-art">全部周报</span>
-            </li>
           </ul>
 
         </div>
@@ -68,10 +62,10 @@
 <script type="text/html" id="second-grade">
   {{each data}}
   <li>
-      <span class="head-image">A</span>
+      <span class="head-image">a</span>
       <span class="name">{{$value.nickname}}</span>
       <span class="art-title">{{$value.title}}</span><span class="art-time">{{$value.publishdate|dataFormat}}</span><span class="eye" data-id="{{$value.id}}"><img src="../assets/images/eye-open.png" alt="眼睛"></span>
-      <span class="all-art" data-id="{{$value.nickname}}">全部周报</span>
+      <span class="all-art" data-id="{{$value.uid}}">全部周报</span>
     </li>
     {{/each}}
 </script>

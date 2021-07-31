@@ -9,7 +9,6 @@ li{
 body{
     background-color: rgb(245,247,251);
     overflow: visible;
-    height: 5000px;
 }
 
 /* 设置标题 */
@@ -39,7 +38,6 @@ body{
     text-align: center;
     line-height: 40px;
     border-radius: 10px;
-    
     box-shadow: 10px 10px 5px 0px gainsboro;
 }
 
@@ -108,6 +106,91 @@ img{
 
 .tab_con{
     display: none;
-    height: 3000px;
     width: 1250px;
+}
+
+
+/* 移动端开始 */
+
+@media screen and (max-width:767px){
+    body{
+       background-image: url("../../components/static/img/bg_.png");
+       background-size: contain;
+       height: 20000px;
+       overflow: visible;
+    }
+    .tab{
+        width: 100%;
+    }
+    .tab_con{
+        width: 100%;
+    }
+    .li_list{
+        width: 100%;
+    }
+    .li_list li{
+        width: 15%;
+        height: 10%;
+        font-size: 1%;
+        margin-top: 1%;
+    }
+    .tab_con .item{
+        margin-left: 22%;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:992px){
+    body{
+        background-image: url("../../components/static/img/bg_.png");
+        background-size: contain;
+        height: 10000px;
+        overflow: visible !important;
+    }
+    .tab{
+        width: 100%;
+    }
+    .tab_con{
+        width: 100%;
+    }
+    .li_list{
+        width: 100%;
+    }
+    .li_list li{
+        width: 15%;
+        height: 10%;
+        font-size: 1%;
+        margin-top: 1%;
+    }
+    .tab_con .item{
+        margin-left: 15%;
+    }
+}
+
+@media screen and (min-width:992px){
+    body{
+        background-image: url("../../components/static/img/bg_.png");
+        background-size: contain;
+        height: 10000px;
+        /* overflow: visible !important; */
+    }
+    .tab{
+        width: 100%;
+        margin-left: 10%;
+    }
+    .tab_con{
+        width: 100%;
+    }
+    .li_list{
+        width: 100%;
+    }
+    .li_list li{
+        width: 10%;
+        height: 10%;
+        font-size: 100%;
+        margin-top:0.5%;
+    }
+    .tab_con .item{
+        margin-left: 4%;
+    }
 }
