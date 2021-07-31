@@ -41,6 +41,9 @@ $(function(){
         var htmlStr = template('second-grade', res)
         console.log(res);
         $('.second').html(htmlStr)
+        
+        renderAvatar(res.data)
+        console.log(res.data);
       }
     })
   }
@@ -100,8 +103,21 @@ $(function(){
           shade: false,
           maxmin: true, //开启最大化最小化按钮
           area: ['893px', '600px'],
-          content: './art_list.html'
+          content: './art_person.html' + '?uid=' + $(this).attr('data-id')
         });
            
   }) 
 })
+function renderAvatar(user) {
+
+  $('.second').children().children('.head-image').each(function(index,domEle){
+    if(index===user.length){
+      return
+    }
+    else{
+      let name = user[index].nickname 
+      let first = name.slice(-2).toUpperCase()
+      $(domEle).html(first).show()
+    } 
+  })
+}
