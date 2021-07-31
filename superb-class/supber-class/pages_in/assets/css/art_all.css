@@ -8,8 +8,9 @@ body{
 }
 .main-box{
   padding: 30px 25px 10px;
-  height: 500px;
+  height: 100%;
   position: relative;
+  box-shadow: 5px 5px 2px 0px gainsboro;
   }
 .layui-card-header{
   display: flex;
@@ -37,6 +38,7 @@ body{
   right: 270px;
   top: 9px;
   font-size: 20px;
+  cursor: pointer;
 }
 .layui-colla-title{
   background-color: white;
@@ -56,13 +58,14 @@ body{
   height: 1px; 
   top: 20px;
   left: 138px;
-  background-color: #a7a7a7;
+  background-color: #009688;
 }
 .layui-collapse{
   border: 0;
 }
 .layui-colla-item{
   border: 0;
+  margin-bottom: 20px;
 }
 .layui-show{
   border: 0;
@@ -77,9 +80,9 @@ ul{
 }
 ul li{
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
-ul li::after{
+/* ul li::after{
   content: "";
   display: block;
   position: absolute;
@@ -87,7 +90,7 @@ ul li::after{
   height: 1px;
   left: 145px;
   background-color: #a7a7a7;
-}
+} */
 span{
   display: inline-block;
   color: black;
@@ -96,24 +99,35 @@ span{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #949597;
+  background-color:#009688;
+  color: white;
+  line-height: 40px;
+  text-align: center;
   position: absolute;
-  top: -6px;
+  top: -17px;
 }
 .name{
   font-size: 17px;
   font-weight: 600;
   margin-left: 60px;
   width: 100px;
+  position: relative;
+  bottom: 8px;
 }
 .art-title,.art-time{
   font-size: 20px;
   width: 30%;
   text-align: center;
+  border-bottom: 1px solid #009688;
+  padding-bottom: 2px
 }
 .eye{
+  width: 10%;
+  text-align: right;
+  border-bottom: 1px solid #009688;
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
+  cursor: pointer;
 }
 .all-art{
   width: 80px;
@@ -125,5 +139,29 @@ span{
   border-radius: 5px;
   cursor: pointer;
   right: 0;
-  bottom: 2px;
+  bottom: 5px;
+}
+
+.artinfo-box {
+  padding: 20px;
+}
+
+.artinfo-title {
+  text-align: center;
+}
+
+.artinfo-bar {
+  font-size: 12px;
+  margin: 20px 0;
+  color: gray;
+}
+
+.artinfo-bar span {
+  margin-right: 20px;
+}
+
+.artinfo-cover {
+  width: 400px;
+  height: 280px;
+  margin: 15px 0;
 }

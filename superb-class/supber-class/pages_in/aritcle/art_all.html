@@ -18,6 +18,7 @@
   <div class="layui-input-inline search">
     <i class="layui-icon layui-icon-search"></i> 
     <input type="text" name="text" lay-verify="required" placeholder="  搜索成员" autocomplete="off" class="layui-input search-input">
+    <a href="#test" id="skip"><span></span></a>
   </div>
   <div class="layui-card-body">
 
@@ -25,16 +26,21 @@
 
       <div class="layui-colla-item">
         <h2 class="layui-colla-title">卓越一年级</h2>
-        <div class="layui-colla-content layui-show">
+        <div class="layui-colla-content">
           <ul>
             <li>
-              <span class="head-image"><img src="" alt="" class="head-img"></span>
-              <span class="name">张三</span>
-              <span class="art-title">最新的一条周报名</span>
-              <span class="art-time">最后上传时间</span>
-              <span class="eye"><img src="../assets/images/eye-open.png" alt="眼睛"></span>
+              <span class="head-image">A</span>
+              <span class="name">李8</span>
+              <span class="art-title">最新的一条周报名</span><span class="art-time">最后上传时间</span><span class="eye"><img src="../assets/images/eye-open.png" alt="眼睛"></span>
               <span class="all-art">全部周报</span>
             </li>
+            <li>
+              <span class="head-image">A</span>
+              <span class="name">王9</span>
+              <span class="art-title">最新的一条周报名</span><span class="art-time">最后上传时间</span><span class="eye"><img src="../assets/images/eye-open.png" alt="眼睛"></span>
+              <span class="all-art">全部周报</span>
+            </li>
+            
           </ul>
         </div>
       </div>
@@ -43,6 +49,15 @@
         <h2 class="layui-colla-title">卓越二年级</h2>
         <div class="layui-colla-content layui-show">
           
+          <ul class="second">
+            <li>
+              <span class="head-image">A</span>
+              <span class="name">王9</span>
+              <span class="art-title">最新的一条周报名</span><span class="art-time">最后上传时间</span><span class="eye"><img src="../assets/images/eye-open.png" alt="眼睛"></span>
+              <span class="all-art">全部周报</span>
+            </li>
+          </ul>
+
         </div>
       </div>
 
@@ -50,13 +65,52 @@
 
   </div>
 </div>
+<script type="text/html" id="second-grade">
+  {{each data}}
+  <li>
+      <span class="head-image">A</span>
+      <span class="name">{{$value.nickname}}</span>
+      <span class="art-title">{{$value.title}}</span><span class="art-time">{{$value.publishdate|dataFormat}}</span><span class="eye" data-id="{{$value.id}}"><img src="../assets/images/eye-open.png" alt="眼睛"></span>
+      <span class="all-art" data-id="{{$value.nickname}}">全部周报</span>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="tmpl-artinfo">
+  <div class="artinfo-box">
+    <h1 class="artinfo-title">{{title}}</h1>
+    <div class="artinfo-bar">
+      <span>作者：{{nickname}}</span>
+      <span>发布时间：{{publishdate|dataFormat}}</span>
+      <span>所属分类：{{cateName}}</span>
+      <span>状态：{{statestr}}</span>
+    </div>
+    <hr>
+    <img src="" alt="" class="">
+    <div>{{@ mdcontent}}</div>
+  </div>
+</script>
+<!-- <script type="text/html" id="tmpl-artinfo">
+  <div class="artinfo-box">
+    <h1 class="artinfo-title">标题</h1>
+    <div class="artinfo-bar">
+      <span>作者：张三</span>
+      <span>发布时间：11111111111111</span>
+      <span>所属分类：什么</span>
+      <span>状态：已发布</span>
+    </div>
+    <hr>
+    <img src="" alt="" class="">
+    <div>内容</div>
+  </div>
+</script> -->
+
 
     <!-- 导入 layui 的 js -->
     <script src="../assets/lib/layui/layui.all.js"></script>
     <!-- 导入 jquery -->
     <script src="../assets/lib/jquery.js"></script>
-    <!-- 导入 baseAPI -->
-    <script src="../assets/js/baseAPI.js"></script>
+    <!--模板引擎的js-->
+     <script src="../assets/lib/template-web.js"></script> 
     <!-- 导入自己的 js -->
     <script src="../assets/js/article/art_all.js"></script>
 
