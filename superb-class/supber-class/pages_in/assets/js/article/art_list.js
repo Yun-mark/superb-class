@@ -25,17 +25,17 @@ $(function() {
   
     // 定义一个查询的参数对象，将来请求数据的时候，
     // 需要将请求参数对象提交到服务器
-    var q = {
-      pagenum: 1, // 页码值，默认请求第一页的数据
-      pagesize: 2, // 每页显示几条数据，默认每页显示2条
-      cid: '', // 文章分类的 Id
-      statestr: '' // 文章的发布状态
-    }
+      // var q = {
+      //   pagenum: 1, // 页码值，默认请求第一页的数据
+      //   pagesize: 2, // 每页显示几条数据，默认每页显示2条
+      //   catename: '', // 文章分类的 Id
+      //   state: '' // 文章的发布状态
+      // }
     //调用函数，获取用户基本信息
     getUserInfo()
   
     initTable()
-    //initCate()
+    initCate()
 
        // 获取文章列表数据的方法
       function initTable() {
@@ -46,7 +46,7 @@ $(function() {
             Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
             token : localStorage.getItem('token')|| '' 
           },
-         data: q,
+         //data: q,
           success: function(res) {
             if (res.code !== 200) {
               return layer.msg('获取文章列表失败！')
@@ -55,6 +55,7 @@ $(function() {
             var htmlStr = template('tpl-table', res)
             $('tbody').html(htmlStr)
             // 调用渲染分页的方法
+            console.log(res);
            renderPage(res.total)
           }
         })
@@ -182,7 +183,6 @@ $(function() {
           if(res.code !== 200){
               return  layui.layer.msg('获取用户的基本信息失败!')
           }
-          console.log(res.data);
           renderAvatar(res.data)
       }
   })

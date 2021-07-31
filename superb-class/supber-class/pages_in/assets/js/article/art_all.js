@@ -57,6 +57,17 @@ $(function(){
         $(this).prop('id','test'); 
         //跳转到id位置
         $('a span').click();
+        //自定页
+        layer.open({
+          type: 1,
+          skin: 'layui-layer-demo', //样式类名
+          closeBtn: 0, //不显示关闭按钮
+          anim: 2,
+          shadeClose: true, //开启遮罩关闭
+          content: $('#test')
+        }); 
+        $('#test').css('display', 'block')
+
       }
       //清除id
       $(this).prop('id', '');
