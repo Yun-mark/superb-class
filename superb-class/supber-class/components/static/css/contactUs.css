@@ -286,3 +286,10 @@
     -webkit-transition: all .6s ease-in-out;
             transition: all .6s ease-in-out;
   }
+
+
+  @media screen and (max-width:767px){
+    #wrapper{
+      /* display: none; */
+    }
+  }
