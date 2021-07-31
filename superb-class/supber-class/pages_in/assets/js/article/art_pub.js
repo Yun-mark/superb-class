@@ -2,7 +2,7 @@ $(function() {
   var layer = layui.layer
   var form = layui.form
 
-  //initCate()
+  initCate()
   // 初始化富文本编辑器
   initEditor()
 
@@ -10,14 +10,18 @@ $(function() {
   function initCate() {
     $.ajax({
       method: 'GET',
-      url: '/article/cates',
+      url: 'http://supertest.nat300.top/category/get',
+      headers:{
+        Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
+        token : localStorage.getItem('token')|| '' 
+        },
       success: function(res) {
-        if (res.status !== 0) {
+        if (res.code !== 200) {
           return layer.msg('初始化文章分类失败！')
         }
         // 调用模板引擎，渲染分类的下拉菜单
         var htmlStr = template('tpl-cate', res)
-        $('[name=cate_id]').html(htmlStr)
+        $('[name=catename]').html(htmlStr)
         // 一定要记得调用 form.render() 方法
         form.render()
       }
@@ -95,8 +99,12 @@ $(function() {
   function publishArticle(fd) {
     $.ajax({
       method: 'POST',
-      url: '/article/create',
+      url: 'http://supertest.nat300.top/article/create',
       data: fd,
+      headers:{
+        Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
+        token : localStorage.getItem('token')|| '' 
+        },
       // 注意：如果向服务器提交的是 FormData 格式的数据，
       // 必须添加以下两个配置项
       contentType: false,

@@ -26,7 +26,7 @@
           <div class="layui-form-item">
             <label class="layui-form-label">文章类别</label>
             <div class="layui-input-block">
-              <select name="cate_id" lay-verify="required"></select>
+              <select name="catename" lay-verify="required"></select>
             </div>
           </div>
           <!-- 第三行 -->
@@ -75,14 +75,13 @@
     <script type="text/html" id="tpl-cate">
       <option value="">请选择文章类别</option>
       {{each data}}
-      <option value="{{$value.Id}}">{{$value.name}}</option>
+      <option value="{{$value.id}}">{{$value.catename}}</option>
       {{/each}}
     </script>
 
     <!-- 导入第三方的 JS 插件 -->
     <script src="../assets/lib/layui/layui.all.js"></script>
     <script src="../assets/lib/jquery.js"></script>
-    <script src="../assets/js/baseAPI3.js"></script>
     <!-- 导入 art-template -->
     <script src="../assets/lib/template-web.js"></script>
     <!-- 富文本 -->

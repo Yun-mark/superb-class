@@ -31,35 +31,44 @@ $(function() {
     //   cate_id: '', // 文章分类的 Id
     //   state: '' // 文章的发布状态
     // }
+    //调用函数，获取用户基本信息
+    getUserInfo()
   
     initTable()
     //initCate()
-  
-    // 获取文章列表数据的方法
-    function initTable() {
-      $.ajax({
-        method: 'GET',
-        url: '/article/get',
-       // data: q,
-        success: function(res) {
-          if (res.code !== 200) {
-            return layer.msg('获取文章列表失败！') 
+
+       // 获取文章列表数据的方法
+      function initTable() {
+        $.ajax({
+          method: 'GET',
+          url: 'http://supertest.nat300.top/article/get',
+          headers : {
+            Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
+            token : localStorage.getItem('token')|| '' 
+          },
+        // data: q,
+          success: function(res) {
+            if (res.code !== 200) {
+              return layer.msg('获取文章列表失败！')
+            } 
+            // 使用模板引擎渲染页面的数据
+            var htmlStr = template('tpl-table', res)
+            $('tbody').html(htmlStr)
+            // 调用渲染分页的方法
+          // renderPage(res.total)
           }
-          //layer.msg('获取周报列表成功!')
-          // 使用模板引擎渲染页面的数据
-          var htmlStr = template('tpl-table', res)
-          $('tbody').html(htmlStr)
-          // 调用渲染分页的方法
-        //   renderPage(res.total)
-        }
-      })
-    }
+        })
+      }
   
     // 初始化文章分类的方法
     function initCate() {
       $.ajax({
         method: 'GET',
-        url: '/article/cates',
+        url: 'http://supertest.nat300.top/article/cates',
+        headers : {
+          Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
+          token : localStorage.getItem('token')|| '' 
+        },
         success: function(res) {
           if (res.code !== 0) {
             return layer.msg('获取分类数据失败！')
@@ -132,7 +141,11 @@ $(function() {
       layer.confirm('确认删除?', { icon: 3, title: '提示' }, function(index) {
         $.ajax({
           method: 'GET',
-          url: '/article/dustbin/' + id,
+          url: 'http://supertest.nat300.top/article/dustbin/' + id,
+          headers : {
+            Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
+            token : localStorage.getItem('token')|| '' 
+          },
           success: function(res) {
             if (res.code !== 200) {
               return layer.msg('删除文章失败！')
@@ -156,3 +169,40 @@ $(function() {
     })
   })
   
+ //获取用户的基本信息
+ function getUserInfo (){
+  $.ajax({
+      method:'GET',
+      url:'http://supertest.nat300.top/userHome/info',
+      headers:{
+          Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
+          token : localStorage.getItem('token')|| '' 
+          },
+       success: function(res){
+          if(res.code !== 200){
+              return  layui.layer.msg('获取用户的基本信息失败!')
+          }
+          console.log(res.data);
+          renderAvatar(res.data)
+      }
+  })
+}
+
+  function renderAvatar(user) {
+    //获取用户的名称
+    var name = user.nickname || user.username
+    //设置欢迎的文本
+    $('#welcome').html('Hi,&nbsp;&nbsp;' + name)
+    //按需渲染用户的头像
+    if(user.userPic !== null){
+        //头像
+        $('layui-nav-img').attr('src',user.userPic).show()
+        $('text-avatar').hide()
+    }else{
+        //文本头像
+        $('.layui-nav-img').hide()
+        var first = name.slice(-2).toUpperCase()
+        $('.text-avatar').html(first).show()
+    }
+
+}
