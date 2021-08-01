@@ -71,12 +71,12 @@ $(function() {
        function initTable() {
         $.ajax({
           method: 'GET',
-          url: 'http://supertest.nat300.top/article/get',
+          url: 'http://supertest.nat300.top/article/get/' + uid,
           headers : {
             Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
             token : localStorage.getItem('token')|| '' 
           },
-          data: q,
+
           success: function(res) {
             if (res.code !== 200) {
               return layer.msg('获取文章列表失败！')
@@ -84,8 +84,9 @@ $(function() {
             // 使用模板引擎渲染页面的数据
             var htmlStr = template('tpl-table', res)
             $('tbody').html(htmlStr)
+            renderAvatar(res.data)
             // 调用渲染分页的方法
-           renderPage(res.data.length)
+            renderPage(res.data.length)
           }
         })
       }
