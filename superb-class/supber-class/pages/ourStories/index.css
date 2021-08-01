@@ -7,7 +7,8 @@ li{
     list-style: none;
 }
 body{
-    background-color: rgb(245,247,251);
+    background-image: url("https://liyun-oss1.oss-cn-beijing.aliyuncs.com/superb-class/image/img/bg_.png?versionId=CAEQDxiBgID58OKC2BciIDNiYjcxMTIzM2MzZDRhYWU4NDRjNjllOWRjMzdlNzUz");
+    background-size: contain;
     overflow: visible;
 }
 
@@ -114,9 +115,7 @@ img{
 
 @media screen and (max-width:767px){
     body{
-       background-image: url("../../components/static/img/bg_.png");
-       background-size: contain;
-       height: 20000px;
+       height: 13000px;
        overflow: visible;
     }
     .tab{
@@ -142,9 +141,7 @@ img{
 
 @media screen and (min-width:768px) and (max-width:992px){
     body{
-        background-image: url("../../components/static/img/bg_.png");
-        background-size: contain;
-        height: 10000px;
+        height: 12000px;
         overflow: visible !important;
     }
     .tab{
@@ -169,9 +166,7 @@ img{
 
 @media screen and (min-width:992px){
     body{
-        background-image: url("../../components/static/img/bg_.png");
-        background-size: contain;
-        height: 10000px;
+        height: 5000px;
         /* overflow: visible !important; */
     }
     .tab{
