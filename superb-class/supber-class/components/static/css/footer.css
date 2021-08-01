@@ -9,12 +9,12 @@
     position: relative;
   }
   
-  .footerPart {
+  .footerPart{
     float: left;
-    width: 33.2%;
+    width: 33%;
     height: 100%;
   }
-  
+ 
   .footerPart a img{
     width: 70px;
     height: 50px;
@@ -64,15 +64,7 @@
     position: absolute;
     top: 118%;
     right: -6%;
-  }
-  
-  .footerLine {
-    width: 33.2%;
-    height: 60%;
-    margin: -35% 67%;
-    border-right: 1.5px solid #fff;
-  }
-  
+  } 
   .footerContact {
     width: 24%;
     height: 70%;
@@ -123,7 +115,10 @@
     top: 0;
     right: 5%;
   }
-  
+  .footerP{
+    opacity: 0;
+    display: block;
+  }
   .record {
     position: absolute;
     font-size: 12px;
@@ -133,42 +128,78 @@
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
   }
-
+/*移动端*/
   @media screen and (max-width:767px){
+    .footer{
+      height: 300px;
+    }
+    .footerPart{
+      width: 48%;
+    }
+   
+    .footerP{
+      display: block;
+      opacity: 1;
+      width: 80%;
+      height: 45px;
+      margin-left: 45px;
+      font-size: 30%;
+      color: white;
+    }
+    .footerP>p:first-child{
+      margin-left: -22px;
+      font-size: 18px;
+      margin-top: 4px;
+    }
+    .footerP>p:last-child{
+      margin-left: 5px;
+    }
     .footerPart a img{
       width: 7%;
       height: 8%;
-      left: 1%;
+      left: 7%;
+      top: 13%;
     }
+    .footerLogoName {
+      width: 23%;
+      font-weight: 400;
+      top: 5%;
+    }
+ 
     .footerBigLogo{
-      font-size: 100%;
-      margin-left: 2%;
+      font-size: 80%;
+      margin-left: 20%;
     }
     .footerLittleLogo{
-      margin-left: -1%;
-      font-size: 70%;
+      width: 100%;
+      margin-left: 20%;
+      font-size: 5px;
     }
-
+    .footerLogoName>.footerLastLogo {
+      left: 20px;
+    }
     .footerImg img {
       height: 25%;
       width: 25%;
-      margin-left: 70%;
+      margin-left: 60%;
       margin-top: 5%;
     }
 
-    .footerContact p{
-      font-size: 60%;
-    }
     .footerContact{
-      margin-top: 2%;
+      display: none;
+    } 
+    .footerPart{
+      float: left;
     }
-
+   
     .footerImg p{
-       margin-left: 80%;
+      width: 50px;
+       margin-left: 60%;
+       margin-right: 6%;
        font-size: 30%;
     }
     .record{
-      margin-top: 25%;
+      margin-top: 42%;
     }
     
     .footerLastLogo{

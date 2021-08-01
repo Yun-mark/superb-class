@@ -290,6 +290,32 @@
 
   @media screen and (max-width:767px){
     #wrapper{
-      /* display: none; */
+      display: none;
+    }
+    .header h1 {
+      left: 70px;
+      top: -500px;
+    }
+    .header h3{
+      left: 75px;
+      color: white;
+      top: -430px;
+    }
+    .contactForm{
+      margin-left: 10px;
+      margin-top: -270px;
+      position: relative;
+      width: 90%;
+    }
+    .contactForm .inputBox{
+      width: 100%;
+    }
+    .contactForm .inputBox input, .contactForm .inputBox textarea {
+      width: 80%;
+    }
+    .contactForm .inputBox input[type='submit'] {
+      position: absolute;
+      left: 50%;
+      margin-left: -25%;
     }
   }
