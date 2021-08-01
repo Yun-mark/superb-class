@@ -63,7 +63,7 @@ $(function(){
         //自定页
         layer.open({
           type: 1,
-          skin: 'layui-layer-demo', //样式类名
+          skin: 'layui-layer-molv', //样式类名
           closeBtn: 0, //不显示关闭按钮
           anim: 2,
           title:'点击查看',
@@ -97,6 +97,7 @@ $(function(){
         layer.open({
               type: 1,
               title: '周报详情页',
+              skin: 'layui-layer-molv',
               area: ['80%', '80%'],
               maxmin: true, //开启最大化最小化按钮
               content: htmlStr
@@ -111,6 +112,7 @@ $(function(){
       layer.open({
           type: 2,
           title: '全部周报',
+          skin: 'layui-layer-molv',
           shadeClose: true,
           shade: false,
           maxmin: true, //开启最大化最小化按钮

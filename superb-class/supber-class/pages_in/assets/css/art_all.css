@@ -119,7 +119,10 @@ span{
   width: 30%;
   text-align: center;
   border-bottom: 1px solid #009688;
-  padding-bottom: 2px
+  padding-bottom: 2px;
+}
+.art-title{
+  color: #009688;
 }
 .eye{
   width: 10%;
