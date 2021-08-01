@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    
 
 }
+
 
 body {
 
     overflow: visible;
-    /* background: linear-gradient(to  top, #8e9eab,#eef2f3); */
-    background-color: rgb(245, 247, 251);
+    background: linear-gradient(to  top, #F0F0F4,#f4f4f4);
+
+
 }
 
 .container {
@@ -21,7 +24,7 @@ body {
 .content {
     display: flex;
     /* float: left; */
-
+    
 
     justify-content: center;
     align-items: center;
@@ -31,17 +34,18 @@ body {
 
 
 
-
 .list {
     position: relative;
     height: 538px;
-    width: 80%;
-    display: flex;
+    width: 100%;
+    /* display: block; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 30px;
     flex-direction: row;
+    display: none;
+    left: -1%;
 
 }
 
@@ -49,15 +53,16 @@ body {
     margin-top: 100px;
     position: relative;
     max-width: 300px;
-    height: 215px;
-    background: #fff;
+    height: 200px;
+    background: #F0F0F4;
     margin: 105px 20px;
     padding: 20px 15px;
-    display: flex;
+    display: block;
     flex-direction: column;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .3);
     transition: .3s ease-in-out;
     float: left;
+    border-radius: 5px;
     /* border: 5px solid rgb(231,232,235); */
 }
 
@@ -69,17 +74,17 @@ body {
 .list .card .imgBx {
     position: relative;
     width: 260px;
-    height: 260px;
-    top: -60px;
+    height: 160px;
+    top: -40px;
     left: 5px;
     z-index: 1;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
 }
 
 .list .card .imgBx img {
     max-width: 100%;
     border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     /* margin-left: -20px; */
 }
 
@@ -104,10 +109,9 @@ body {
 
 .content1 {
     border: 1px solid #f4f4f4;
-    height: 100%;
-
-    /* overflow: hidden; */
+    height: 58%;
 }
+    
 
 .card span {
     position: relative;
@@ -116,11 +120,6 @@ body {
     text-align: center;
 }
 
-li {
-    cursor: pointer;
-
-    list-style-type: none;
-}
 
 
 
@@ -131,4 +130,141 @@ li {
 .line {
     color: #009688;
     margin-top: -10px;
+}
+.tab_list{
+    height: 250px;
+}
+
+.tab_list ul{
+    list-style: none;
+    position: relative;
+    top: -20%;
+    justify-content: center;
+    
+}
+
+.tab_list li{
+    
+    border:2px solid rgb(203,201,214);
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: -10%;
+    padding: 5px 10px;
+    margin-top: 40px;
+    width: 100%;
+    box-shadow: 5px  5px 5px 0 rgba(0, 0, 0, .2);
+    transition:transform 0.2s;
+    
+}
+.tab_list li:hover{
+    border-color: #009688;
+    cursor: pointer;
+    transform:translate(-5px,-5px);
+
+}
+.current{
+    background-color: #009688;
+}
+.tab_con{
+    height: 100%;
+}
+
+/* .tab_list .current{
+    background-color: aquamarine;
+} */
+
+
+/* 移动端开始 */
+@media screen and (max-width:768px){
+    html{
+        height: 800px;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .tab_list li{
+        width: 100px;
+    }
+
+
+
+}
+/* pad端开始 */
+@media screen and (min-width:768px) and (max-width:992px) {
+    html{
+        height: 1800px;
+    }
+    h1{
+        font-size: 80px;
+    }
+    .container h3{
+        font-size: 50px;
+        
+    }
+    .tab_list li{
+        width: 100px;
+    }
+    .list .card {
+        margin-top: 200px;
+        position:relative;
+        max-width: 300px;
+        height: 200px;
+        background: #F0F0F4;
+        margin: 105px 20px;
+        padding: 20px 15px;
+        display: block;
+        flex-direction: column;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, .3);
+        transition: .3s ease-in-out;
+        float: left;
+        border-radius: 5px;
+        /* border: 5px solid rgb(231,232,235); */
+    }
+    
+    .list .card:hover {
+        height: 420px;
+        margin: 1px 20px;
+    }
+    
+    .list .card .imgBx {
+        position: relative;
+        width: 260px;
+        height: 160px;
+        top: -40px;
+        left: 5px;
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+    }
+    
+    .list .card .imgBx img {
+        max-width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+        /* margin-left: -20px; */
+    }
+    
+    .list .card .content1 {
+        position: relative;
+        margin-top: -140px;
+        padding: 10px 15px;
+        text-align: left;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease-in-out;
+    }
+    
+    .list .card:hover .content1 {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: .3s;
+    }
+    .line{
+        color: #009688;
+    margin-top: -10px;
+    
+    }
+
 }

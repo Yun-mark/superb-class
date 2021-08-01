@@ -41,8 +41,24 @@
       //注意：导航 依赖 element 模块，否则无法进行功能性操作
       layui.use('element', function(){
         var element = layui.element;
-         
-      });
+        let navs=document.getElementsByClassName("layui-nav-item");
+        
+        navs[1].onclick=function(){
+          for(let i=2;i<navs.length;i++){
+            navs[i].style.display='block';
+          }
+      }
+
+      for(let i=2;i<navs.length;i++){
+        navs[i].onclick=function(){
+          for(let i=2;i<navs.length;i++){
+            navs[i].style.display='none';
+          }
+          
+        }
+          }
+    });
+
       </script>
 </body>
 </html>
