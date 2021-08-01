@@ -176,95 +176,66 @@ body {
 
 /* 移动端开始 */
 @media screen and (max-width:768px){
-    html{
-        height: 800px;
+    .content{
+        height: 1500px;
+        
     }
     h3{
         font-size: 20px;
         font-weight: bold;
     }
-    .tab_list li{
-        width: 100px;
+    .tab_list{
+        position: relative;
+        margin-left:50px ;
+        margin-top: -400px;
     }
-
+    .tab_list li{
+        width: 40px;
+        
+        
+        
+    }
+    .list{
+        width: 50%;
+        height: 40%;
+        padding: 0 0;
+    }
+    .tab_con{
+        margin-top: 50px;
+    }
+  
 
 
 }
 /* pad端开始 */
 @media screen and (min-width:768px) and (max-width:992px) {
-    html{
-        height: 1800px;
-    }
-    h1{
-        font-size: 80px;
-    }
-    .container h3{
-        font-size: 50px;
+    .content{
+        height: 1500px;
         
     }
+    h3{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .tab_list{
+        position: relative;
+        margin-left:50px ;
+        margin-top: -400px;
+    }
     .tab_list li{
-        width: 100px;
+        width: 40px;
+        
+        
+        
     }
-    .list .card {
-        margin-top: 200px;
-        position:relative;
-        max-width: 300px;
-        height: 200px;
-        background: #F0F0F4;
-        margin: 105px 20px;
-        padding: 20px 15px;
-        display: block;
-        flex-direction: column;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, .3);
-        transition: .3s ease-in-out;
-        float: left;
-        border-radius: 5px;
-        /* border: 5px solid rgb(231,232,235); */
+    .list{
+        width: 80%;
+        height: 40%;
+        padding: 0 0;
     }
-    
-    .list .card:hover {
-        height: 420px;
-        margin: 1px 20px;
-    }
-    
-    .list .card .imgBx {
-        position: relative;
-        width: 260px;
-        height: 160px;
-        top: -40px;
-        left: 5px;
-        z-index: 1;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
-    }
-    
-    .list .card .imgBx img {
-        max-width: 100%;
-        border-radius: 5px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-        /* margin-left: -20px; */
-    }
-    
-    .list .card .content1 {
-        position: relative;
-        margin-top: -140px;
-        padding: 10px 15px;
-        text-align: left;
-        color: #111;
-        visibility: hidden;
-        opacity: 0;
-        transition: .3s ease-in-out;
-    }
-    
-    .list .card:hover .content1 {
-        visibility: visible;
-        opacity: 1;
-        margin-top: -40px;
-        transition-delay: .3s;
-    }
-    .line{
-        color: #009688;
-    margin-top: -10px;
-    
+    .tab_con{
+        margin-top: 50px;
+        margin-left: 150px;
     }
 
 }

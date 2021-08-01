@@ -38,6 +38,18 @@ body {
   overflow: hidden;
 }
 .layui-card{
+  margin: 0 auto; 
+  width: 90%;
+  height: 90%;
   box-shadow: 5px 5px 2px 0px gainsboro;
-    border-radius: 10px;
+  border-radius: 10px;
+}
+.layui-form-item {
+  font-size: 15px;
+}
+span {
+  margin-left: 3%;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 10px;
 }

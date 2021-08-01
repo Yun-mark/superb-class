@@ -39,11 +39,9 @@ $(function(){
           return layer.msg('获取成员列表失败！') 
         }
         var htmlStr = template('second-grade', res)
-        console.log(res);
         $('.second').html(htmlStr)
         
         renderAvatar(res.data)
-        console.log(res.data);
       }
     })
   }
@@ -63,7 +61,7 @@ $(function(){
         //自定页
         layer.open({
           type: 1,
-          skin: 'layui-layer-demo', //样式类名
+          skin: 'layui-layer-molv', //样式类名
           closeBtn: 0, //不显示关闭按钮
           anim: 2,
           title:'点击查看',
@@ -91,12 +89,11 @@ $(function(){
         if (res.code !== 200) {
           return layer.msg('获取成员列表失败！') 
         }
-        console.log(res);
         const htmlStr = template('tmpl-artinfo', res.data)
-        console.log(htmlStr);
         layer.open({
               type: 1,
               title: '周报详情页',
+              skin: 'layui-layer-molv',
               area: ['80%', '80%'],
               maxmin: true, //开启最大化最小化按钮
               content: htmlStr
@@ -111,6 +108,7 @@ $(function(){
       layer.open({
           type: 2,
           title: '全部周报',
+          skin: 'layui-layer-molv',
           shadeClose: true,
           shade: false,
           maxmin: true, //开启最大化最小化按钮
