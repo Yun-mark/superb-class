@@ -12,7 +12,7 @@ html, body{
     margin-left: -10%
 }
 .loginAndRegBox {
-    width: 500px;
+    width: 30%;
     height: 400px;
 	background: linear-gradient(to top right, #191654,#43C6AC);
     position: absolute;
@@ -98,4 +98,13 @@ html, body{
   top: 2%;
   right: 2%;
   transform: rotate(180deg);
+}
+/* 移动端开始 */
+@media screen and (max-width:768px){
+    .loginAndRegBox {
+        width: 100%;
+    }
+    .layui-form{
+        padding: 25px 20px;
+    }
 }
