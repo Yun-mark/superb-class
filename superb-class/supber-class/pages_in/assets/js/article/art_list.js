@@ -161,7 +161,6 @@ $(function() {
     $('tbody').on('click', '.btn-delete', function() {
       // 获取删除按钮的个数
       var len = $('.btn-delete').length
-      console.log(len)
       // 获取到文章的 id
       var id = $(this).attr('data-id')
       // 询问用户是否要删除数据

@@ -29,20 +29,46 @@ $(function() {
   
     // 定义一个查询的参数对象，将来请求数据的时候，
     // 需要将请求参数对象提交到服务器
-    // var q = {
-    //   pagenum: 1, // 页码值，默认请求第一页的数据
-    //   pagesize: 2, // 每页显示几条数据，默认每页显示2条
-    //   cid: '', // 文章分类的 Id
-    //   statestr: '' // 文章的发布状态
-    // }
+    var q = {
+      pagenum: 1, // 页码值，默认请求第一页的数据
+      pagesize: 2, // 每页显示几条数据，默认每页显示2条
+      catename: '', // 文章分类的 Id
+      statestr: '' // 文章的发布状态
+    }
     //调用函数，获取用户基本信息
     getUserInfo()
   
     initTable()
+    initCate()
+    $('.layui-table').on('click','a', function () {
+      $.ajax({
+        method: 'GET',
+        url: 'http://supertest.nat300.top/article/'+ $(this).attr('data-id'),
+        headers : {
+          Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
+          token : localStorage.getItem('token')|| '' 
+        } ,
+        success: function(res) {
+          if (res.code !== 200) {
+            return layer.msg('获取成员列表失败！') 
+          }
+          const htmlStr = template('tmpl-artinfo', res.data)
+          layer.open({
+                type: 1,
+                title: '周报详情页',
+                area: ['80%', '80%'],
+                maxmin: true, //开启最大化最小化按钮
+                content: htmlStr
+              })
+              
+            }
+          
+      })
+    })
     //initCate()
 
        // 获取文章列表数据的方法
-      function initTable() {
+       function initTable() {
         $.ajax({
           method: 'GET',
           url: 'http://supertest.nat300.top/article/get/' + uid,
@@ -50,7 +76,7 @@ $(function() {
             Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
             token : localStorage.getItem('token')|| '' 
           },
-    
+
           success: function(res) {
             if (res.code !== 200) {
               return layer.msg('获取文章列表失败！')
@@ -59,9 +85,8 @@ $(function() {
             var htmlStr = template('tpl-table', res)
             $('tbody').html(htmlStr)
             renderAvatar(res.data)
-            console.log(res.data);
             // 调用渲染分页的方法
-          // renderPage(res.total)
+            renderPage(res.data.length)
           }
         })
       }
@@ -70,13 +95,13 @@ $(function() {
     function initCate() {
       $.ajax({
         method: 'GET',
-        url: 'http://supertest.nat300.top/article/cates',
+        url: 'http://supertest.nat300.top/category/get',
         headers : {
           Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
           token : localStorage.getItem('token')|| '' 
         },
         success: function(res) {
-          if (res.code !== 0) {
+          if (res.code !== 200) {
             return layer.msg('获取分类数据失败！')
           }
           // 调用模板引擎渲染分类的可选项
@@ -101,43 +126,45 @@ $(function() {
       initTable()
     })
 
-    
-  
     // 定义渲染分页的方法
-    function renderPage(total) {
-      // 调用 laypage.render() 方法来渲染分页的结构
-      laypage.render({
-        elem: 'pageBox', // 分页容器的 Id
-        count: total, // 总数据条数
-        limit: q.pagesize, // 每页显示几条数据
-        curr: q.pagenum, // 设置默认被选中的分页
-        layout: ['count', 'limit', 'prev', 'page', 'next', 'skip'],
-        limits: [2, 3, 5, 10],
-        // 分页发生切换的时候，触发 jump 回调
-        // 触发 jump 回调的方式有两种：
-        // 1. 点击页码的时候，会触发 jump 回调
-        // 2. 只要调用了 laypage.render() 方法，就会触发 jump 回调
-        jump: function(obj, first) {
-          // 可以通过 first 的值，来判断是通过哪种方式，触发的 jump 回调
-          // 如果 first 的值为 true，证明是方式2触发的
-          // 否则就是方式1触发的
-          // console.log(first)
-          // console.log(obj.curr)
-          // 把最新的页码值，赋值到 q 这个查询参数对象中
-          q.pagenum = obj.curr
-          // 把最新的条目数，赋值到 q 这个查询参数对象的 pagesize 属性中
-          q.pagesize = obj.limit
-          // 根据最新的 q 获取对应的数据列表，并渲染表格
-          // initTable()
-          if (!first) {
-            initTable()
-          }
+  function renderPage(total) {
+    // 调用 laypage.render() 方法来渲染分页的结构
+    laypage.render({
+      elem: 'pageBox', // 分页容器的 Id
+      count: total, // 总数据条数
+      limit: q.pagesize, // 每页显示几条数据
+      curr: q.pagenum, // 设置默认被选中的分页
+      layout: ['count', 'limit', 'prev', 'page', 'next', 'skip'],
+      limits: [2, 3, 5, 10],
+      // 分页发生切换的时候，触发 jump 回调
+      // 触发 jump 回调的方式有两种：
+      // 1. 点击页码的时候，会触发 jump 回调
+      // 2. 只要调用了 laypage.render() 方法，就会触发 jump 回调
+      jump: function(obj, first) {
+        // 可以通过 first 的值，来判断是通过哪种方式，触发的 jump 回调
+        // 如果 first 的值为 true，证明是方式2触发的
+        // 否则就是方式1触发的
+        // console.log(first)
+        // console.log(obj.curr)
+        // 把最新的页码值，赋值到 q 这个查询参数对象中
+        q.pagenum = obj.curr
+        // 把最新的条目数，赋值到 q 这个查询参数对象的 pagesize 属性中
+        q.pagesize = obj.limit
+        // 根据最新的 q 获取对应的数据列表，并渲染表格
+        // initTable()
+        if (!first) {
+          initTable()
         }
-      })
-    }
+      }
+    })
+  }
+  
+    
   
   })
   
+  
+
  //获取用户的基本信息
  function getUserInfo (){
   $.ajax({
