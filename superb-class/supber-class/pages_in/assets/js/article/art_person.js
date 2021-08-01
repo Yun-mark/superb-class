@@ -29,16 +29,17 @@ $(function() {
   
     // 定义一个查询的参数对象，将来请求数据的时候，
     // 需要将请求参数对象提交到服务器
-    // var q = {
-    //   pagenum: 1, // 页码值，默认请求第一页的数据
-    //   pagesize: 2, // 每页显示几条数据，默认每页显示2条
-    //   cid: '', // 文章分类的 Id
-    //   statestr: '' // 文章的发布状态
-    // }
+    var q = {
+      pagenum: 1, // 页码值，默认请求第一页的数据
+      pagesize: 2, // 每页显示几条数据，默认每页显示2条
+      catename: '', // 文章分类的 Id
+      statestr: '' // 文章的发布状态
+    }
     //调用函数，获取用户基本信息
     getUserInfo()
   
     initTable()
+    initCate()
     $('.layui-table').on('click','a', function () {
       $.ajax({
         method: 'GET',
@@ -67,15 +68,15 @@ $(function() {
     //initCate()
 
        // 获取文章列表数据的方法
-      function initTable() {
+       function initTable() {
         $.ajax({
           method: 'GET',
-          url: 'http://supertest.nat300.top/article/get/' + uid,
+          url: 'http://supertest.nat300.top/article/get',
           headers : {
             Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
             token : localStorage.getItem('token')|| '' 
           },
-    
+          data: q,
           success: function(res) {
             if (res.code !== 200) {
               return layer.msg('获取文章列表失败！')
@@ -83,9 +84,8 @@ $(function() {
             // 使用模板引擎渲染页面的数据
             var htmlStr = template('tpl-table', res)
             $('tbody').html(htmlStr)
-            renderAvatar(res.data)
             // 调用渲染分页的方法
-          // renderPage(res.total)
+           renderPage(res.data.length)
           }
         })
       }
@@ -94,13 +94,13 @@ $(function() {
     function initCate() {
       $.ajax({
         method: 'GET',
-        url: 'http://supertest.nat300.top/article/cates',
+        url: 'http://supertest.nat300.top/category/get',
         headers : {
           Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
           token : localStorage.getItem('token')|| '' 
         },
         success: function(res) {
-          if (res.code !== 0) {
+          if (res.code !== 200) {
             return layer.msg('获取分类数据失败！')
           }
           // 调用模板引擎渲染分类的可选项
@@ -125,13 +125,7 @@ $(function() {
       initTable()
     })
 
-    
-  
-    
-  
-  })
-  
-  // 定义渲染分页的方法
+    // 定义渲染分页的方法
   function renderPage(total) {
     // 调用 laypage.render() 方法来渲染分页的结构
     laypage.render({
@@ -163,6 +157,12 @@ $(function() {
       }
     })
   }
+  
+    
+  
+  })
+  
+  
 
  //获取用户的基本信息
  function getUserInfo (){
