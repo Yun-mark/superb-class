@@ -42,21 +42,22 @@
       layui.use('element', function(){
         var element = layui.element;
         let navs=document.getElementsByClassName("layui-nav-item");
-        
-        navs[1].onclick=function(){
-          for(let i=2;i<navs.length;i++){
-            navs[i].style.display='block';
-          }
-      }
-
-      for(let i=2;i<navs.length;i++){
-        navs[i].onclick=function(){
-          for(let i=2;i<navs.length;i++){
-            navs[i].style.display='none';
-          }
+        if(screen.width<=768){  //移动端执行
+            let navs=document.getElementsByClassName("layui-nav-item");
           
-        }
+          navs[1].onclick=function(){
+            for(let i=2;i<navs.length;i++){
+              navs[i].style.display='block';
+            }
           }
+          for(let i=2;i<navs.length;i++){
+            navs[i].onclick=function(){
+              for(let i=2;i<navs.length;i++){
+                navs[i].style.display='none';
+              }
+            }
+          }
+        }
     });
 
       </script>
