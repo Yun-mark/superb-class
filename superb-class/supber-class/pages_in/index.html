@@ -45,13 +45,17 @@
         
         <div class="layui-side layui-bg-black">
           <div class="layui-side-scroll">
-            
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
-                <li class="layui-nav-item layui-nav-item1 layui-this"><a href="./home/card.html" target="fm"><span class="iconfont icon-home"></span>首页</a></li>
-                <li class="layui-nav-item layui-nav-item2"><a href="./aritcle/art_all.html" target="fm"><span class="iconfont icon-pinglun"></span>周报列表</a></li>
+              <li class="layui-nav-item layadmin-flexible" lay-unselect="">
+                <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩">
+                  <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i><span>侧边收缩</span>
+                </a>
+              </li>
+                <li class="layui-nav-item layui-nav-item1 layui-this"><a href="./home/card.html" target="fm"><i class="iconfont icon-home"></i><span>首页</span></a></li>
+                <li class="layui-nav-item layui-nav-item2"><a href="./aritcle/art_all.html" target="fm"><i class="iconfont icon-pinglun"></i><span>周报列表</span></a></li>
               <li class="layui-nav-item">
-                <a class="" href="javascript:;"><span class="iconfont icon-16"></span>周报管理</a>
+                <a class="" href="javascript:;"><i class="iconfont icon-16"></i><span>周报管理</span></a>
                 <dl class="layui-nav-child">
                   <dd><a href="./aritcle/art_cate.html" target="fm"><i class="layui-icon layui-icon-app"></i> 周报类别</a></dd>
                   <dd id="look1"><a href="./aritcle/art_list.html" target="fm"><i class="layui-icon layui-icon-app"></i>个人列表</a></dd>
@@ -59,14 +63,14 @@
                 </dl>
               </li>
               <li class="layui-nav-item">
-                <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
+                <a href="javascript:;"><i class="iconfont icon-user"></i><span>个人中心</span></a>
                 <dl class="layui-nav-child">
                   <dd id="look3"><a href="./user/user_info.html" target="fm"><i class="layui-icon layui-icon-template-1"></i>基本资料</a></dd>
                   <dd id="look4"><a href="./user/user_safety.html" target="fm"><i class="layui-icon layui-icon-set"></i>账号安全</a></dd>
                 </dl>
               </li>
               <li class="layui-nav-item">
-                <a id="aboutUs" href="javascript:;" ><span class="layui-icon layui-icon-auz"></span>关于我们</a>
+                <a id="aboutUs" href="javascript:;" ><i class="layui-icon layui-icon-auz"></i><span>关于我们</span></a>
               </li>
             </ul>
           </div>
@@ -83,16 +87,17 @@
         </div>
       </div>
       <script src="./assets/lib/layui/layui.all.js"></script>
+      
+      <script src="./assets/lib/jquery.js"></script>
       <script>
-        //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+         //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
         layui.use('element', function(){
           var element = layui.element;
           
           //…
         });
-        </script>
-      <!--导入jQuery-->
-      <script src="./assets/lib/jquery.js"></script>
+      </script>
+      <script src="./assets/js/layuiAll.js"></script>
       <script src="./assets/lib/template-web.js"></script>
       <script src="./assets/js/base.js"></script>
 </body>

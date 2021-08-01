@@ -39,23 +39,31 @@ span{
 .layui-table{
     color: #2F4056;
 }
-.artinfo-box {
+  .artinfo-box {
     padding: 20px;
   }
   
- .artinfo-title {
+  .artinfo-title {
     text-align: center;
-    font-size: 40px;
   }
-.artinfo-bar {
+  
+  .artinfo-bar {
     font-size: 12px;
     margin: 20px 0;
-    color: gray;
   }
   
   .artinfo-bar span {
     margin-right: 20px;
+    margin-left: 0;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 0;
+    color: black;
   }
-  .layui-table a:hover{
-      color: #009688;
+  
+  .artinfo-cover {
+    width: 400px;
+    height: 280px;
+    margin: 15px 0;
   }
+  

@@ -1,4 +1,4 @@
-.layui-footer{
+ .layui-footer{
     text-align: center;
     font-size: 12px;
 }
@@ -117,7 +117,7 @@ iframe {
 }
 .card1{
     width: 66%;
-    height: 600px;
+    height: 550px;
     float: left;
     border-radius: 10px;
     margin: 1%;
@@ -126,7 +126,15 @@ iframe {
 .card2{
     width: 30%;
     float: right;
-    height: 600px;
+    height: auto;
+    margin: 1%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px 0px gainsboro;
+}
+.card3{
+    width: 30%;
+    float: right;
+    height: auto;
     margin: 1%;
     border-radius: 10px;
     box-shadow: 5px 5px 2px 0px gainsboro;
@@ -165,4 +173,29 @@ iframe {
 }
 #aboutUs{
     padding: 0!important;
+}
+
+.layui-layout-admin .layui-logo{
+    line-height: 0;
+}
+#LAY_app_flexible{
+   margin-left: 0;
+}
+.card3 .layui-card-body span {
+    margin: 0;
+}
+.card3 .layui-card-body .layui-progress{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.card3 .layui-card-body{
+    position: relative;
+}
+.card3 h3{
+    position: absolute;
+    font-size: 14px;
+    padding: 0 15px;
+    color:#009688;
+    margin-left: -10px;
+    margin-top: 10px;
 }

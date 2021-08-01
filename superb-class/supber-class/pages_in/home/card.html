@@ -99,23 +99,12 @@
           <div id="pageBox"></div>
       </div>
   </div>
-      <!--列表数据的模板引擎-->
-      <script type="text/html" id="tpl-table">
-        {{each data}}
-        <tr>
-          <td>{{$value.title}}</td>
-          <td>{{$value.catename}}</td>
-          <td>{{$value.publishdate|dataFormat}}</td>
-          <td>{{$value.statestr}}</td>
-        </tr>
-        {{/each}}
-      </script>
-       
-      </div>
+      
+
+
       <div class="layui-card card2">
         <div class="layui-card-header"><p>新建</p></div>
         <div class="layui-card-body">
-
       <div class="one item">
         <a href="javascript:;">
       <i class="layui-icon layui-icon-export" style="font-size: 70px; color: #009688;"></i></a>
@@ -132,8 +121,32 @@
         <span>更多</span>
        </div>
       </div> 
-      
-    
+      </div>
+      <div class="layui-card card3">
+            <div class="layui-card-header"><p>任务进度</p></div>
+            <div class="layui-card-body"> <h3>校企</h3>
+              <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                 <div class="layui-progress-bar layui-bg-orange" lay-percent="40%"></div>
+              </div><h3>迭代</h3>
+              <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                <div class="layui-progress-bar layui-bg-green" lay-percent="99%"></div>
+              </div><h3>竞赛</h3>
+              <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                <div class="layui-progress-bar" lay-percent="75%"></div>
+              </div>
+            </div> 
+      </div>
+     <!--列表数据的模板引擎-->
+      <script type="text/html" id="tpl-table">
+        {{each data}}
+        <tr>
+          <td>{{$value.title}}</td>
+          <td>{{$value.catename}}</td>
+          <td>{{$value.publishdate|dataFormat}}</td>
+          <td>{{$value.statestr}}</td>
+        </tr>
+        {{/each}}
+      </script>
 
 
       <script src="../assets/lib/layui/layui.all.js"></script>
