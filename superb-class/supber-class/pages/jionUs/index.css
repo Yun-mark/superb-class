@@ -191,6 +191,9 @@ h2{
         width: 98%;
         margin: 0 auto;
     }
+    .form{
+        height: 1100px;
+    }
     .form-box{
         height: 490px;
         grid-template-columns: 15% 85%;  

@@ -168,3 +168,6 @@ span{
 .eye img:hover{
   background-color:#5FB878;
 }
+.layui-layer-wrap{
+  margin:50px;
+}

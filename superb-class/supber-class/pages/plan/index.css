@@ -180,9 +180,9 @@ html {
   text-align: center;
 }
 .text2 p {
-  width: 3.9625rem;
+  width: 5.9625rem;
   color: #000;
-  margin: 0.1375rem 0 0 2.6375rem;
+  margin: 0.1375rem 0 0 1.6375rem;
 }
 .text2 ul {
   width: 3.9625rem;
@@ -330,22 +330,22 @@ html {
 /* pc端开始 */
 @media screen and (min-width:992px) {
   #box{
-    height: 800px;
+    height: 1350px;
   }
   #box #content {
     width: 19.7rem;
   }
   .text1 {
     width: 6.19rem;
-    font-size: 0.175rem;
+    font-size: 0.275rem;
   }
   .text2 {
     width: 9.3rem;
-    font-size: 0.175rem;
+    font-size: 0.275rem;
   }
   .text3 {
     width: 4.622rem;
-    font-size: 0.175rem;
+    font-size: 0.275rem;
   }
 }
 /* pc端结束 */
