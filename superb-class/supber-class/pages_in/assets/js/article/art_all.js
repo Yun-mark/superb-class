@@ -39,11 +39,9 @@ $(function(){
           return layer.msg('获取成员列表失败！') 
         }
         var htmlStr = template('second-grade', res)
-        console.log(res);
         $('.second').html(htmlStr)
         
         renderAvatar(res.data)
-        console.log(res.data);
       }
     })
   }
@@ -91,9 +89,7 @@ $(function(){
         if (res.code !== 200) {
           return layer.msg('获取成员列表失败！') 
         }
-        console.log(res);
         const htmlStr = template('tmpl-artinfo', res.data)
-        console.log(htmlStr);
         layer.open({
               type: 1,
               title: '周报详情页',
