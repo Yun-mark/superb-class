@@ -87,7 +87,7 @@ $(function(){
       } ,
       success: function(res) {
         if (res.code !== 200) {
-          return layer.msg('获取成员列表失败！') 
+          return layer.msg('周报预览失败！') 
         }
         const htmlStr = template('tmpl-artinfo', res.data)
         layer.open({
@@ -95,6 +95,8 @@ $(function(){
               title: '周报详情页',
               skin: 'layui-layer-molv',
               area: ['80%', '80%'],
+              shadeClose: true,
+              shade: false,
               maxmin: true, //开启最大化最小化按钮
               content: htmlStr
             })

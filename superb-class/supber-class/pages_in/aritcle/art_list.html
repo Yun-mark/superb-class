@@ -70,7 +70,7 @@
         <td>{{$value.publishdate|dataFormat}}</td>
         <td>{{$value.statestr}}</td>
         <td>
-          <button type="button" class="layui-btn layui-btn-xs">编辑</button>
+          <button type="button" class="layui-btn layui-btn-xs btn-edit" data-id="{{$value.id}}">编辑</button>
           <button type="button" class="layui-btn layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.id}}">删除</button>
         </td>
       </tr>

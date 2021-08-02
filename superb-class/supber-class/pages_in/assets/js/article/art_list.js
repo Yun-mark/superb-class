@@ -193,7 +193,31 @@ $(function() {
         layer.close(index)
       })
     })
+    // 通过代理的形式，为编辑按钮绑定点击事件处理函数
+  $('tbody').on('click', '.btn-edit', function() {
+    // 获取到文章的 id
+    // var id = $(this).attr('data-id')
+    // // 询问用户是否要删除数据
+    // layer.open({
+    //   type: 2,
+    //   title: '编辑周报',
+    //   skin: 'layui-layer-molv',
+    //   shadeClose: true,
+    //   shade: false,
+    //   maxmin: true, //开启最大化最小化按钮
+    //   area: ['1100px', '650px'],
+    //   content: './art_edit.html' + '?aid=' + id
+    // });
+    layer.alert('该功能程序猿小哥哥还在开发中...', {
+      skin: 'layui-layer-molv' //样式类名
+      ,closeBtn: 0,
+      title:'尊敬的用户',
+      anim: 3
+    });
   })
+})
+
+  
   
  //获取用户的基本信息
  function getUserInfo (){
