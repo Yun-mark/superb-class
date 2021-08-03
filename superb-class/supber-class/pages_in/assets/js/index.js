@@ -23,7 +23,7 @@ $(function(){
 function getUserInfo (){
     $.ajax({
          method:'GET',
-         url:'http://supertest.nat300.top/userHome/info',
+         url:'http://39.105.118.190:8080/userHome/info',
          headers:{
               Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
               token : localStorage.getItem('token')|| '' 
@@ -82,7 +82,7 @@ $(function(){
     function initTable() {
        $.ajax({
          method: 'GET',
-         url: 'http://supertest.nat300.top/article/get',
+         url: 'http://39.105.118.190:8080/article/get',
          headers:{
            Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
            token : localStorage.getItem('token')|| '' 

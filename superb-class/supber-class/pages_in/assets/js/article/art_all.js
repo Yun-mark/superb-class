@@ -29,7 +29,7 @@ $(function(){
   function init(){
     $.ajax({
       method: 'GET',
-      url: 'http://supertest.nat300.top/article/latest',
+      url: 'http://39.105.118.190:8080/article/latest',
       headers : {
         Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
         token : localStorage.getItem('token')|| '' 
@@ -80,7 +80,7 @@ $(function(){
   $('.second').on('click','.eye', function () {
     $.ajax({
       method: 'GET',
-      url: 'http://supertest.nat300.top/article/'+ $(this).attr('data-id'),
+      url: 'http://39.105.118.190:8080/article/'+ $(this).attr('data-id'),
       headers : {
         Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
         token : localStorage.getItem('token')|| '' 

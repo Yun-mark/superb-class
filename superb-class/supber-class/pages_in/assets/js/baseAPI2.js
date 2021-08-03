@@ -4,7 +4,7 @@
 
 $.ajaxPrefilter(function (options){
     //在发起真正的ajax请求之前，统一拼接请求的根路径
-    options.url = 'http://supertest.nat300.top' + options.url
+    options.url = 'http://39.105.118.190:8080' + options.url
  
  
    if(options.url.indexOf('/category/')!==-1){

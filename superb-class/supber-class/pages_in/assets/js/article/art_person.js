@@ -43,7 +43,7 @@ $(function() {
     $('.layui-table').on('click','a', function () {
       $.ajax({
         method: 'GET',
-        url: 'http://supertest.nat300.top/article/'+ $(this).attr('data-id'),
+        url: 'http://39.105.118.190:8080/article/'+ $(this).attr('data-id'),
         headers : {
           Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
           token : localStorage.getItem('token')|| '' 
@@ -71,7 +71,7 @@ $(function() {
        function initTable() {
         $.ajax({
           method: 'GET',
-          url: 'http://supertest.nat300.top/article/get/' + uid,
+          url: 'http://39.105.118.190:8080/article/get/' + uid,
           headers : {
             Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
             token : localStorage.getItem('token')|| '' 
@@ -95,7 +95,7 @@ $(function() {
     function initCate() {
       $.ajax({
         method: 'GET',
-        url: 'http://supertest.nat300.top/category/get',
+        url: 'http://39.105.118.190:8080/category/get',
         headers : {
           Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
           token : localStorage.getItem('token')|| '' 
@@ -169,7 +169,7 @@ $(function() {
  function getUserInfo (){
   $.ajax({
       method:'GET',
-      url:'http://supertest.nat300.top/userHome/info',
+      url:'http://39.105.118.190:8080/userHome/info',
       headers:{
           Authorization : 'Bearer ' + localStorage.getItem('token')|| '' ,
           token : localStorage.getItem('token')|| '' 
