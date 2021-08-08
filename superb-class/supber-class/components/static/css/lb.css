@@ -14,7 +14,8 @@
     transition:  opacity 0.5s ease-out
 }
 #pic li img{
-    height: 919px;
+    height: 100%;
+    width: 100%;
 }
 #pic li.active{
     opacity: 1;
@@ -23,4 +24,11 @@
 a{
     text-decoration: none;
     color: #EDF1F2;
+}
+@media screen and (max-width:767px){
+    #pic li img{
+        width: 100%;
+        height: 720px;
+        object-fit: cover;
+    }
 }
